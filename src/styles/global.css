@@ -3,10 +3,13 @@
 :root {
   --font-basic: Montserrat, 'Roboto', 'Oxygen', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
   --color-white: white;
+  --color-peach: #D5876F;
   --font-size-large: 4.1vw;
-  --font-size-big: 3vw;
-  --font-size-middle: 3vw;
+  --font-size-big: 2.8vw;
+  --font-size-middle: 3.5vw;
   --font-size-small: 3vw;
+  --font-size-body: 1.15vw;
+  --font-size-body-small: 0.8vw;
 }
 
 body {

@@ -1,0 +1,30 @@
+.button {
+  transition: all linear 0.25s;
+  width: 19.5vw;
+  height: 3.5vw;
+  background-color: var(--color-peach);
+  color: var(--color-white);
+  border-radius: 35px;
+  font-family: var(--font-basic);
+  font-weight: 200;
+  font-size: 1vw;
+  border: none;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.small {
+  width: 14vw;
+  height: 2.8vw;
+}
+
+.secondary {
+  border: 1px black solid;
+  background-color: transparent;
+  color: black;
+}
+
+.button:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}

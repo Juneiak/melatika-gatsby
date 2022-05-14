@@ -1,5 +1,11 @@
 import React from "react";
-import Opening from '../components/sections/opening/opening'
+import {
+  Opening,
+  Catalog,
+  WeWillSelect,
+  AboutUs,
+} from '../components/sections/index';
+
 import IndexLayout from "../components/index-layout/index-layout";
 import * as styles from '../styles/page-styles/index-page.css';
 
@@ -10,8 +16,11 @@ const IndexPage = () => {
     <IndexLayout>
       <main className={styles.main}>
         <Opening />
+        <Catalog />
+        <WeWillSelect openPopupHanler={() => setIsFormPopupOpen(true)} />
+        <AboutUs openPopupHanler={() => setIsFormPopupOpen(true)} />
       </main>
-      {setIsFormPopupOpen && <div></div>}
+      {isFormPopupOpen && <div><h1>hello!</h1></div>}
     </IndexLayout>
 
   )

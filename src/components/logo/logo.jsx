@@ -1,5 +1,4 @@
 import React from 'react';
-import * as style from './logo.module.css';
 import logoImage from '../../images/icons/logo.svg'
 const Logo = ({ size="3vw" }) => {
 

@@ -1,0 +1,36 @@
+.weWillSelect {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../../../images/solutions.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.titleContent {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 17vw;
+  color: var(--color-white);
+  font-family: var(--font-basic);
+}
+
+.title {
+  font-size: var(--font-size-big);
+  margin-bottom: 1vw;
+  font-weight: 200;
+}
+
+.subtitle {
+  font-size: 1.4vw;
+  font-weight: 100;
+
+}
