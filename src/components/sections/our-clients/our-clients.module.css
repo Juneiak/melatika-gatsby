@@ -1,0 +1,38 @@
+.aboutUs {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 4.85vw 0;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.title {
+  font-family: var(--font-basic);
+  font-weight: 200;
+  font-size: var(--font-size-big);
+  margin-bottom: 6.5vw;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 70%;
+  margin-bottom: 6.5vw;
+}
+
+.listElement {
+
+}
+
+.logo {
+  background-color: black;
+}

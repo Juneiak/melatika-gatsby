@@ -1,0 +1,38 @@
+.footer {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  padding: 4.85vw 0;
+}
+
+.content {
+  height: 100%;
+  width: 70%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+
+  font-family: var(--font-basic);
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 6.5vw;
+  align-self: flex-start;
+}
+
+.title {
+  font-size: var(--font-size-big);
+  font-weight: 200;
+  
+}
+
+.contacts {
+  font-size: var(--font-size-footer);
+  font-weight: 100;
+  margin-bottom: 6.5vw;
+  line-height: 1.5;
+}

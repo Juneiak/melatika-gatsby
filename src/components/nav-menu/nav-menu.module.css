@@ -24,6 +24,7 @@
 
 .navElementTitle {
   font-family: var(--font-basic);
-  font-size: var(--font-size-2);
+  font-size: var(--font-size-big);
   color: var(--color-white);
+  text-align: center;
 }

@@ -4,22 +4,25 @@ import {
   Catalog,
   WeWillSelect,
   AboutUs,
+  OurClients,
+  Footer,
 } from '../components/sections/index';
 
 import IndexLayout from "../components/index-layout/index-layout";
-import * as styles from '../styles/page-styles/index-page.css';
 
 const IndexPage = () => {
   const [ isFormPopupOpen, setIsFormPopupOpen ] = React.useState(false);
   
   return (
     <IndexLayout>
-      <main className={styles.main}>
+      <main style={{width: '100%', height: '100%'}}>
         <Opening />
         <Catalog />
         <WeWillSelect openPopupHanler={() => setIsFormPopupOpen(true)} />
         <AboutUs openPopupHanler={() => setIsFormPopupOpen(true)} />
+        <OurClients openPopupHanler={() => setIsFormPopupOpen(true)} />
       </main>
+      <Footer />
       {isFormPopupOpen && <div><h1>hello!</h1></div>}
     </IndexLayout>
 
