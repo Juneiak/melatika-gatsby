@@ -1,0 +1,25 @@
+.layout {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logoContainer {
+  position: fixed;
+  top: 2.5%;
+  left: 2.5%;
+}
+
+.contactsContainer {
+  position: fixed;
+  bottom: 2.5%;
+  left: 2.5%;
+}
+
+.buttonContainer {
+  position: fixed;
+  top: 2.5%;
+  right: 2.5%;
+  z-index: 100;
+}
