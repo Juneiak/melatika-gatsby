@@ -1,0 +1,43 @@
+.splitedSection {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+.content {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    'image about';
+}
+
+.isReversed {
+  grid-template-areas:
+  'about image';
+}
+
+.image {
+  grid-area: image;
+  width: 100%;
+  height: 53vw;
+}
+
+.aboutContainer {
+  grid-area: about;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 460px) {
+  .content {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .image {
+    width: 100%;
+    height: 90vw;
+  }
+}

@@ -2,7 +2,7 @@ import React from 'react';
 import * as styles from './atricle.module.css';
 
 
-const Atricle = ({ isBig=false, inRow=false, isTurned=false, text, title, image }) => {
+const Atricle = ({ articleData:{isBig=false, inRow=false, isTurned=false, text, title, image }}) => {
 
   return (
     <li className={`

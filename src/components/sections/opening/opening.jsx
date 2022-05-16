@@ -6,7 +6,8 @@ const Opening = () => {
   return (
     <section className={styles.opening}>
       <div className={styles.content}>
-        <h1 className={styles.title}>Мебель для тех, кто <br/> знает цену комфорту</h1>
+        <h1 className={styles.title}>Melatika</h1>
+        <p className={styles.subtitle}>Мебель для тех, кто знает цену комфорту</p>
       </div>
     </section>
   )

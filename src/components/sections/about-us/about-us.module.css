@@ -1,30 +1,16 @@
 .aboutUs {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-}
-
-.content {
-  height: 100%;
-  width: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
-.image {
-  width: 100%;
-  height: 100%;
-}
-
-
-.aboutContainer {
   display: flex;
   flex-direction: column;
   font-family: var(--font-basic);
   align-items: flex-start;
   justify-content: center;
-  margin-left: 4vw;
+  width: 100%;
+  height: 100%
+}
+
+.content {
+  width: 70%;
+  margin-left: 3vw;
 }
 
 .nameContainer {
@@ -50,10 +36,15 @@
   height: 100%;
 }
 
-.about {
+.text {
   font-size: var(--font-size-body);
   font-weight: 100;
   margin-bottom: 1.5vw;
-  width: 70%;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 460px) {
+  .text {
+    font-size: var(--font-size-body-small);
+  }
 }

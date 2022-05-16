@@ -5,6 +5,7 @@ import AboutUs from "./about-us/about-us";
 import Atricles from "./atricles/atricles";
 import OurClients from './our-clients/our-clients';
 import Footer from "./footer/footer";
+import ClientArticles from "./client-articles/client-articles";
 
 export {
   Opening,
@@ -14,4 +15,5 @@ export {
   AboutUs,
   OurClients,
   Footer,
+  ClientArticles,
 }

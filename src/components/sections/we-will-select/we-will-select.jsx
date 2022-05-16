@@ -1,19 +1,25 @@
 import React from 'react';
 import * as styles from './we-will-select.module.css';
-import CallToActionButton from '../../call-to-action-button/call-to-action-button';
+import BasicButton from '../../basic-button/basic-button';
+import SplitedSection from '../../splited-section/splited-section';
+import image from '../../../images/we-will-select.jpg'
 
 const WeWillSelect = ({ openPopupHanler }) => {
 
   return (
-    <section className={styles.weWillSelect}>
-      <div className={styles.content}>
-        <div className={styles.titleContent}>
-          <h2 className={styles.title}>Полная свобода творчества</h2>
-          <p className={styles.subtitle}>Подберем идеальную мебель в ваш интерьер</p>
+    <SplitedSection image={image} isrReversed={true}>
+      <div className={styles.weWillSelect}>
+
+        <div className={styles.content}>
+          <div className={styles.titleContent}>
+            <h2 className={styles.title}>Полная свобода творчества</h2>
+            <p className={styles.subtitle}>Подберем идеальную мебель в ваш интерьер</p>
+          </div>
+          <BasicButton secondary={true} small={true} text='Подобрать мебель' handler={openPopupHanler} />
         </div>
-        <CallToActionButton small={true} text='Подобрать мебель' clickHandler={openPopupHanler} />
+
       </div>
-    </section>
+    </SplitedSection>
   )
 }
 

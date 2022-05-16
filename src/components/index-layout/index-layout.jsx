@@ -7,13 +7,10 @@ import BurgerMenuButton from '../burger-menu-button/burger-menu-button';
 import NavMenu from '../sections/nav-menu/nav-menu'
 import useDelayUnmountState from '../hooks/use-delay-unmount-state';
 import PopupLayout from '../popup-layout/popup-layout';
-import FormPopup from '../sections/form-popup/form-popup';
 
 const IndexLayout = ({ children }) => {
   const [isNavMenuOpen, setIsNavMenuOpen] = React.useState(false);
-
-
-  const isShouldNavMount = useDelayUnmountState(isNavMenuOpen, 500)
+  const isShouldNavMount = useDelayUnmountState(isNavMenuOpen, 500);
 
   const animStyle = isNavMenuOpen ? {animation: 'openAniamtion 0.5s linear'} : {animation: 'closeAniamtion 0.5s linear'}
 
@@ -21,20 +18,20 @@ const IndexLayout = ({ children }) => {
     <div className={styles.layout}>
 
       {children}
-    
+
       <div className={styles.logoContainer}><Logo /></div>
       <div className={styles.contactsContainer}><Contacts whiteColor={true}/></div>
       <div className={styles.buttonContainer}>
         <BurgerMenuButton handler={() => setIsNavMenuOpen(!isNavMenuOpen)}/>
       </div>
 
-      {isShouldNavMount && <PopupLayout mountAnim={animStyle}>
-        <NavMenu />
-      </PopupLayout>}
+      {isShouldNavMount &&
+        <PopupLayout mountAnim={animStyle}>
+          <NavMenu closeNavHandler={() => setIsNavMenuOpen(false)} />
+        </PopupLayout>
+      }
 
     </div>
-
-    
   )
 }
 

@@ -39,8 +39,8 @@
   background-color: var(--color-error);
   color: var(--color-white);
   position: absolute;
-  top: 115%;
-  left: 3%;
+  top: 100%;
+  left: 5%;
   width: 90%;
   padding: 2%;
   z-index: 5;
@@ -48,4 +48,25 @@
   font-size: var(--font-size-body);
   font-family: var(--font-basic);
   border-radius: 3px;
+  border-radius: 12px;
+}
+
+.errorMessage::before {
+  content: '';
+  border: 0.5em var(--color-error) solid;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  position: absolute;
+  top: -35%;
+  left: 51.95%;
+}
+
+.errorMessage::after {
+  content: '';
+  border: 0.5em var(--color-error) solid;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  position: absolute;
+  top: -35%;
+  left: 48.15%;
 }

@@ -5,12 +5,22 @@
   --color-white: white;
   --color-peach: #D5876F;
   --color-error: #87331a;
-  --font-size-large: 4.1vw;
-  --font-size-big: 2.8vw;
-  --font-size-middle: 1.6vw;
-  --font-size-small: 1.4vw;
-  --font-size-body: 1.15vw;
-  --font-size-body-small: 1vw;
+  --font-size-large: 4.9vw; /* 60px => 70 */
+  --font-size-big: 2.8vw; /* 40px */
+  --font-size-middle: 1.81vw ; /* 26px */
+  --font-size-small: 1.68vw; /* 24px */
+  --font-size-body: 1.12vw; /* 16px */
+  --font-size-body-small: 1vw; /* 14px */
+}
+@media screen and (max-width: 460px) {
+  :root {
+    --font-size-large: 4.1vw; /* 60px => 70 */
+    --font-size-big: 2.8vw; /* 40px */
+    --font-size-middle: 1.81vw ; /* 26px */
+    --font-size-small: 1.68vw; /* 24px */
+    --font-size-body: 1.1vw; /* 16px */
+    --font-size-body-small: 1vw; /* 14px */
+  }
 }
 
 body {

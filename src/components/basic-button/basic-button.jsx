@@ -1,8 +1,8 @@
 import React from 'react';
-import * as styles from './call-to-action-button.module.css';
+import * as styles from './basic-button.module.css';
 
-const CallToActionButton = ({
-  clickHandler,
+const BasicButton = ({
+  handler,
   text,
   small=false,
   secondary=false,
@@ -16,8 +16,9 @@ const CallToActionButton = ({
         ${styles.button}
         ${small ? styles.small : ''}
         ${secondary ? styles.secondary : ''}
+        ${!isValid ? styles.invalid : ''}
       `}
-      onClick={clickHandler}
+      onClick={handler}
       name={name}
       disabled={!isValid}
     >
@@ -26,4 +27,4 @@ const CallToActionButton = ({
   )
 }
 
-export default CallToActionButton;
+export default BasicButton;

@@ -13,11 +13,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--color-white);
+  font-family: var(--font-basic);
+  flex-direction: column;
 }
 
 .title {
-  color: var(--color-white);
-  font-family: var(--font-basic);
   font-size: var(--font-size-large);
-  font-weight: 100;
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: var(--font-size-middle);
+  font-weight: 200;
+
 }

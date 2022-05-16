@@ -1,28 +1,44 @@
 import React from 'react';
 import * as styles from './nav-menu.module.css';
+import { Link } from 'gatsby';
 
-const NavMenu = ({ mountAnim }) => {
+import navImage1 from '../../../images/nav/nav-1.jpg';
+import navImage2 from '../../../images/nav/nav-2.jpg';
+import navImage3 from '../../../images/nav/nav-3.jpg';
+import navImage4 from '../../../images/nav/nav-4.jpg';
+
+
+const NavMenu = ({ mountAnim, closeNavHandler }) => {
   
   return (
-    <section style={mountAnim} className={styles.navMenu}>
-      <nav style={{ height: '100%', width: '100%' }}>
-        <ul className={styles.list}>
-          <li style={{backgroundColor: 'green'}} className={styles.listElement}>
-            <p className={styles.navElementTitle}>Каталог</p>
-          </li>
-          <li style={{backgroundColor: 'red'}} className={styles.listElement}>
-            <p className={styles.navElementTitle}>Персональные решения</p>
-          </li>
-          <li style={{backgroundColor: 'black'}} className={styles.listElement}>
-            <p className={styles.navElementTitle}>Дизайнерам</p>
-          </li>
-          <li style={{backgroundColor: 'blue'}} className={styles.listElement}>
-            <p className={styles.navElementTitle}>О нас</p>
-          </li>
-        </ul>
-      </nav>
-
-    </section>
+    <nav style={mountAnim} className={styles.navMenu}>
+      <ul className={styles.list}>
+        <li className={styles.listElement}>
+          <Link onClick={closeNavHandler} to='#clients' className={styles.navLink}>
+            <img src={navImage1} alt="картинка навигации" className={styles.image} />
+            <p className={styles.title}>Каталог</p>
+          </Link>
+        </li>
+        <li className={styles.listElement}>
+          <Link onClick={closeNavHandler} to='#clients' className={styles.navLink}>
+            <img src={navImage2} alt="картинка навигации" className={styles.image} />
+            <p className={styles.title}>Персональные решения</p>
+          </Link>
+        </li>
+        <li className={styles.listElement}>
+          <Link onClick={closeNavHandler} to='#clients' className={styles.navLink}>
+            <img src={navImage3} alt="картинка навигации" className={styles.image} />
+            <p className={styles.title}>Дизайнерам</p>
+          </Link>
+        </li>
+        <li  className={styles.listElement}>
+          <Link onClick={closeNavHandler} to='#clients' className={styles.navLink}>
+            <img src={navImage4} alt="картинка навигации" className={styles.image} />
+            <p className={styles.title}>О нас</p>
+          </Link>
+        </li>
+      </ul>
+    </nav>
   )
 }
 

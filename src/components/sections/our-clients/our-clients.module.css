@@ -25,14 +25,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 70%;
+  width: 80%;
   margin-bottom: 6.5vw;
 }
 
 .listElement {
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
   background-color: black;
+  width: 90%;
+  height: 90%;
+}
+
+@media screen and (max-width: 460px) {
+  
 }

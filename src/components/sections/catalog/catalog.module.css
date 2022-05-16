@@ -3,12 +3,14 @@
 }
 
 .list {
+  width: 100%;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .listElement {
-  width: 50vw;
+  width: 100%;
   height: 30vw;
   overflow: hidden;
   position: relative;
@@ -40,4 +42,15 @@
 .listElement:hover .elementTitle {
   opacity: 1;
   cursor: pointer;
+}
+
+@media screen and (max-width: 460px) {
+  .list {
+    grid-template-columns: 1fr;
+  }
+
+  .listElement {
+    width: 100%;
+    height: 60vw;
+  }
 }

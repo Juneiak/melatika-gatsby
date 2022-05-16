@@ -1,6 +1,6 @@
 import React from 'react';
 import * as styles from './bitrix-form.module.css';
-import CallToActionButton from '../call-to-action-button/call-to-action-button';
+import BasicButton from '../basic-button/basic-button';
 import BitrixFormInput from './bitrix-form-input/bitrix-form-input';
 import Loader from '../loader/loader';
 
@@ -122,9 +122,9 @@ export default function BitrixForm() {
             errorMessage = {phoneErrorMessage}
           />
         </div>
-        <CallToActionButton
+        <BasicButton
           isValid={buttonStatus}
-          clickHandler={() => btxButton.click()}
+          handler={() => btxButton.click()}
           name="send-contact"
           text='Записаться'
         />

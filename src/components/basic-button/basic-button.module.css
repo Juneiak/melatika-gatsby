@@ -13,6 +13,12 @@
   box-sizing: border-box;
 }
 
+.invalid {
+  border: 1px var(--color-peach) solid;
+  background-color: transparent;
+  color: var(--color-white);
+}
+
 .small {
   width: 14vw;
   height: 2.8vw;

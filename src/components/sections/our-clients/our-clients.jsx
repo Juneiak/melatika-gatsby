@@ -1,12 +1,13 @@
 import React from 'react';
 import * as styles from './our-clients.module.css';
-import CallToActionButton from '../../call-to-action-button/call-to-action-button';
+import BasicButton from '../../basic-button/basic-button';
 import clientLogo1 from '../../../images/our-clients/client-1.png'
 import clientLogo2 from '../../../images/our-clients/client-2.png'
 import clientLogo3 from '../../../images/our-clients/client-3.png'
 import clientLogo4 from '../../../images/our-clients/client-4.png'
 import clientLogo5 from '../../../images/our-clients/client-5.png'
 
+//unused
 const OurClients = ({ openPopupHanler }) => {
   const clientsData = [ clientLogo1, clientLogo2, clientLogo3, clientLogo4, clientLogo5 ]
   return (
@@ -22,7 +23,7 @@ const OurClients = ({ openPopupHanler }) => {
             ))
           }
         </ul>
-        <CallToActionButton secondary={true} small={true} clickHandler={openPopupHanler} text='Подобрать мебель' />
+        <BasicButton secondary={true} small={true} handler={openPopupHanler} text='Подобрать мебель' />
       </div>
     </section>
   )
