@@ -21,13 +21,13 @@ const articlesData = [
     image: articleImage2,
     isBig: false,
     inRow: false,
-    isTurned: false,
+    isTurned: true,
   },
   {
     title: 'Title',
     text: lorem,
     image: articleImage3,
-    isBig: false,
+    isBig: true,
     inRow: false,
     isTurned: false,
   },
@@ -35,8 +35,8 @@ const articlesData = [
     title: 'Title',
     text: lorem,
     image: articleImage4,
-    isBig: false,
-    inRow: false,
+    isBig: true,
+    inRow: true,
     isTurned: false,
   },
   {
@@ -45,7 +45,7 @@ const articlesData = [
     image: articleImage5,
     isBig: false,
     inRow: false,
-    isTurned: false,
+    isTurned: true,
   },
   {
     title: 'Title',
@@ -59,5 +59,4 @@ const articlesData = [
 
 export {
   articlesData,
-
 }

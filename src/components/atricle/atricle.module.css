@@ -1,6 +1,13 @@
+.listElement {
+  width: 100%;
+  height: 100%;
+}
+.isBig {
+  grid-column: span 2;
+}
+
+
 .article {
-  display: flex;
-  justify-content: center;
   width: 100%;
   height: 100%;
 
@@ -9,39 +16,64 @@
 .content {
   width: 100%;
   height: 100%;
-  display: flex;
+  display: grid;
+  flex-direction: column;
+  grid-template-columns: 100%;
+  grid-template-rows:  60% 40%;
+  grid-template-areas: 
+  'image'
+  'about'
+  ;
 }
 
-.isBig {
-
-}
 
 .inRow {
-
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 100%;
+  grid-template-areas: 
+  'image about';
 }
 
 .isTurned {
+  grid-template-areas: 
+  'about'
+  'image'
+  ;
+  grid-template-rows:  45% 55%;
+}
 
+.inRow.isTurned  {
+  grid-template-areas: 
+  'about image';
 }
 
 .image {
-  height: 100%;
+  grid-area: image;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .about {
-  height: 100%;
   width: 100%;
+  height: 100%;
+  grid-area: about;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  align-items: start;
+  justify-content:  center;
   font-family: var(--font-basic);
+  flex-direction: column;
+  padding: 2vw;
+  box-sizing: border-box;
 }
 
 .title {
-  font-size: var(font-size-middle);
+  font-size: var(--font-size-middle);
+  font-weight: 200;
+  margin-bottom: 1vw;
 }
 
 .text {
-
+  font-size: var(--font-size-body-small);
+  font-weight: 200;
 }

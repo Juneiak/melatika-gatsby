@@ -1,17 +1,23 @@
 import React from "react";
+import useDelayUnmountState from "../components/hooks/use-delay-unmount-state";
 import {
   Opening,
   Catalog,
   WeWillSelect,
+  Atricles,
   AboutUs,
   OurClients,
   Footer,
 } from '../components/sections/index';
 
 import IndexLayout from "../components/index-layout/index-layout";
+import PopupLayout from "../components/popup-layout/popup-layout";
+import FormPopup from "../components/sections/form-popup/form-popup";
 
 const IndexPage = () => {
   const [ isFormPopupOpen, setIsFormPopupOpen ] = React.useState(false);
+  const isShouldFormMount = useDelayUnmountState(isFormPopupOpen, 500)
+  const animStyle = isFormPopupOpen ? {animation: 'openAniamtion 0.5s linear'} : {animation: 'closeAniamtion 0.5s linear'}
   
   return (
     <IndexLayout>
@@ -19,11 +25,15 @@ const IndexPage = () => {
         <Opening />
         <Catalog />
         <WeWillSelect openPopupHanler={() => setIsFormPopupOpen(true)} />
+        <Atricles />
         <AboutUs openPopupHanler={() => setIsFormPopupOpen(true)} />
         <OurClients openPopupHanler={() => setIsFormPopupOpen(true)} />
       </main>
       <Footer />
-      {isFormPopupOpen && <div><h1>hello!</h1></div>}
+
+      {isShouldFormMount && <PopupLayout mountAnim={animStyle}>
+        <FormPopup closeHandler={() => setIsFormPopupOpen(false)}  />
+      </PopupLayout>}
     </IndexLayout>
 
   )

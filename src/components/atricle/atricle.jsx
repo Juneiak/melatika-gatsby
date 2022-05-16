@@ -5,21 +5,27 @@ import * as styles from './atricle.module.css';
 const Atricle = ({ isBig=false, inRow=false, isTurned=false, text, title, image }) => {
 
   return (
-    <article className={styles.article}>
-      <div className={`
-        ${styles.content}
-        ${isBig ? styles.big : ''}
-        ${inRow ? styles.inRow : ''}
-        ${isTurned ? styles.inRow : ''}
+    <li className={`
+      ${styles.listElement}
+      ${isBig ? styles.isBig : ''}
+    `}>
+      <article className={styles.article}>
+        <div className={`
+          ${styles.content}
+          ${inRow ? styles.inRow : ''}
+          ${isTurned ? styles.isTurned : ''}
+        `}>
+          <img className={styles.image} src={image} alt="фото статьи" />
 
-      `}>
-        <img className={styles.image} src={image} alt="фото статьи" />
-        <div className={styles.about}>
-          <h3 className={styles.title}>{title}</h3>
-          <p className={styles.text}>{text}</p>
+          <div style={{
+            justifyContent: [isTurned ? 'flex-end' : inRow ? 'center' : 'flex-start']
+          }} className={styles.about}>
+            <h3 className={styles.title}>{title}</h3>
+            <p className={styles.text}>{text}</p>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+    </li>
   )
 }
 

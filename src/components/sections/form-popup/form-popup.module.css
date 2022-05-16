@@ -1,0 +1,31 @@
+.closeButtonContainer {
+  position: absolute;
+  top: 3%;
+  right: 1%;
+}
+
+.formPopup {
+  background-image: url(../../../images/form.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 86vw;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 50px;
+  color: var(--color-white);
+  position: relative;
+}
+
+.formTitle {
+  font-family: var(--font-basic);
+  font-size: var(--font-size-large);
+  font-weight: 100;
+  margin-bottom: 3%;
+}
+
+.logoContainer {
+  margin: 7% 0 3%;
+}

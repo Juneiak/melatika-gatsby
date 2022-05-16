@@ -4,12 +4,13 @@
   --font-basic: Montserrat, 'Roboto', 'Oxygen', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
   --color-white: white;
   --color-peach: #D5876F;
+  --color-error: #87331a;
   --font-size-large: 4.1vw;
   --font-size-big: 2.8vw;
   --font-size-middle: 1.6vw;
   --font-size-small: 1.4vw;
   --font-size-body: 1.15vw;
-  --font-size-body-small: 0.8vw;
+  --font-size-body-small: 1vw;
 }
 
 body {

@@ -11,16 +11,15 @@ const Atricles = () => {
         <ul className={styles.list}>
           {
             articlesData.map((articleData, index) => (
-              <li key={index} className={styles.listElement}>
-                <Article
-                  text={articleData.text}
-                  title={articleData.title}
-                  image={articleData.image}
-                  inRow={articleData.inRow}
-                  isBig={articleData.isBig}
-                  isTurned={articleData.isTurned}
-                />
-              </li>
+              <Article
+                key={index}
+                text={articleData.text}
+                title={articleData.title}
+                image={articleData.image}
+                inRow={articleData.inRow}
+                isBig={articleData.isBig}
+                isTurned={articleData.isTurned}
+              />
             ))
           }
 

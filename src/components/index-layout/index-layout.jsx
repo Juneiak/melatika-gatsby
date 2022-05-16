@@ -4,12 +4,17 @@ import * as styles from './index-layout.module.css';
 import Logo from '../logo/logo';
 import Contacts from '../contacts/contacts';
 import BurgerMenuButton from '../burger-menu-button/burger-menu-button';
-import NavMenu from '../nav-menu/nav-menu'
+import NavMenu from '../sections/nav-menu/nav-menu'
 import useDelayUnmountState from '../hooks/use-delay-unmount-state';
+import PopupLayout from '../popup-layout/popup-layout';
+import FormPopup from '../sections/form-popup/form-popup';
 
 const IndexLayout = ({ children }) => {
   const [isNavMenuOpen, setIsNavMenuOpen] = React.useState(false);
-  const isShouldMount = useDelayUnmountState(isNavMenuOpen, 500)
+
+
+  const isShouldNavMount = useDelayUnmountState(isNavMenuOpen, 500)
+
   const animStyle = isNavMenuOpen ? {animation: 'openAniamtion 0.5s linear'} : {animation: 'closeAniamtion 0.5s linear'}
 
   return (
@@ -23,7 +28,10 @@ const IndexLayout = ({ children }) => {
         <BurgerMenuButton handler={() => setIsNavMenuOpen(!isNavMenuOpen)}/>
       </div>
 
-      {isShouldMount && <NavMenu mountAnim={animStyle} />}
+      {isShouldNavMount && <PopupLayout mountAnim={animStyle}>
+        <NavMenu />
+      </PopupLayout>}
+
     </div>
 
     
