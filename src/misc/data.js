@@ -18,6 +18,10 @@ const articlesData1 = [
     isBig: true,
     inRow: true,
     isTurned: false,
+
+    is460Big: false,
+    in460Row: true,
+    is460Turned: false,
   },
   {
     title: 'Детали',
@@ -26,6 +30,10 @@ const articlesData1 = [
     isBig: false,
     inRow: false,
     isTurned: true,
+
+    is460Big: false,
+    in460Row: true,
+    is460Turned: true,
   },
   {
     title: 'Забота',
@@ -34,6 +42,10 @@ const articlesData1 = [
     isBig: false,
     inRow: false,
     isTurned: false,
+
+    is460Big: true,
+    in460Row: false,
+    is460Turned: false,
   },
 ]
 
@@ -45,6 +57,10 @@ const articlesData2 = [
     isBig: false,
     inRow: false,
     isTurned: false,
+
+    is460Big: false,
+    in460Row: true,
+    is460Turned: true,
   },
   {
     title: 'Интерес',
@@ -53,6 +69,10 @@ const articlesData2 = [
     isBig: false,
     inRow: false,
     isTurned: true,
+
+    is460Big: false,
+    in460Row: true,
+    is460Turned: false,
   },
   {
     title: 'Лояльность',
@@ -61,6 +81,10 @@ const articlesData2 = [
     isBig: true,
     inRow: false,
     isTurned: false,
+
+    is460Big: true,
+    in460Row: false,
+    is460Turned: false,
   },
 ]
 
@@ -72,6 +96,10 @@ const articlesData3 = [
     isBig: false,
     inRow: false,
     isTurned: true,
+
+    is460Big: false,
+    in460Row: true,
+    is460Turned: false,
   },
   {
     title: 'Фамилия',
@@ -80,6 +108,10 @@ const articlesData3 = [
     isBig: false,
     inRow: false,
     isTurned: false,
+
+    is460Big: true,
+    in460Row: true,
+    is460Turned: false,
   },
   {
     title: 'Фамилия',
@@ -88,6 +120,10 @@ const articlesData3 = [
     isBig: false,
     inRow: false,
     isTurned: true,
+
+    is460Big: false,
+    in460Row: true,
+    is460Turned: true,
   },
 ]
 

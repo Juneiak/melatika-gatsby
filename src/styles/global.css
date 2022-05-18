@@ -5,6 +5,7 @@
   --color-white: white;
   --color-peach: #D5876F;
   --color-error: #87331a;
+  --color-gray: #2A2C2E;
   --font-size-large: 4.9vw; /* 60px => 70 */
   --font-size-big: 2.8vw; /* 40px */
   --font-size-middle: 1.81vw ; /* 26px */
@@ -14,12 +15,12 @@
 }
 @media screen and (max-width: 460px) {
   :root {
-    --font-size-large: 4.1vw; /* 60px => 70 */
-    --font-size-big: 2.8vw; /* 40px */
-    --font-size-middle: 1.81vw ; /* 26px */
-    --font-size-small: 1.68vw; /* 24px */
-    --font-size-body: 1.1vw; /* 16px */
-    --font-size-body-small: 1vw; /* 14px */
+    --font-size-large: 10.7vw; /* 40px */
+    --font-size-big: 6.5vw; /* 24px */
+    --font-size-middle: 4.8vw; /* 18px */
+    --font-size-small: 3.8vw; /* 14px */
+    --font-size-body: 2.7vw; /* 10px */
+    --font-size-body-small: 2.3vw; /* 8px */
   }
 }
 

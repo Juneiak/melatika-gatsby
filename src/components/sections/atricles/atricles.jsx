@@ -5,7 +5,7 @@ import Article from '../../atricle/atricle';
 const Atricles = ({ articlesData }) => {
 
   return (
-    <section className={styles.aboutUs}>
+    <section className={styles.atricles}>
       <div className={styles.content}>
         <ul className={styles.list}>
           {

@@ -26,5 +26,10 @@
 .subtitle {
   font-size: var(--font-size-middle);
   font-weight: 200;
+}
 
+@media screen and (max-width: 460px) {
+  .subtitle {
+    font-size: var(--font-size-body);
+  }
 }

@@ -21,9 +21,10 @@
 
 .name {
   font-size: var(--font-size-big);
-  font-weight: 200;
+  font-weight: 300;
   margin-right: 1vw;
   line-height: 0.8;
+  letter-spacing: 1.6px;
 }
 
 .vkLink {
@@ -39,12 +40,36 @@
 .text {
   font-size: var(--font-size-body);
   font-weight: 100;
-  margin-bottom: 1.5vw;
   line-height: 1.5;
 }
 
 @media screen and (max-width: 460px) {
+  .aboutUs {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .content {
+    width: 77%;
+    margin-left: 0;
+  }
+
+  .nameContainer {
+    margin-bottom: 4vw;
+    justify-content: center;
+  }
+
+  .name {
+    margin-right: 3.7vw;
+
+  }
   .text {
-    font-size: var(--font-size-body-small);
+    font-size: var(--font-size-body);
+    line-height: 2;
+  }
+
+  .vkLink {
+    width: 4.5vw;
+    height: 4.5vw;
   }
 }

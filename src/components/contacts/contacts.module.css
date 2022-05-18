@@ -22,3 +22,10 @@
   transform: scale(1.1);
   opacity: 0.8;
 }
+
+@media screen and (max-width: 460px) {
+  .link {
+    width: 4vw;
+    height: 4vw;
+  }
+}

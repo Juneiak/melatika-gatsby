@@ -2,21 +2,27 @@
   transition: all linear 0.25s;
   width: 19.5vw;
   height: 3.5vw;
-  background-color: var(--color-peach);
-  color: var(--color-white);
   border-radius: 35px;
   font-family: var(--font-basic);
   font-weight: 200;
-  font-size: 1vw;
-  border: none;
+  font-size: var(--font-size-body-small);
   padding: 0;
   box-sizing: border-box;
+  transition: 0.3s all ease-out;
+  border: 1px black solid;
+  background-color: transparent;
+  color: black;
+}
+
+.button:hover {
+  border-color: var(--color-peach);
+  color: var(--color-white);
+  background-color: var(--color-peach);
 }
 
 .invalid {
-  border: 1px var(--color-peach) solid;
-  background-color: transparent;
-  color: var(--color-white);
+  border-color: var(--color-error);
+  color: var(--color-error);
 }
 
 .small {
@@ -25,12 +31,25 @@
 }
 
 .secondary {
-  border: 1px black solid;
+  border-color: var(--color-white);
   background-color: transparent;
-  color: black;
+  color: var(--color-white);
 }
 
 .button:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+@media screen and (max-width: 460px) {
+
+  .button {
+    width: 44vw;
+    height: 8.5vw;
+    font-size: var(--font-size-body)
+  }
+
+  .small {
+    width: 44vw;
+    height: 8.5vw;
+  }
 }

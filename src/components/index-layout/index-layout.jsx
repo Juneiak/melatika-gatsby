@@ -26,7 +26,7 @@ const IndexLayout = ({ children }) => {
       </div>
 
       {isShouldNavMount &&
-        <PopupLayout mountAnim={animStyle}>
+        <PopupLayout isNav={true} mountAnim={animStyle}>
           <NavMenu closeNavHandler={() => setIsNavMenuOpen(false)} />
         </PopupLayout>
       }

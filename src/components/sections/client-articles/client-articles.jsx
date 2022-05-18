@@ -4,14 +4,17 @@ import Article from '../../atricle/atricle';
 import { articlesData3 } from '../../../misc/data';
 import WorkWithUs from '../../work-with-us/work-with-us';
 
-const ClientArticles = ({openPopupHanler}) => {
+const ClientArticles = ({ openPopupHanler }) => {
 
   return (
-    <section id='clients' className={styles.aboutUs}>
+    <section id='toDesigners' className={styles.aboutUs}>
       <div className={styles.content}>
-        <ul className={styles.list}>
-          <Article articleData={articlesData3[0]}/>
+        <div className={styles.titleConatainer}>
           <WorkWithUs openPopupHanler={openPopupHanler} />
+        </div>
+        <ul className={styles.list}>
+          <li className={styles.elementContainer}><WorkWithUs openPopupHanler={openPopupHanler} /></li>
+          <Article articleData={articlesData3[0]}/>
           <Article articleData={articlesData3[1]}/>
           <Article articleData={articlesData3[2]}/>
         </ul>

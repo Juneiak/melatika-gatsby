@@ -13,15 +13,20 @@ export default function BitrixForm() {
 
   const [ btxNameInput, setBtxNameInput ] = useState()
   const [ btxPhoneInput, setBtxPhoneInput ] = useState()
+  const [ btxEmailInput, setEmailInput ] = useState()
+
   const [ btxButton, setBtxButton ] = useState()
 
   const [ nameErrorMessage, setNameErrorMessage ] = useState('')
   const [ phoneErrorMessage, setPhoneErrorMessage ] = useState('')
+  const [ emailErrorMessage, setEmailErrorMessage ] = useState('')
+
 
   const [ buttonStatus, setButtonStatus ] = useState(false)
 
   const nameRef = useRef()
   const phoneRef = useRef()
+  const emailRef = useRef()
 
   const formRef = useRef()
   const scriptRef = useRef()
@@ -34,9 +39,11 @@ export default function BitrixForm() {
     script.src='https://cdn-ru.bitrix24.ru/b21322336/crm/form/loader_24.js'+'?'+(Date.now()/180000|0);
     let name
     let phone
+    let email
     let button
     let nameError
     let phoneError
+    let emailError
 
     // it is 3 different functions for correct work of removeEventListener
     const nameInputListenerCallback = (event) => {
@@ -52,6 +59,12 @@ export default function BitrixForm() {
       checkFormValidity()
       if (phoneError.textContent !== phoneErrorMessage) setPhoneErrorMessage(phoneError.textContent)
     }
+    const emailInputListenerCallback = (event) => {
+      emailRef.current.value = event.target.value
+      emailRef.current.focus()
+      checkFormValidity()
+      if (emailError.textContent !== emailErrorMessage) setEmailErrorMessage(emailError.textContent)
+    }
 
     script.onload = () => {
       setTimeout(() => {
@@ -61,15 +74,21 @@ export default function BitrixForm() {
         nameError = inputDivs[0].querySelector('.b24-form-control-alert-message');
         phone = inputDivs[1].querySelector('input');
         phoneError = inputDivs[1].querySelector('.b24-form-control-alert-message');
+        email = inputDivs[2].querySelector('input');
+        emailError = inputDivs[2].querySelector('.b24-form-control-alert-message');
 
         button = btxContainerRef.current.querySelector('button[type=submit');
 
         setBtxNameInput(name)
         setBtxPhoneInput(phone)
+        setEmailInput(email)
+
         setBtxButton(button)
-        if (name && phone && button) {
+        if (name && phone && email && button) {
           name.addEventListener('input', nameInputListenerCallback)
           phone.addEventListener('input', phoneInputListenerCallback)
+          email.addEventListener('input', emailInputListenerCallback)
+
         }
       }, 500);
     }
@@ -80,6 +99,8 @@ export default function BitrixForm() {
         if (name || phone || button) {
           name.removeEventListener('input', nameInputListenerCallback)
           phone.removeEventListener('input', phoneInputListenerCallback)
+          email.removeEventListener('input', emailInputListenerCallback)
+
         }
       }
   }, [])
@@ -120,6 +141,15 @@ export default function BitrixForm() {
             inputMinLength={5}
             inputPlaceholder = "Телефон"
             errorMessage = {phoneErrorMessage}
+          />
+          <BitrixFormInput
+            inputTitle = 'Почта'
+            onKeyDownHandler = {() => btxEmailInput.focus()}
+            inputRef = {emailRef}
+            inputType = "email"
+            isRequired = {false}
+            inputPlaceholder = "E-mail"
+            errorMessage = {emailErrorMessage}
           />
         </div>
         <BasicButton

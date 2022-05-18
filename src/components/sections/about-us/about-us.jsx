@@ -1,14 +1,14 @@
 import React from 'react';
 import * as styles from './about-us.module.css';
 import vkIcon from '../../../images/icons/vk-d.svg';
-import image from '../../../images/contact-us.jpg';
+import image from '../../../images/about-us.jpg';
 import SplitedSection from '../../splited-section/splited-section';
 
 const AboutUs = () => {
 
   return (
     <SplitedSection image={image}>
-      <div className={styles.aboutUs}>
+      <div id='aboutUs' className={styles.aboutUs}>
 
         <div className={styles.content}>
           <div className={styles.nameContainer}>

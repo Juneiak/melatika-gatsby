@@ -1,12 +1,11 @@
 import React from 'react';
-import logoImage from '../../images/icons/logo.svg'
-const Logo = ({ size="3vw" }) => {
+import logoImage from '../../images/icons/logo.svg';
+import * as styles from './logo.module.css';
+
+const Logo = () => {
 
   return (
-    <img style={{
-      height: size,
-      width: size
-    }} src={logoImage} alt="лого" />
+    <img className={styles.logo} src={logoImage} alt="лого" />
   )
 }
 

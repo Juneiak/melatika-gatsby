@@ -29,5 +29,19 @@
 .subtitle {
   font-size: var(--font-size-body);
   font-weight: 100;
+}
 
+@media screen and (max-width: 460px) {
+  .subtitle {
+    font-size: var(--font-size-body);
+  }
+  .titleContent {
+    margin-bottom: 4.5vw;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .title {
+    margin-bottom: 2vw;
+  }
 }

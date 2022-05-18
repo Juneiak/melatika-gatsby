@@ -14,25 +14,25 @@ const NavMenu = ({ mountAnim, closeNavHandler }) => {
     <nav style={mountAnim} className={styles.navMenu}>
       <ul className={styles.list}>
         <li className={styles.listElement}>
-          <Link onClick={closeNavHandler} to='#clients' className={styles.navLink}>
+          <Link onClick={closeNavHandler} to='#catalog' className={styles.navLink}>
             <img src={navImage1} alt="картинка навигации" className={styles.image} />
             <p className={styles.title}>Каталог</p>
           </Link>
         </li>
         <li className={styles.listElement}>
-          <Link onClick={closeNavHandler} to='#clients' className={styles.navLink}>
+          <Link onClick={closeNavHandler} to='#solution' className={styles.navLink}>
             <img src={navImage2} alt="картинка навигации" className={styles.image} />
             <p className={styles.title}>Персональные решения</p>
           </Link>
         </li>
         <li className={styles.listElement}>
-          <Link onClick={closeNavHandler} to='#clients' className={styles.navLink}>
+          <Link onClick={closeNavHandler} to='#toDesigners' className={styles.navLink}>
             <img src={navImage3} alt="картинка навигации" className={styles.image} />
             <p className={styles.title}>Дизайнерам</p>
           </Link>
         </li>
         <li  className={styles.listElement}>
-          <Link onClick={closeNavHandler} to='#clients' className={styles.navLink}>
+          <Link onClick={closeNavHandler} to='#aboutUs' className={styles.navLink}>
             <img src={navImage4} alt="картинка навигации" className={styles.image} />
             <p className={styles.title}>О нас</p>
           </Link>

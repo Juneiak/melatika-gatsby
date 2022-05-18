@@ -31,8 +31,14 @@
 }
 
 .contacts {
-  font-size: var(--font-size-footer);
+  font-size: var(--font-size-middle);
   font-weight: 100;
   margin-bottom: 6.5vw;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 460px) {
+  .contacts {
+    font-size: var(--font-size-small);
+  }
 }

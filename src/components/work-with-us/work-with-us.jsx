@@ -5,13 +5,10 @@ import BasicButton from '../basic-button/basic-button';
 const WorkWithUs = ({ openPopupHanler }) => {
 
   return (
-    <li>
       <div className={styles.workWithUs}>
         <p className={styles.text}>Нас выбирают профи</p>
-        <BasicButton handler={openPopupHanler} text="Работать с нами" secondary={true} small={true} />
+        <BasicButton handler={openPopupHanler} text="Работать с нами" small={true} />
       </div>
-    </li>
-    
   )
 }
 
