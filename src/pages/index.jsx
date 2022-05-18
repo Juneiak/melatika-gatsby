@@ -8,11 +8,12 @@ import {
   AboutUs,
   Footer,
   ClientArticles,
+  SecondPartArticles,
+  FirstPartArticles,
 } from '../components/sections/index';
-import { articlesData1, articlesData2 } from "../misc/data";
 import IndexLayout from "../components/index-layout/index-layout";
 import PopupLayout from "../components/popup-layout/popup-layout";
-import FormPopup from "../components/sections/form-popup/form-popup";
+import FormPopup from "../components/form-popup/form-popup";
 
 const IndexPage = () => {
   const [ isFormPopupOpen, setIsFormPopupOpen ] = React.useState(false);
@@ -24,11 +25,11 @@ const IndexPage = () => {
       <main style={{width: '100%', height: '100%'}}>
         <Opening />
         <Catalog />
-        <Atricles articlesData={articlesData1} />
+        <FirstPartArticles />
         <WeWillSelect openPopupHanler={() => setIsFormPopupOpen(true)} />
-        <Atricles articlesData={articlesData2} />
+        <SecondPartArticles />
         <AboutUs openPopupHanler={() => setIsFormPopupOpen(true)} />
-        <ClientArticles openPopupHanler={() => setIsFormPopupOpen(true)} />
+        {/* <ClientArticles openPopupHanler={() => setIsFormPopupOpen(true)} /> */}
       </main>
       <Footer />
 

@@ -13,78 +13,40 @@ const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do e
 const articlesData1 = [
   {
     title: 'Актуальность',
-    text: lorem,
+    text: 'Создаем стильную мебель, вдохновляясь лучшими европейскими трендами. Концепция бренда «Melatika» –  это синергия современных идей и передовых технологий в сфере дизайна.',
     image: articleImage1,
-    isBig: true,
-    inRow: true,
-    isTurned: false,
-
-    is460Big: false,
-    in460Row: true,
-    is460Turned: false,
   },
   {
     title: 'Детали',
-    text: lorem,
+    text: 'Изысканная эстетика в каждом шве и соединении –  один из главных канонов нашего бренда. Мы видим большое в малом, создавая эксклюзивы для вашего интерьера.',
     image: articleImage2,
-    isBig: false,
-    inRow: false,
-    isTurned: true,
 
-    is460Big: false,
-    in460Row: true,
-    is460Turned: true,
   },
   {
     title: 'Забота',
-    text: lorem,
+    text: 'От начала работы над эскизом до распаковки и сборки мебели у вас дома, мы оберегаем наших клиентов на всех этапах.',
     image: articleImage3,
-    isBig: false,
-    inRow: false,
-    isTurned: false,
 
-    is460Big: true,
-    in460Row: false,
-    is460Turned: false,
   },
 ]
 
 const articlesData2 = [
   {
-    title: 'Исполнение',
-    text: lorem,
+    title: 'Лояльность',
+    text: 'Готовы работать над любым заказом и выполнить его в срок. Доставим мебель до вашего дома, поднимем, распакуем и соберем. Ваше пожелание –  наше точное исполнение.',
     image: articleImage4,
-    isBig: false,
-    inRow: false,
-    isTurned: false,
 
-    is460Big: false,
-    in460Row: true,
-    is460Turned: true,
   },
   {
     title: 'Интерес',
-    text: lorem,
+    text: 'Ваш персональный менеджер, понимает тренды, и заинтересован в реализации вашего дизайн-проекта. Он всегда на связи, и готов ответить на любые вопросы.',
     image: articleImage5,
-    isBig: false,
-    inRow: false,
-    isTurned: true,
 
-    is460Big: false,
-    in460Row: true,
-    is460Turned: false,
   },
   {
-    title: 'Лояльность',
-    text: lorem,
+    title: 'Исполнение',
+    text: 'Сделаем мебель в точном соответствии с вашим персональным эскизом. Воплотим любые пожелания клиента в качественном исполнении и учетом всех деталей. Вместе мы создадим интерьер, в котором хочется жить, заниматься творчеством и наслаждаться комфортом.',
     image: articleImage6,
-    isBig: true,
-    inRow: false,
-    isTurned: false,
-
-    is460Big: true,
-    in460Row: false,
-    is460Turned: false,
   },
 ]
 
@@ -93,37 +55,19 @@ const articlesData3 = [
     title: 'Фамилия',
     text: lorem,
     image: articleImage7,
-    isBig: false,
-    inRow: false,
-    isTurned: true,
 
-    is460Big: false,
-    in460Row: true,
-    is460Turned: false,
   },
   {
     title: 'Фамилия',
     text: lorem,
     image: articleImage8,
-    isBig: false,
-    inRow: false,
-    isTurned: false,
 
-    is460Big: true,
-    in460Row: true,
-    is460Turned: false,
   },
   {
     title: 'Фамилия',
     text: lorem,
     image: articleImage9,
-    isBig: false,
-    inRow: false,
-    isTurned: true,
 
-    is460Big: false,
-    in460Row: true,
-    is460Turned: true,
   },
 ]
 

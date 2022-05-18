@@ -2,10 +2,10 @@ import React from 'react';
 import * as styles from './nav-menu.module.css';
 import { Link } from 'gatsby';
 
-import navImage1 from '../../../images/nav/nav-1.jpg';
-import navImage2 from '../../../images/nav/nav-2.jpg';
-import navImage3 from '../../../images/nav/nav-3.jpg';
-import navImage4 from '../../../images/nav/nav-4.jpg';
+import navImage1 from '../../images/nav/nav-1.jpg';
+import navImage2 from '../../images/nav/nav-2.jpg';
+import navImage3 from '../../images/nav/nav-3.jpg';
+import navImage4 from '../../images/nav/nav-4.jpg';
 
 
 const NavMenu = ({ mountAnim, closeNavHandler }) => {

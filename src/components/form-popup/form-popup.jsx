@@ -1,9 +1,9 @@
 import React from 'react';
 import * as styles from './form-popup.module.css';
-import PopupLayout from '../../popup-layout/popup-layout';
-import CloseButton from '../../close-button/close-button';
-import BitrixForm from '../../bitrix-form/bitrix-form';
-import image from '../../../images/form.jpg';
+import PopupLayout from '../popup-layout/popup-layout';
+import CloseButton from '../close-button/close-button';
+import BitrixForm from '../bitrix-form/bitrix-form';
+import image from '../../images/form.jpg';
 
 const FormPopup = ({ closeHandler }) => {
 

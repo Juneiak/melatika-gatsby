@@ -4,7 +4,7 @@ import * as styles from './index-layout.module.css';
 import Logo from '../logo/logo';
 import Contacts from '../contacts/contacts';
 import BurgerMenuButton from '../burger-menu-button/burger-menu-button';
-import NavMenu from '../sections/nav-menu/nav-menu'
+import NavMenu from '../nav-menu/nav-menu'
 import useDelayUnmountState from '../hooks/use-delay-unmount-state';
 import PopupLayout from '../popup-layout/popup-layout';
 

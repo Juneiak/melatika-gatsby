@@ -2,18 +2,18 @@ import Opening from "./opening/opening";
 import Catalog from "./catalog/catalog";
 import WeWillSelect from "./we-will-select/we-will-select";
 import AboutUs from "./about-us/about-us";
-import Atricles from "./atricles/atricles";
-import OurClients from './our-clients/our-clients';
 import Footer from "./footer/footer";
 import ClientArticles from "./client-articles/client-articles";
+import FirstPartArticles from "./first-part-articles/first-part-atricles";
+import SecondPartArticles from "./second-part-articles/second-part-articles";
 
 export {
   Opening,
   Catalog,
   WeWillSelect,
-  Atricles,
+  FirstPartArticles,
+  SecondPartArticles,
   AboutUs,
-  OurClients,
   Footer,
   ClientArticles,
 }
