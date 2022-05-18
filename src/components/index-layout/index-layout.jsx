@@ -12,7 +12,7 @@ const IndexLayout = ({ children }) => {
   const [isNavMenuOpen, setIsNavMenuOpen] = React.useState(false);
   const isShouldNavMount = useDelayUnmountState(isNavMenuOpen, 500);
 
-  const animStyle = isNavMenuOpen ? {animation: 'openAniamtion 0.5s linear'} : {animation: 'closeAniamtion 0.5s linear'}
+  const animStyle = isNavMenuOpen ? {animation: 'openAniamtion 0.5s linear'} : {animation: 'closeAniamtion 0.5s linear forwards'}
 
   return (
     <div className={styles.layout}>

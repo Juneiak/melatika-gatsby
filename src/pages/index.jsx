@@ -17,7 +17,7 @@ import FormPopup from "../components/sections/form-popup/form-popup";
 const IndexPage = () => {
   const [ isFormPopupOpen, setIsFormPopupOpen ] = React.useState(false);
   const isShouldFormMount = useDelayUnmountState(isFormPopupOpen, 500)
-  const animStyle = isFormPopupOpen ? {animation: 'openAniamtion 0.5s linear'} : {animation: 'closeAniamtion 0.5s linear'}
+  const animStyle = isFormPopupOpen ? {animation: 'openAniamtion 0.5s linear'} : {animation: 'closeAniamtion 0.5s linear forwards'}
 
   return (
     <IndexLayout >
