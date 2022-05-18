@@ -1,6 +1,6 @@
 .popupLayout {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -13,7 +13,7 @@
 
 .closeButton {
   position: absolute;
-  top: 2.5%;
-  right: 2.5%;
+  top: 3vw;
+  right: 3vw;
   z-index: 11;
 }

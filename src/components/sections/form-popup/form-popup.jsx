@@ -13,9 +13,12 @@ const FormPopup = ({ closeHandler }) => {
         <div className={styles.closeButtonContainer}><CloseButton handler={closeHandler} /></div>
 
         <div className={styles.formContainer}>
-          <h2 className={styles.formTitle}>Начните прямо сейчас</h2>
-          <BitrixForm />
-          <p className={styles.worning}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo temporibus aspernatur doloribus quidem rerum vitae aut ipsum nam corrupti perferendis mollitia magnam id exercitationem, facilis, excepturi tempore quam eaque. Ex?</p>
+          <div className={styles.formContent}>
+            <h2 className={styles.formTitle}>Начните прямо сейчас</h2>
+            <BitrixForm />
+            <p className={styles.worning}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo temporibus aspernatur doloribus quidem rerum vitae aut ipsum nam corrupti perferendis mollitia magnam id exercitationem, facilis, excepturi tempore quam eaque. Ex?</p>
+          </div>
+         
         </div>
         
         <img src={image} alt="фон формы" className={styles.image} />
