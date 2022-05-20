@@ -5,17 +5,17 @@ const BasicButton = ({
   handler,
   text,
   small=false,
-  secondary=false,
   name='',
-  isValid=true
+  isValid=true,
+  type='primary', // primary, secondary, tertiary
 }) => {
 
   return (
     <button
       className={`
         ${styles.button}
+        ${styles[type]}
         ${small ? styles.small : ''}
-        ${secondary ? styles.secondary : ''}
         ${!isValid ? styles.invalid : ''}
       `}
       onClick={handler}

@@ -157,6 +157,7 @@ export default function BitrixForm() {
           handler={() => btxButton.click()}
           name="send-contact"
           text='Записаться'
+          type='primary'
         />
       </form>
       :

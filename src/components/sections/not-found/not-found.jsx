@@ -12,7 +12,7 @@ const NotFound = () => {
       <div className={styles.content}>
         <h1 className={styles.title}>404</h1>
         <p className={styles.subtitle}>Такой страницы не существует</p>
-        <BasicButton secondary={true} text='На главную' handler={() => navigate('/')}/>
+        <BasicButton type='tertiary' text='На главную' handler={() => navigate('/')}/>
       </div>
       
     </section>

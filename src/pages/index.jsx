@@ -4,12 +4,11 @@ import {
   Opening,
   Catalog,
   WeWillSelect,
-  Atricles,
   AboutUs,
   Footer,
-  ClientArticles,
   SecondPartArticles,
   FirstPartArticles,
+  ClientArticles,
 } from '../components/sections/index';
 import IndexLayout from "../components/index-layout/index-layout";
 import PopupLayout from "../components/popup-layout/popup-layout";
@@ -24,12 +23,12 @@ const IndexPage = () => {
     <IndexLayout >
       <main style={{width: '100%', height: '100%'}}>
         <Opening />
-        <Catalog />
+        <Catalog openPopupHanler={() => setIsFormPopupOpen(true)} />
         <FirstPartArticles />
         <WeWillSelect openPopupHanler={() => setIsFormPopupOpen(true)} />
         <SecondPartArticles />
         <AboutUs openPopupHanler={() => setIsFormPopupOpen(true)} />
-        {/* <ClientArticles openPopupHanler={() => setIsFormPopupOpen(true)} /> */}
+        <ClientArticles openPopupHanler={() => setIsFormPopupOpen(true)} />
       </main>
       <Footer />
 

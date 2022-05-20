@@ -6,26 +6,26 @@ import image3 from '../../../images/catalog/catalog-3.jpg'
 import image4 from '../../../images/catalog/catalog-4.jpg'
 
 
-const Catalog = () => {
+const Catalog = ({ openPopupHanler }) => {
 
   const catalogData = [
     {
-      title: 'Кровати',
+      title: 'Диваны',
       linkUrl: '#',
       image: image1,
     },
     {
-      title: 'Диваны',
+      title: 'Детские',
       linkUrl: '#',
       image: image2,
     },
     {
-      title: 'Диваны',
+      title: 'Кровати',
       linkUrl: '#',
       image: image3,
     },
     {
-      title: 'Диваны',
+      title: 'Аксессуары',
       linkUrl: '#',
       image: image4,
     },
@@ -35,7 +35,7 @@ const Catalog = () => {
     <section id='catalog' className={styles.catalog}>
       <ul className={styles.list}>
         {catalogData.map((item, index) => (
-          <li key={index} className={styles.listElement}>
+          <li onClick={openPopupHanler} key={index} className={styles.listElement}>
             <img className={styles.elementImage} src={item.image} alt={`иконка ${item.title}`} />
             <p className={styles.elementTitle}>{item.title}</p>
           </li>

@@ -66,6 +66,7 @@
   .text {
     font-size: var(--font-size-body);
     line-height: 2;
+    text-align: center;
   }
 
   .vkLink {

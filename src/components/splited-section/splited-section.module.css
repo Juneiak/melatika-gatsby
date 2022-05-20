@@ -53,12 +53,12 @@
   
   .content {
     grid-template-columns: 1fr;
-    grid-template-rows: 50% 50%;
+    grid-template-rows: 58% 42%;
     justify-items: center;
     grid-template-areas:
     'image'
     'about';
-    height: 170vw;
+    height: 157vw;
   }
 
   .image {

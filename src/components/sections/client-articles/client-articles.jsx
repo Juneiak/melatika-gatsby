@@ -3,9 +3,10 @@ import * as styles from './client-articles.module.css';
 import Article from '../../atricle/atricle';
 import { articlesData3 } from '../../../misc/data';
 import WorkWithUs from '../../work-with-us/work-with-us';
-
+import useWindowDimensions from '../../hooks/use-window-dimensions';
+import image375 from '../../../images/about/about-8-375.jpg'
 const ClientArticles = ({ openPopupHanler }) => {
-
+  const { width } = useWindowDimensions()
   return (
     <section id='toDesigners' className={styles.aboutUs}>
       <div className={styles.content}>
@@ -14,9 +15,27 @@ const ClientArticles = ({ openPopupHanler }) => {
         </div>
         <ul className={styles.list}>
           <li className={styles.elementContainer}><WorkWithUs openPopupHanler={openPopupHanler} /></li>
-          <Article articleData={articlesData3[0]}/>
-          <Article articleData={articlesData3[1]}/>
-          <Article articleData={articlesData3[2]}/>
+          <li className={styles.listElement1}>
+            <Article
+                articleData={articlesData3[0]}
+                articleStyles={styles.articleCard1}
+                aboutStyles={styles.about1}
+              />
+          </li>
+          <li className={styles.listElement2}>
+            <Article
+                articleData={{...articlesData3[1], image: [width > 460 ? articlesData3[1].image : image375]}}
+                articleStyles={styles.articleCard2}
+                aboutStyles={styles.about2}
+              />
+          </li>
+          <li className={styles.listElement3}>
+            <Article
+                articleData={articlesData3[2]}
+                articleStyles={styles.articleCard3}
+                aboutStyles={styles.about3}
+              />
+          </li>
         </ul>
       </div>
     </section>

@@ -1,9 +1,7 @@
 import React from 'react';
 import * as styles from './atricle.module.css';
 
-
 const Atricle = ({ articleData: {text, title, image}, articleStyles, aboutStyles}) => {
-
   return (
     <article className={styles.article}>
       <div className={`
