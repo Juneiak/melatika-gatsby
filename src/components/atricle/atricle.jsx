@@ -1,16 +1,15 @@
 import React from 'react';
 import * as styles from './atricle.module.css';
 
-const Atricle = ({ articleData: {text, title, image}, articleStyles, aboutStyles}) => {
+const Atricle = ({ isAnimate, articleData: {text, title, image}, articleStyles, aboutStyles}) => {
   return (
     <article className={styles.article}>
       <div className={`
-      ${styles.content}
-      ${articleStyles}
-    `}>
-
+        ${styles.content}
+        ${articleStyles}
+        ${isAnimate ? styles.isAnimate : ''}
+      `}>
         <img className={styles.image} src={image} alt="фото статьи" />
-
         <div className={`
           ${styles.about}
           ${aboutStyles}

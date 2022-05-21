@@ -3,12 +3,13 @@ import * as styles from './bitrix-form.module.css';
 import BasicButton from '../basic-button/basic-button';
 import BitrixFormInput from './bitrix-form-input/bitrix-form-input';
 import Loader from '../loader/loader';
+import useWidthMediaMatch from '../hooks/use-width-media-match';
 
 const { useRef, useEffect, useState } = React;
 
 export default function BitrixForm() {
   // need some refactoring - add onError and update onLoad, maybe reduse some states
-
+  const is460 = useWidthMediaMatch('(max-width: 460px)')
   const [ scriptLoadStatus, setScriptLoadStatus ] = useState(false);
 
   const [ btxNameInput, setBtxNameInput ] = useState()
@@ -158,6 +159,7 @@ export default function BitrixForm() {
           name="send-contact"
           text='Записаться'
           type='primary'
+          customStyle={is460 ? {fontSize: 'var(--font-size-body'} : {fontSize: 'var(--font-size-body'}}
         />
       </form>
       :

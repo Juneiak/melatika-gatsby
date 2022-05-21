@@ -16,7 +16,7 @@
   text-align: center;
   font-family: var(--font-basic);
   font-size: var(--font-size-small);
-  font-weight: 100;
+  font-weight: 300;
   color: black;
   margin-bottom: 1vw;
   box-sizing: border-box;
@@ -49,6 +49,7 @@
   font-family: var(--font-basic);
   border-radius: 3px;
   border-radius: 12px;
+  text-align: center;
 }
 
 .errorMessage::before {
@@ -69,4 +70,11 @@
   position: absolute;
   top: -35%;
   left: 48.15%;
+}
+
+@media screen and (max-width: 460px) {
+  .input {
+    height: 9vw;
+    margin-bottom: 3vw;
+  }
 }

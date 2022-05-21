@@ -29,3 +29,13 @@
   transform: rotate(-45deg);
   transform-origin: 0% 100%;
 }
+
+@media screen and (max-width: 460px) {
+  .button {
+    width: 5vw;
+    height: 3.75vw;
+  }
+  .line {
+    background-color: black;
+  }
+}

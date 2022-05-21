@@ -27,13 +27,12 @@
 
 .title {
   font-size: 23vw;
-  font-weight: 100;
+  font-weight: 300;
   line-height: 1;
 }
 
 .subtitle {
-  font-weight: 200;
   font-size: var(--font-size-big);
   margin-bottom: 8vw;
-  font-weight: 200;
+  font-weight: 300;
 }

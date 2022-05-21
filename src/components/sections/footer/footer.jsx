@@ -6,17 +6,19 @@ import Contacts from '../../contacts/contacts';
 const Footer = () => {
 
   return (
-    <footer className={styles.footer}>
+    <footer  className={styles.footer}>
       <div className={styles.content}>
 
-        <div className={styles.titleContainer}>
+        <div id='contacts' className={styles.titleContainer}>
           <h2 className={styles.title}>Контакты</h2>
           <Logo />
         </div>
-
-        <p className={styles.contacts}>
-          +7-905-309-9992<br/>info@melatika.ru<br/>Москва - Дмитровское шоссе, 73<br/>Уфа - ВДНХ, 2 этаж
-        </p>
+        <div className={styles.contacts}>
+          <p>+7-905-309-99-92</p>
+          <p>info@melatika.ru</p>
+          <p>Москва - Дмитровское шоссе, 73</p>
+          <p>Уфа - ВДНХ, 2 этаж</p>
+        </div>
         <Contacts inRow={true} />
       </div>
     </footer>

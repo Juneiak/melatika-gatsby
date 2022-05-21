@@ -10,7 +10,7 @@ const FormPopup = ({ closeHandler }) => {
   return (
     <PopupLayout closeHandler={closeHandler}>
       <section className={styles.formPopup}>
-        <div className={styles.closeButtonContainer}><CloseButton handler={closeHandler} /></div>
+        <div className={styles.closeButtonContainer}><CloseButton  handler={closeHandler} /></div>
 
         <div className={styles.formContainer}>
           <div className={styles.formContent}>

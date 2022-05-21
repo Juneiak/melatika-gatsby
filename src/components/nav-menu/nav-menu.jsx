@@ -8,7 +8,7 @@ const NavMenu = ({ mountAnim, closeNavHandler }) => {
     <nav style={mountAnim} className={styles.navMenu}>
       <ul className={styles.list}>
         <li className={styles.listElement}>
-          <Link onClick={closeNavHandler} to='#catalog' className={styles.navLink}>
+          <Link onClick={closeNavHandler} to='/catalog' className={styles.navLink}>
             <div className={`${styles.linkImage} ${styles.linkImage1}`} />
             <p className={styles.title}>Каталог</p>
           </Link>
@@ -20,15 +20,15 @@ const NavMenu = ({ mountAnim, closeNavHandler }) => {
           </Link>
         </li>
         <li className={styles.listElement}>
-          <Link onClick={closeNavHandler} to='#toDesigners' className={styles.navLink}>
+          <Link onClick={closeNavHandler} to='#solution' className={styles.navLink}>
             <div className={`${styles.linkImage} ${styles.linkImage3}`} />
             <p className={styles.title}>Дизайнерам</p>
           </Link>
         </li>
         <li  className={styles.listElement}>
-          <Link onClick={closeNavHandler} to='#aboutUs' className={styles.navLink}>
+          <Link onClick={closeNavHandler} to='#contacts' className={styles.navLink}>
             <div className={`${styles.linkImage} ${styles.linkImage4}`} />
-            <p className={styles.title}>О нас</p>
+            <p className={styles.title}>Контакты</p>
           </Link>
         </li>
       </ul>

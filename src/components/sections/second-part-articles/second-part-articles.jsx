@@ -22,6 +22,7 @@ const SecondPartArticles = () => {
                 articleData={articlesData2[1]}
                 articleStyles={styles.articleCard2}
                 aboutStyles={styles.about2}
+                isAnimate={true}
               />
           </li>
           <li className={styles.listElement3}>

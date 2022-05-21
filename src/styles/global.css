@@ -30,6 +30,19 @@ body {
   height: 100%;
 }
 
+body::after {
+  position: absolute; height: 0; width: 0; overflow: hidden; z-index: -1;
+  content: 
+  url(../images/nav/nav-1-375.png)
+  url(../images/nav/nav-2-375.png)
+  url(../images/nav/nav-3-375.png)
+  url(../images/nav/nav-4-375.png)
+  url(../images/nav/nav-1.png)
+  url(../images/nav/nav-2.png)
+  url(../images/nav/nav-3.png)
+  url(../images/nav/nav-4.png);
+}
+
 ul {
   list-style: none;
   margin: 0;

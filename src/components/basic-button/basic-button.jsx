@@ -8,6 +8,7 @@ const BasicButton = ({
   name='',
   isValid=true,
   type='primary', // primary, secondary, tertiary
+  customStyle,
 }) => {
 
   return (
@@ -21,6 +22,7 @@ const BasicButton = ({
       onClick={handler}
       name={name}
       disabled={!isValid}
+      style={customStyle}
     >
       {text}
     </button>

@@ -26,15 +26,15 @@
 
 .title {
   font-size: var(--font-size-big);
-  font-weight: 200;
+  font-weight: 300;
   
 }
 
 .contacts {
   font-size: var(--font-size-middle);
-  font-weight: 100;
+  font-weight: 300;
   margin-bottom: 6.5vw;
-  line-height: 1.5;
+  line-height: 2;
 }
 
 @media screen and (max-width: 460px) {

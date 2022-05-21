@@ -4,10 +4,11 @@ import BasicButton from '../../basic-button/basic-button';
 import SplitedSection from '../../splited-section/splited-section';
 import image from '../../../images/we-will-select.jpg'
 import image375 from '../../../images/we-will-select-375.jpg'
-import useWindowDimensions from '../../hooks/use-window-dimensions';
+import useWidthMediaMatch from '../../hooks/use-width-media-match';
 
 const WeWillSelect = ({ openPopupHanler }) => {
-  const { width } = useWindowDimensions()
+  const is460 = useWidthMediaMatch('(max-width: 460px)');
+
   return (
     <SplitedSection is460Cover={true} image375={image375} image={image} isReversed={true}>
       <div id='solution' className={styles.weWillSelect}>
@@ -17,7 +18,13 @@ const WeWillSelect = ({ openPopupHanler }) => {
             <h2 className={styles.title}>Полная свобода творчества</h2>
             <p className={styles.subtitle}>Подберем идеальную мебель в ваш интерьер</p>
           </div>
-          <BasicButton type={width < 460 ? 'tertiary' : 'secondary'} small={true} text='Подобрать мебель' handler={openPopupHanler} />
+          <BasicButton
+            type={is460 ? 'tertiary' : 'secondary'}
+            small={true}
+            text='Подобрать мебель'
+            handler={openPopupHanler}
+            customStyle={is460 ? {fontSize: 'var(--font-size-body-small)'} : {fontSize: '0.8vw'}}
+          />
         </div>
 
       </div>
