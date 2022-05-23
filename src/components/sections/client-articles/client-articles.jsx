@@ -3,10 +3,11 @@ import * as styles from './client-articles.module.css';
 import Article from '../../atricle/atricle';
 import { articlesData3 } from '../../../misc/data';
 import WorkWithUs from '../../work-with-us/work-with-us';
-import useWindowDimensions from '../../hooks/use-window-dimensions';
+import useWidthMediaMatch from '../../hooks/use-width-media-match';
 import image375 from '../../../images/about/about-8-375.jpg'
 const ClientArticles = ({ openPopupHanler }) => {
-  const { width } = useWindowDimensions()
+
+  const is460 = useWidthMediaMatch('(max-width: 460px)');
   return (
     <section id='toDesigners' className={styles.aboutUs}>
       <div className={styles.content}>
@@ -24,7 +25,7 @@ const ClientArticles = ({ openPopupHanler }) => {
           </li>
           <li className={styles.listElement2}>
             <Article
-                articleData={{...articlesData3[1], image: [width > 460 ? articlesData3[1].image : image375]}}
+                articleData={{...articlesData3[1], image: [!is460 ? articlesData3[1].image : image375]}}
                 articleStyles={styles.articleCard2}
                 aboutStyles={styles.about2}
               />
