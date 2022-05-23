@@ -1,14 +1,16 @@
 import React from 'react';
 
-const getWindowDimensions = () => {
-  const { innerHeight: height, innerWidth: width } = window;
-  return { width, height };
-};
-
 const useWindowDimensions = () => {
-  const [windowDimensions, setWindowDimensions] = React.useState(getWindowDimensions());
+
+  const [windowDimensions, setWindowDimensions] = React.useState({width: 1920, height: 1024});
 
   React.useEffect(() => {
+    const getWindowDimensions = () => {
+      const { innerHeight: height, innerWidth: width } = window;
+      return { width, height };
+    };
+    setWindowDimensions(getWindowDimensions())
+
     const handleResize = () => {
       setWindowDimensions(getWindowDimensions());
     };
