@@ -42,6 +42,10 @@
   'image'!important;
 }
 
+.articleCard1:hover {
+  transform: translateY(10%);
+}
+
 .about1 {
   justify-content: flex-end!important;
 }
@@ -53,6 +57,10 @@
 
 .articleCard2 {
 
+}
+
+.articleCard2:hover {
+  transform: translateY(-10%);
 }
 
 .about2 {
@@ -69,6 +77,10 @@
   grid-template-areas:
   'about'
   'image'!important;
+}
+
+.articleCard3:hover {
+  transform: translateY(10%);
 }
 
 .about3 {
@@ -98,52 +110,64 @@
 
 
 
-.listElement1 {
+  .listElement1 {
 
-}
+  }
 
-.articleCard1 {
-  grid-template-columns: 43% 57%!important;
-  grid-template-rows: 100%!important;
-  grid-template-areas: 
-  'image about'!important;
-}
+  .articleCard1 {
+    grid-template-columns: 43% 57%!important;
+    grid-template-rows: 100%!important;
+    grid-template-areas: 
+    'image about'!important;
+  }
 
-.about1 {
-  justify-content: flex-start!important;
-}
+  .articleCard1:hover {
+    transform: none;
+  }
 
-
-.listElement2 {
-  grid-row: 2 span!important;
-}
-
-.articleCard2 {
-  grid-template-columns: 43% 57%!important;
-  grid-template-rows: 100%!important;
-  grid-template-areas: 
-  'image about'!important;
-}
-
-.about2 {
-
-}
+  .about1 {
+    justify-content: flex-start!important;
+  }
 
 
-.listElement3 {
+  .listElement2 {
+    grid-row: 2 span!important;
+  }
 
-}
+  .articleCard2 {
+    grid-template-columns: 43% 57%!important;
+    grid-template-rows: 100%!important;
+    grid-template-areas: 
+    'image about'!important;
+  }
 
-.articleCard3 {
-  grid-template-columns: 57% 43% !important;
-  grid-template-rows: 100%!important;
-  grid-template-areas: 
-  'about image'!important;
-}
+  .articleCard2:hover {
+    transform: none;
+  }
 
-.about3 {
-  justify-content: flex-start!important;
-  align-items: flex-end!important;
-  text-align: end;
-}
+  .about2 {
+
+  }
+
+
+  .listElement3 {
+
+  }
+
+  .articleCard3 {
+    grid-template-columns: 57% 43% !important;
+    grid-template-rows: 100%!important;
+    grid-template-areas: 
+    'about image'!important;
+  }
+
+  .articleCard3:hover {
+    transform: none;
+  }
+
+  .about3 {
+    justify-content: flex-start!important;
+    align-items: flex-end!important;
+    text-align: end;
+  }
 }

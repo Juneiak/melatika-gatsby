@@ -22,7 +22,7 @@ const FirstPartArticles = () => {
                 articleData={articlesData1[1]}
                 articleStyles={styles.articleCard2}
                 aboutStyles={styles.about2}
-                isAnimate={true}
+                isAnimateUp={true}
               />
           </li>
           <li className={styles.listElement3}>
