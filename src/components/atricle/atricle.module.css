@@ -50,7 +50,7 @@
 }
 
 .text {
-  font-size: var(--font-size-body-small);
+  font-size: var(--font-size-body-extra-small);
   font-weight: 300;
   line-height: 1.8;
 }

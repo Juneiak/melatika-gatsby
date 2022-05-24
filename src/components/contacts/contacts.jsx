@@ -10,10 +10,10 @@ const Contacts = ({ whiteColor=false, inRow=false }) => {
 
   return (
     <div className={`${styles.contacts} ${inRow ? styles.contactsInRow : ''}`}>
-      <a href="https://vk.com/" target='_blank' className={styles.link}>
-        <img style={{width: '100%', height: '100%'}} src={whiteColor ? callIconWhite : callIconDark} alt="иконка вк" className={styles.icon} />
+      <a href="https://api.whatsapp.com/send?phone=79631441111&text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20" target='_blank' className={styles.link}>
+        <img style={{width: '100%', height: '100%'}} src={whiteColor ? callIconWhite : callIconDark} alt="иконка ватсапп" className={styles.icon} />
       </a>
-      <a href="https://vk.com/" target='_blank' className={styles.link}>
+      <a href="https://vk.com/melatika" target='_blank' className={styles.link}>
         <img style={{width: '100%', height: '100%'}} src={whiteColor ? vkIconWhite : vkIconDark} alt="иконка вк" className={styles.icon} />
       </a>
     </div>

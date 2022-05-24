@@ -8,12 +8,12 @@
 }
 
 .fakeFormContainer{
-  opacity: 0;
+  /* opacity: 0;
   height: 1px;
   width: 1px;
   position: absolute;
   clip: rect(0 0 0 0);
-  overflow: hidden;
+  overflow: hidden; */
 }
 
 .form {

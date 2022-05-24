@@ -14,10 +14,10 @@ const Footer = () => {
           <Logo />
         </div>
         <div className={styles.contacts}>
-          <p>+7-905-309-99-92</p>
+          <p>+7 963-144-1111</p>
           <p>info@melatika.ru</p>
-          <p>Москва - Дмитровское шоссе, 73</p>
-          <p>Уфа - ВДНХ, 2 этаж</p>
+          {/* <p>Москва - Дмитровское шоссе, 73</p>
+          <p>Уфа - ВДНХ, 2 этаж</p> */}
         </div>
         <Contacts inRow={true} />
       </div>

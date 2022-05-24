@@ -15,12 +15,12 @@ const Catalog = ({ openPopupHanler }) => {
       image: image1,
     },
     {
-      title: 'Детские',
+      title: 'Кровати',
       linkUrl: '#',
       image: image2,
     },
     {
-      title: 'Кровати',
+      title: 'Детские',
       linkUrl: '#',
       image: image3,
     },

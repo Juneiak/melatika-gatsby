@@ -16,14 +16,14 @@ const AboutUs = () => {
             <h3 className={styles.name}>Александр Зырянов</h3>
             <a
               className={styles.vkLink}
-              href="https://vk.com/"
+              href="https://vk.com/thugsagainstdrugs"
               target='_blank'
             >
               <img src={vkIcon} alt="иконка вк" className={styles.vkIcon}/>
             </a>
             
           </div>
-          <p className={styles.text}>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Soluta ab dolorem libero. Vero eligendi, fugit id doloremque voluptatem ullam pariatur molestiae quam dolorum porro? Iure repudiandae inventore eaque autem praesentium.</p>
+          <p className={styles.text}>Каждое изделие Melatika мы проектируем с огромным вниманием к деталям, а вдохновение черпаем из эстетики премиальных европейских интерьеров и брендов.</p>
         </div>
 
       </div>

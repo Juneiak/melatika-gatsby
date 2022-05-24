@@ -4,6 +4,7 @@ import PopupLayout from '../popup-layout/popup-layout';
 import CloseButton from '../close-button/close-button';
 import BitrixForm from '../bitrix-form/bitrix-form';
 import image from '../../images/form.jpg';
+import politDoc from '../../misc/confidential_politic_document.pdf';
 
 const FormPopup = ({ closeHandler }) => {
 
@@ -16,7 +17,9 @@ const FormPopup = ({ closeHandler }) => {
           <div className={styles.formContent}>
             <h2 className={styles.formTitle}>Начните прямо сейчас</h2>
             <BitrixForm />
-            <p className={styles.worning}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo temporibus aspernatur doloribus quidem rerum vitae aut ipsum nam corrupti perferendis mollitia magnam id exercitationem, facilis, excepturi tempore quam eaque. Ex?</p>
+            <p className={styles.worning}>Нажимая кнопку, вы принимаете<br />
+            <a href={politDoc} className={styles.worningLink} download>условия политики конфиденциальности</a>
+            </p>
           </div>
          
         </div>

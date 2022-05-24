@@ -12,6 +12,8 @@
   --font-size-small: 1.68vw; /* 24px */
   --font-size-body: 1.12vw; /* 16px */
   --font-size-body-small: 1vw; /* 14px */
+  --font-size-body-extra-small: 0.84vw; /* 12px */
+
 }
 @media screen and (max-width: 460px) {
   :root {
@@ -21,6 +23,7 @@
     --font-size-small: 3.8vw; /* 14px */
     --font-size-body: 2.7vw; /* 10px */
     --font-size-body-small: 2.15vw; /* 8px */
+    --font-size-body-extra-small: 2.15vw /* 8px */
   }
 }
 

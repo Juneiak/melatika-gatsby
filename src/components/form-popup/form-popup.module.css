@@ -45,11 +45,18 @@
 
 .worning {
   margin-top: 3vw;
-  font-size: var(--font-size-body-small);
+  font-size: var(--font-size-body-extra-small);
   font-weight: 300;
-  color: gray;
+  color: black;
+  opacity: 0.6;
   width: 60%;
   text-align: center;
+}
+
+.worningLink {
+  color: #00186B;
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
 }
 
 @media screen and (max-width: 460px) {

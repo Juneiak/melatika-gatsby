@@ -9,13 +9,13 @@
 }
 
 .content {
-  width: 70%;
+  width: 72%;
   margin-left: 3vw;
 }
 
 .nameContainer {
   display: flex;
-  align-items: end;
+  align-items: center;
   margin-bottom: 1vw;
 }
 
@@ -28,6 +28,7 @@
 }
 
 .vkLink {
+  align-items: flex-end;
   width: 1.7vw;
   height: 1.7vw;
 }
@@ -50,7 +51,7 @@
   }
 
   .content {
-    width: 77%;
+    width: 79%;
     margin-left: 0;
   }
 

@@ -23,6 +23,12 @@ export default function BitrixForm() {
   const [ emailErrorMessage, setEmailErrorMessage ] = useState('')
 
 
+
+
+  const [ test, setTest ] = useState()
+
+
+
   const [ buttonStatus, setButtonStatus ] = useState(false)
 
   const nameRef = useRef()
@@ -70,6 +76,10 @@ export default function BitrixForm() {
     script.onload = () => {
       setTimeout(() => {
         setScriptLoadStatus(true);
+        const testElement = btxContainerRef.current.querySelector('.b24-form-state-text');
+        
+        setTest(testElement)
+
         const inputDivs = btxContainerRef.current.querySelectorAll('.b24-form-field');
         name = inputDivs[0].querySelector('input');
         nameError = inputDivs[0].querySelector('.b24-form-control-alert-message');
@@ -113,6 +123,9 @@ export default function BitrixForm() {
     }
     setButtonStatus(false)
   }
+
+  console.log(test?.textContent)
+
 
   return (
     <div className={styles.container}>

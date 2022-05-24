@@ -8,7 +8,7 @@ import NavMenu from '../nav-menu/nav-menu'
 import useDelayUnmountState from '../hooks/use-delay-unmount-state';
 import PopupLayout from '../popup-layout/popup-layout';
 import Helmet from 'react-helmet';
-
+import fav from '../../images/favicon.ico'
 const IndexLayout = ({ children }) => {
   const [isNavMenuOpen, setIsNavMenuOpen] = React.useState(false);
   const isShouldNavMount = useDelayUnmountState(isNavMenuOpen, 500);
@@ -19,19 +19,22 @@ const IndexLayout = ({ children }) => {
     <>
       <Helmet htmlAttributes={{lang: 'ru'}}>
         <meta charSet="utf-8" />
-        <meta name="description" content="Кровати диваны и проч" />
+        <meta name="description" content="Кровати и диваны под заказ" />
         <meta name="keywords" content="Диваны, кровати, качественный, специально для вас, уфа, быстро" />
         <meta name="author" content="CookDog" />
+        <link rel="icon" type="image/x-icon" href={fav}></link>
         <title>Melatika</title>
       </Helmet>
       <div className={styles.layout}>
 
         {children}
 
-        <div className={styles.logoContainer}><Logo /></div>
+        <div className={styles.logoContainer}>
+          <a href="#opening" className=""><Logo /></a>
+        </div>
         <div className={styles.contactsContainer}><Contacts whiteColor={true}/></div>
         <div className={styles.buttonContainer}>
-          <BurgerMenuButton handler={() => setIsNavMenuOpen(!isNavMenuOpen)}/>
+          <BurgerMenuButton isOpen={isNavMenuOpen} handler={() => setIsNavMenuOpen(!isNavMenuOpen)}/>
         </div>
 
         {isShouldNavMount &&
