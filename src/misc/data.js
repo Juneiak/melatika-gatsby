@@ -4,9 +4,11 @@ import articleImage3 from '../images/about/about-3.jpg';
 import articleImage4 from '../images/about/about-4.jpg';
 import articleImage5 from '../images/about/about-5.jpg';
 import articleImage6 from '../images/about/about-6.jpg';
-import articleImage7 from '../images/about/about-7.jpg';
-import articleImage8 from '../images/about/about-8.jpg';
-import articleImage9 from '../images/about/about-9.jpg';
+
+import designerImage1 from '../images/designers/designer-1.jpg';
+import designerImage2 from '../images/designers/designer-2.jpg';
+import designerImage3 from '../images/designers/designer-3.jpg';
+
 
 const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun...'
 
@@ -50,23 +52,25 @@ const articlesData2 = [
   },
 ]
 
-const articlesData3 = [
+const designerCardsData = [
   {
-    title: 'Фамилия',
-    text: lorem,
-    image: articleImage7,
+    name: 'Виктория Мусина',
+    subtitle : 'Дизайнер интерьеров',
+    text: 'О компании “Мелатика” я узнала через соц. сети, мне понравился обширный выбор тканей, ценовой диапазон, сроки производства и то, как лояльно работают с дизайнерами.',
+    image: designerImage1,
+  },
+  {
+    name: 'Елена Бузина',
+    subtitle : 'Дизайнер интерьеров',
+    text: 'Мы смогли реализовать дизайн-проект в жизнь в точности, как на картинке. С любыми вопросами всегда помогала служба поддержки. Нас устроило соотношение “цена-качество” именно здесь.',
+    image: designerImage2,
 
   },
   {
-    title: 'Фамилия',
-    text: lorem,
-    image: articleImage8,
-
-  },
-  {
-    title: 'Фамилия',
-    text: lorem,
-    image: articleImage9,
+    name: 'Миля Тагирова',
+    subtitle : 'Дизайнер интерьеров',
+    text: 'Мне понравилось то, что даже не пришлось приходить в салон. Я посмотрела проекты компании, отправила свой эскиз и мне всё сделали качественно. Получилось даже лучше, чем моя визуализация.',
+    image: designerImage3,
 
   },
 ]
@@ -74,5 +78,5 @@ const articlesData3 = [
 export {
   articlesData1,
   articlesData2,
-  articlesData3
+  designerCardsData,
 }

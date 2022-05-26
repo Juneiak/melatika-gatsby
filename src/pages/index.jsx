@@ -8,7 +8,7 @@ import {
   Footer,
   SecondPartArticles,
   FirstPartArticles,
-  ClientArticles,
+  DesignersList,
 } from '../components/sections/index';
 import IndexLayout from "../components/index-layout/index-layout";
 import PopupLayout from "../components/popup-layout/popup-layout";
@@ -41,7 +41,7 @@ const IndexPage = () => {
         <WeWillSelect openPopupHandler={() => openForm('Получите своего персонального менеджера для комфортной работы')} />
         <SecondPartArticles />
         <AboutUs />
-        <ClientArticles openPopupHandler={() => openForm('Оставьте заявку и мы рассчитаем цену')} />
+        <DesignersList openPopupHandler={() => openForm('Оставьте заявку и мы рассчитаем цену')} />
       </main>
       <Footer />
 

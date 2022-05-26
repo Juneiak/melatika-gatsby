@@ -9,9 +9,9 @@
   --font-size-large: 4.9vw; /* 60px => 70 */
   --font-size-big: 2.8vw; /* 40px */
   --font-size-middle: 1.81vw ; /* 26px */
-  --font-size-small: 1.68vw; /* 24px */
+  --font-size-small: 1.67vw; /* 24px */
   --font-size-body: 1.12vw; /* 16px */
-  --font-size-body-small: 1vw; /* 14px */
+  --font-size-body-small: 0.96vw; /* 14px */
   --font-size-body-extra-small: 0.84vw; /* 12px */
 
 }
