@@ -23,6 +23,7 @@ const BasicButton = ({
       name={name}
       disabled={!isValid}
       style={customStyle}
+      type='button'
     >
       {text}
     </button>

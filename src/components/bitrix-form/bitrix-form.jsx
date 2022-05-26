@@ -1,16 +1,16 @@
-import React from 'react';
+import React, {useRef, useEffect, useState} from 'react';
 import * as styles from './bitrix-form.module.css';
 import BasicButton from '../basic-button/basic-button';
 import BitrixFormInput from './bitrix-form-input/bitrix-form-input';
 import Loader from '../loader/loader';
 import useWidthMediaMatch from '../hooks/use-width-media-match';
 
-const { useRef, useEffect, useState } = React;
-
-export default function BitrixForm() {
+export default function BitrixForm({ setIsSuccessResponse }) {
   // need some refactoring - add onError and update onLoad, maybe reduse some states
+
   const is460 = useWidthMediaMatch('(max-width: 460px)')
   const [ scriptLoadStatus, setScriptLoadStatus ] = useState(false);
+  const [ bitrixResponseIsLoading, setBitrixResponseIsLoading ] = useState(false);
 
   const [ btxNameInput, setBtxNameInput ] = useState()
   const [ btxPhoneInput, setBtxPhoneInput ] = useState()
@@ -21,13 +21,6 @@ export default function BitrixForm() {
   const [ nameErrorMessage, setNameErrorMessage ] = useState('')
   const [ phoneErrorMessage, setPhoneErrorMessage ] = useState('')
   const [ emailErrorMessage, setEmailErrorMessage ] = useState('')
-
-
-
-
-  const [ test, setTest ] = useState()
-
-
 
   const [ buttonStatus, setButtonStatus ] = useState(false)
 
@@ -51,6 +44,7 @@ export default function BitrixForm() {
     let nameError
     let phoneError
     let emailError
+    let statusMessageObserver
 
     // it is 3 different functions for correct work of removeEventListener
     const nameInputListenerCallback = (event) => {
@@ -72,14 +66,24 @@ export default function BitrixForm() {
       checkFormValidity()
       if (emailError.textContent !== emailErrorMessage) setEmailErrorMessage(emailError.textContent)
     }
+    
+    const observerCallback = (mutationsList, observer) => {
+      if (mutationsList[mutationsList.length - 1].target.textContent === ' success') setIsSuccessResponse(true)
+      else setIsSuccessResponse(false)
+      setBitrixResponseIsLoading(false)
+    }
 
+    
     script.onload = () => {
       setTimeout(() => {
         setScriptLoadStatus(true);
-        const testElement = btxContainerRef.current.querySelector('.b24-form-state-text');
-        
-        setTest(testElement)
 
+        // status message observer
+        const messageElement = btxContainerRef.current.querySelector('.b24-form-state-text');
+        statusMessageObserver = new MutationObserver(observerCallback);
+        statusMessageObserver.observe(messageElement, {childList: true});
+
+        //inputs
         const inputDivs = btxContainerRef.current.querySelectorAll('.b24-form-field');
         name = inputDivs[0].querySelector('input');
         nameError = inputDivs[0].querySelector('.b24-form-control-alert-message');
@@ -103,16 +107,17 @@ export default function BitrixForm() {
         }
       }, 500);
     }
+      //script insert
       scriptRef.current.parentNode.insertBefore(script, scriptRef.current);
 
-      
       return () => {
-        if (name || phone || button) {
+        if (name || phone || button || email) {
           name.removeEventListener('input', nameInputListenerCallback)
           phone.removeEventListener('input', phoneInputListenerCallback)
           email.removeEventListener('input', emailInputListenerCallback)
-
         }
+        // turn off message observer
+        statusMessageObserver.disconnect()
       }
   }, [])
 
@@ -124,8 +129,10 @@ export default function BitrixForm() {
     setButtonStatus(false)
   }
 
-  console.log(test?.textContent)
-
+  const handleButtonClick = () => {
+    setBitrixResponseIsLoading(true);
+    btxButton.click();
+  }
 
   return (
     <div className={styles.container}>
@@ -133,50 +140,51 @@ export default function BitrixForm() {
         <script ref={scriptRef} data-b24-form="inline/24/k9hje0" data-skip-moving="true"></script>
       </div>
 
-      {scriptLoadStatus 
-      ?
-      <form ref={formRef} className={styles.form}>
-        <div className={styles.inputsContainer}>
-          <BitrixFormInput
-            inputTitle = 'Имя'
-            onKeyDownHandler = {() => btxNameInput.focus()}
-            inputRef = {nameRef}
-            inputType = "text"
-            isRequired = {true}
-            inputPlaceholder = "Имя"
-            errorMessage = {nameErrorMessage}
-          />
-          <BitrixFormInput
-            inputTitle = 'Телефон'
-            onKeyDownHandler = {() => btxPhoneInput.focus()}
-            inputRef = {phoneRef}
-            inputType = "tel"
-            isRequired = {true}
-            inputMinLength={5}
-            inputPlaceholder = "Телефон"
-            errorMessage = {phoneErrorMessage}
-          />
-          <BitrixFormInput
-            inputTitle = 'Почта'
-            onKeyDownHandler = {() => btxEmailInput.focus()}
-            inputRef = {emailRef}
-            inputType = "email"
-            isRequired = {false}
-            inputPlaceholder = "E-mail"
-            errorMessage = {emailErrorMessage}
-          />
-        </div>
-        <BasicButton
-          isValid={buttonStatus}
-          handler={() => btxButton.click()}
-          name="send-contact"
-          text='Записаться'
-          type='primary'
-          customStyle={is460 ? {fontSize: 'var(--font-size-body'} : {fontSize: 'var(--font-size-body'}}
-        />
-      </form>
+      {!scriptLoadStatus
+      ? <Loader />
       :
-      <Loader />
+        <form ref={formRef} className={styles.form}>
+          {bitrixResponseIsLoading && <div className={styles.formLoading}><Loader /></div>}
+
+          <div className={styles.inputsContainer}>
+            <BitrixFormInput
+              inputTitle = 'Имя'
+              onKeyDownHandler = {() => btxNameInput.focus()}
+              inputRef = {nameRef}
+              inputType = "text"
+              isRequired = {true}
+              inputPlaceholder = "Имя"
+              errorMessage = {nameErrorMessage}
+            />
+            <BitrixFormInput
+              inputTitle = 'Телефон'
+              onKeyDownHandler = {() => btxPhoneInput.focus()}
+              inputRef = {phoneRef}
+              inputType = "tel"
+              isRequired = {true}
+              inputMinLength={5}
+              inputPlaceholder = "Телефон"
+              errorMessage = {phoneErrorMessage}
+            />
+            <BitrixFormInput
+              inputTitle = 'Почта'
+              onKeyDownHandler = {() => btxEmailInput.focus()}
+              inputRef = {emailRef}
+              inputType = "email"
+              isRequired = {false}
+              inputPlaceholder = "E-mail"
+              errorMessage = {emailErrorMessage}
+            />
+          </div>
+          <BasicButton
+            isValid={buttonStatus}
+            handler={handleButtonClick}
+            name="send-contact"
+            text='Записаться'
+            type='primary'
+            customStyle={is460 ? {fontSize: 'var(--font-size-body'} : {fontSize: 'var(--font-size-body'}}
+          />
+        </form>
       }
     </div>
   )

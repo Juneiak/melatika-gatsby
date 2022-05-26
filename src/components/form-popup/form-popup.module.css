@@ -59,6 +59,13 @@
   text-underline-offset: 2px;
 }
 
+.successMessage {
+  font-family: var(--font-basic);
+  font-size: 2.5vw;
+  font-weight: 200;
+  text-align: center;
+}
+
 @media screen and (max-width: 460px) {
   .formPopup {
     width: 100%;
@@ -88,6 +95,9 @@
   .worning {
     margin-top: 3vw;
     width: 80%;
+  }
 
+  .successMessage {
+    font-size: 5vw;
   }
 }

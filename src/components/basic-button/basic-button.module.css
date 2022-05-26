@@ -4,7 +4,7 @@
   height: 3.5vw;
   border-radius: 35px;
   font-family: var(--font-basic);
-  font-weight: 500;
+  font-weight: 300;
   font-size: var(--font-size-body-small);
   padding: 0;
   box-sizing: border-box;
@@ -28,6 +28,7 @@
 .small {
   width: 14vw;
   height: 2.8vw;
+  font-size: 10px;
 }
 
 .primary {

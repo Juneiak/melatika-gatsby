@@ -6,7 +6,7 @@ import image from '../../../images/we-will-select.jpg'
 import image375 from '../../../images/we-will-select-375.jpg'
 import useWidthMediaMatch from '../../hooks/use-width-media-match';
 
-const WeWillSelect = ({ openPopupHanler }) => {
+const WeWillSelect = ({ openPopupHandler }) => {
   const is460 = useWidthMediaMatch('(max-width: 460px)');
 
   return (
@@ -21,9 +21,8 @@ const WeWillSelect = ({ openPopupHanler }) => {
           <BasicButton
             type={is460 ? 'tertiary' : 'secondary'}
             small={true}
-            text='Подобрать мебель'
-            handler={openPopupHanler}
-            customStyle={is460 ? {fontSize: 'var(--font-size-body-small)'} : {fontSize: '0.8vw'}}
+            text='Заказать'
+            handler={openPopupHandler}
           />
         </div>
 

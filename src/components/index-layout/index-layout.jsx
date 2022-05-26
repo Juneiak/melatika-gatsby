@@ -8,7 +8,8 @@ import NavMenu from '../nav-menu/nav-menu'
 import useDelayUnmountState from '../hooks/use-delay-unmount-state';
 import PopupLayout from '../popup-layout/popup-layout';
 import Helmet from 'react-helmet';
-import fav from '../../images/favicon.ico'
+import fav from '../../images/favicon.ico';
+
 const IndexLayout = ({ children }) => {
   const [isNavMenuOpen, setIsNavMenuOpen] = React.useState(false);
   const isShouldNavMount = useDelayUnmountState(isNavMenuOpen, 500);

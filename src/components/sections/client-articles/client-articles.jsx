@@ -6,17 +6,17 @@ import WorkWithUs from '../../work-with-us/work-with-us';
 import useWidthMediaMatch from '../../hooks/use-width-media-match';
 import image375 from '../../../images/about/about-8-375.jpg'
 
-const ClientArticles = ({ openPopupHanler }) => {
+const ClientArticles = ({ openPopupHandler }) => {
 
   const is460 = useWidthMediaMatch('(max-width: 460px)');
   return (
     <section id='toDesigners' className={styles.aboutUs}>
       <div className={styles.content}>
         <div className={styles.titleConatainer}>
-          <WorkWithUs openPopupHanler={openPopupHanler} />
+          <WorkWithUs openPopupHanler={openPopupHandler} />
         </div>
         <ul className={styles.list}>
-          <li className={styles.elementContainer}><WorkWithUs openPopupHanler={openPopupHanler} /></li>
+          <li className={styles.elementContainer}><WorkWithUs openPopupHanler={openPopupHandler} /></li>
           <li className={styles.listElement1}>
             <Article
                 articleData={articlesData3[0]}

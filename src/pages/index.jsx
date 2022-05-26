@@ -1,6 +1,5 @@
 import React from "react";
 import useDelayUnmountState from "../components/hooks/use-delay-unmount-state";
-
 import {
   Opening,
   Catalog,
@@ -17,25 +16,38 @@ import FormPopup from "../components/form-popup/form-popup";
 
 const IndexPage = () => {
   const [ isFormPopupOpen, setIsFormPopupOpen ] = React.useState(false);
+  const [ formTitle, setFormTitle ] = React.useState('');
+
+
   const isShouldFormMount = useDelayUnmountState(isFormPopupOpen, 500)
   const animStyle = isFormPopupOpen ? {animation: 'openAniamtion 0.5s linear'} : {animation: 'closeAniamtion 0.5s linear forwards'}
+  
+  const openForm = (title) => {
+    setIsFormPopupOpen(true);
+    setFormTitle(title)
+  }
+
+  const closeForm = () => {
+    setIsFormPopupOpen(false);
+    setFormTitle('')
+  }
 
   return (
-    <IndexLayout >
+    <IndexLayout>
       <main style={{width: '100%', height: '100%'}}>
         <Opening />
-        <Catalog openPopupHanler={() => setIsFormPopupOpen(true)} />
+        <Catalog openPopupHandler={() => openForm(true)} />
         <FirstPartArticles />
-        <WeWillSelect openPopupHanler={() => setIsFormPopupOpen(true)} />
+        <WeWillSelect openPopupHandler={() => openForm('Получите своего персонального менеджера для комфортной работы')} />
         <SecondPartArticles />
-        <AboutUs openPopupHanler={() => setIsFormPopupOpen(true)} />
-        <ClientArticles openPopupHanler={() => setIsFormPopupOpen(true)} />
+        <AboutUs />
+        <ClientArticles openPopupHandler={() => openForm('Оставьте заявку и мы рассчитаем цену')} />
       </main>
       <Footer />
 
       {isShouldFormMount &&
         <PopupLayout mountAnim={animStyle}>
-          <FormPopup closeHandler={() => setIsFormPopupOpen(false)}  />
+          <FormPopup title={formTitle}  closeHandler={closeForm} />
         </PopupLayout>
       }
     </IndexLayout>

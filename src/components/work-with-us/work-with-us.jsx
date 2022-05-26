@@ -7,7 +7,12 @@ const WorkWithUs = ({ openPopupHanler }) => {
   return (
       <div className={styles.workWithUs}>
         <p className={styles.text}>Нас выбирают профи</p>
-        <BasicButton handler={openPopupHanler} type='secondary' text="Работать с нами" small={true} />
+        <BasicButton
+          handler={openPopupHanler}
+          type='secondary'
+          text="Работать с нами"
+          small={true}
+        />
       </div>
   )
 }
