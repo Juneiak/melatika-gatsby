@@ -6,7 +6,7 @@ import image3 from '../../../images/catalog/catalog-3.jpg'
 import image4 from '../../../images/catalog/catalog-4.jpg'
 
 
-const Catalog = ({ openPopupHandler }) => {
+const Catalog = ({ openFormPopupHandler }) => {
 
   const catalogData = [
     {
@@ -35,7 +35,7 @@ const Catalog = ({ openPopupHandler }) => {
     <section id='catalog' className={styles.catalog}>
       <ul className={styles.list}>
         {catalogData.map((item, index) => (
-          <li onClick={openPopupHandler} key={index} className={styles.listElement}>
+          <li onClick={openFormPopupHandler} key={index} className={styles.listElement}>
             <img className={styles.elementImage} src={item.image} alt={`иконка ${item.title}`} />
             <p className={styles.elementTitle}>{item.title}</p>
           </li>

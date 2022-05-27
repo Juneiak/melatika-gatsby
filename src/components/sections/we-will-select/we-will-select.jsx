@@ -6,7 +6,7 @@ import image from '../../../images/we-will-select.jpg'
 import image375 from '../../../images/we-will-select-375.jpg'
 import useWidthMediaMatch from '../../hooks/use-width-media-match';
 
-const WeWillSelect = ({ openPopupHandler }) => {
+const WeWillSelect = ({ openFormPopupHandler }) => {
   const is460 = useWidthMediaMatch('(max-width: 460px)');
 
   return (
@@ -22,7 +22,7 @@ const WeWillSelect = ({ openPopupHandler }) => {
             type={is460 ? 'tertiary' : 'secondary'}
             small={true}
             text='Заказать'
-            handler={openPopupHandler}
+            handler={openFormPopupHandler}
           />
         </div>
 

@@ -4,17 +4,12 @@ import * as styles from './index-layout.module.css';
 import Logo from '../logo/logo';
 import Contacts from '../contacts/contacts';
 import BurgerMenuButton from '../burger-menu-button/burger-menu-button';
-import NavMenu from '../nav-menu/nav-menu'
-import useDelayUnmountState from '../hooks/use-delay-unmount-state';
-import PopupLayout from '../popup-layout/popup-layout';
+import { NavMenuPopup } from '../popups'
 import Helmet from 'react-helmet';
-import fav from '../../images/favicon.ico';
+import favicon from '../../images/favicon.ico';
 
 const IndexLayout = ({ children }) => {
   const [isNavMenuOpen, setIsNavMenuOpen] = React.useState(false);
-  const isShouldNavMount = useDelayUnmountState(isNavMenuOpen, 500);
-
-  const animStyle = isNavMenuOpen ? {animation: 'openAniamtion 0.5s linear'} : {animation: 'closeAniamtion 0.5s linear forwards'}
 
   return (
     <>
@@ -23,9 +18,10 @@ const IndexLayout = ({ children }) => {
         <meta name="description" content="Кровати и диваны под заказ" />
         <meta name="keywords" content="Диваны, кровати, качественный, специально для вас, уфа, быстро" />
         <meta name="author" content="CookDog" />
-        <link rel="icon" type="image/x-icon" href={fav}></link>
+        <link rel="icon" type="image/x-icon" href={favicon}></link>
         <title>Melatika</title>
       </Helmet>
+
       <div className={styles.layout}>
 
         {children}
@@ -38,11 +34,7 @@ const IndexLayout = ({ children }) => {
           <BurgerMenuButton isOpen={isNavMenuOpen} handler={() => setIsNavMenuOpen(!isNavMenuOpen)}/>
         </div>
 
-        {isShouldNavMount &&
-          <PopupLayout isNav={true} mountAnim={animStyle}>
-            <NavMenu closeNavHandler={() => setIsNavMenuOpen(false)} />
-          </PopupLayout>
-        }
+        <NavMenuPopup isOpen={isNavMenuOpen} closeNavHandler={() => setIsNavMenuOpen(false)} />
 
       </div>
     </>

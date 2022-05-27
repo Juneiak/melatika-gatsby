@@ -1,19 +1,19 @@
 import React from 'react';
 import * as styles from './form-popup.module.css';
+import CloseButton from '../../close-button/close-button';
+import BitrixForm from '../../bitrix-form/bitrix-form';
+import image from '../../../images/form.jpg';
+import politDoc from '../../../misc/confidential_politic_document.pdf';
 import PopupLayout from '../popup-layout/popup-layout';
-import CloseButton from '../close-button/close-button';
-import BitrixForm from '../bitrix-form/bitrix-form';
-import image from '../../images/form.jpg';
-import politDoc from '../../misc/confidential_politic_document.pdf';
 
-const FormPopup = ({ closeHandler, title }) => {
+const FormPopup = ({ title, closeHandler, isOpen }) => {
 
   const [ isSuccessResponse, setIsSuccessResponse ] = React.useState(false)
 
   return (
-    <PopupLayout closeHandler={closeHandler}>
+    <PopupLayout isOpen={isOpen}>
       <section className={styles.formPopup}>
-        <div className={styles.closeButtonContainer}><CloseButton  handler={closeHandler} /></div>
+        <div className={styles.closeButtonContainer}><CloseButton handler={closeHandler} /></div>
 
         <div className={styles.formContainer}>
           {
@@ -33,8 +33,7 @@ const FormPopup = ({ closeHandler, title }) => {
         
         <img src={image} alt="фон формы" className={styles.image} />
       </section>
-    </PopupLayout>
-
+    </PopupLayout>  
   )
 }
 

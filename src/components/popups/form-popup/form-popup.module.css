@@ -36,7 +36,7 @@
 
 .formTitle {
   font-family: var(--font-basic);
-  font-size: 3.2vw;
+  font-size: 2.2vw;
   font-weight: 300;
   margin-bottom: 3vw;
   text-align: center;
@@ -44,7 +44,7 @@
 }
 
 .worning {
-  margin-top: 3vw;
+  margin-top: 2vw;
   font-size: var(--font-size-body-extra-small);
   font-weight: 300;
   color: black;
@@ -83,7 +83,7 @@
 
   .formTitle {
     font-family: var(--font-basic);
-    font-size: var(--font-size-large);
+    font-size: 7vw;
     margin-bottom: 8vw;
 
   }

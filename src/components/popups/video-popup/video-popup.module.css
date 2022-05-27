@@ -1,0 +1,11 @@
+.videoPopup {
+  width: 60vw;
+  height: 40vw;
+}
+
+@media screen and (max-width: 460px) {
+  .videoPopup {
+    width: 100vw;
+    height: 70vw;
+  }
+}

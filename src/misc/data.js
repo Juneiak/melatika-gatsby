@@ -58,12 +58,14 @@ const designerCardsData = [
     subtitle : 'Дизайнер интерьеров',
     text: 'О компании “Мелатика” я узнала через соц. сети, мне понравился обширный выбор тканей, ценовой диапазон, сроки производства и то, как лояльно работают с дизайнерами.',
     image: designerImage1,
+    videoURl: 'https://www.youtube.com/embed/CHeMU_iVIwk?autoplay=1&iv_load_policy=3",'
   },
   {
     name: 'Елена Бузина',
     subtitle : 'Дизайнер интерьеров',
     text: 'Мы смогли реализовать дизайн-проект в жизнь в точности, как на картинке. С любыми вопросами всегда помогала служба поддержки. Нас устроило соотношение “цена-качество” именно здесь.',
     image: designerImage2,
+    videoURl: 'https://www.youtube.com/embed/tmfKM1e4Rgo?autoplay=1&iv_load_policy=3",'
 
   },
   {
@@ -71,7 +73,7 @@ const designerCardsData = [
     subtitle : 'Дизайнер интерьеров',
     text: 'Мне понравилось то, что даже не пришлось приходить в салон. Я посмотрела проекты компании, отправила свой эскиз и мне всё сделали качественно. Получилось даже лучше, чем моя визуализация.',
     image: designerImage3,
-
+    videoURl: 'https://www.youtube.com/embed/Bbju5uRub94?autoplay=1&iv_load_policy=3",'
   },
 ]
 

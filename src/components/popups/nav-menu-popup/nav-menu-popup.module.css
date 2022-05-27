@@ -42,19 +42,19 @@
 } 
 
 .linkImage1 {
-  background-image: url(../../images/nav/nav-1.png);
+  background-image: url(../../../images/nav/nav-1.png);
 }
 
 .linkImage2 {
-  background-image: url(../../images/nav/nav-2.png);
+  background-image: url(../../../images/nav/nav-2.png);
 }
 
 .linkImage3 {
-  background-image: url(../../images/nav/nav-3.png);
+  background-image: url(../../../images/nav/nav-3.png);
 }
 
 .linkImage4 {
-  background-image: url(../../images/nav/nav-4.png);
+  background-image: url(../../../images/nav/nav-4.png);
 }
 
 .title {
@@ -79,18 +79,18 @@
   }
 
   .linkImage1 {
-    background-image: url(../../images/nav/nav-1-375.png);
+    background-image: url(../../../images/nav/nav-1-375.png);
   }
   
   .linkImage2 {
-    background-image: url(../../images/nav/nav-2-375.png);
+    background-image: url(../../../images/nav/nav-2-375.png);
   }
   
   .linkImage3 {
-    background-image: url(../../images/nav/nav-3-375.png);
+    background-image: url(../../../images/nav/nav-3-375.png);
   }
   
   .linkImage4 {
-    background-image: url(../../images/nav/nav-4-375.png);
+    background-image: url(../../../images/nav/nav-4-375.png);
   }
 }

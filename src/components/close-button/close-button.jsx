@@ -1,7 +1,7 @@
 import React from 'react';
 import * as styles from './close-button.module.css';
 
-const CloseButton = ({ handler}) => {
+const CloseButton = ({ handler }) => {
 
   return (
     <button onClick={handler} className={styles.button}>

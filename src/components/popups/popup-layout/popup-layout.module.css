@@ -11,9 +11,8 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.closeButton {
+.closeButtonContainer {
   position: absolute;
   top: 3vw;
   right: 3vw;
-  z-index: 11;
 }
