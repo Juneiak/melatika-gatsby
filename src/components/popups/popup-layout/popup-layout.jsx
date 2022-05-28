@@ -15,7 +15,7 @@ const PopupLayout = ({ children, isNav, isOpen, closeHandler }) => {
   return (
     isShouldVideoPopupMount && 
       <div 
-        style={{...animation, zIndex: [isNav ? 1 : 3]}}
+        style={{...animation, zIndex: [isNav ? 100 : 103]}}
         className={styles.popupLayout}
         onClick={overlayClose}
       >
