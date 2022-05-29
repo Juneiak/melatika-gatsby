@@ -32,29 +32,10 @@
   height: 100%;
   overflow: hidden;
   transition: opacity 0.4s linear;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
 }
 
 .linkImage:hover {
   opacity: 0.8;
-} 
-
-.linkImage1 {
-  background-image: url(../../../images/nav/nav-1.png);
-}
-
-.linkImage2 {
-  background-image: url(../../../images/nav/nav-2.png);
-}
-
-.linkImage3 {
-  background-image: url(../../../images/nav/nav-3.png);
-}
-
-.linkImage4 {
-  background-image: url(../../../images/nav/nav-4.png);
 }
 
 .title {
@@ -66,6 +47,7 @@
   position: relative;
   z-index: 10;
   transition: transform 0.3s linear;
+  width: 70%;
 }
 
 .navLink:hover .title {
@@ -76,21 +58,5 @@
   .list {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(4, 1fr);
-  }
-
-  .linkImage1 {
-    background-image: url(../../../images/nav/nav-1-375.png);
-  }
-  
-  .linkImage2 {
-    background-image: url(../../../images/nav/nav-2-375.png);
-  }
-  
-  .linkImage3 {
-    background-image: url(../../../images/nav/nav-3-375.png);
-  }
-  
-  .linkImage4 {
-    background-image: url(../../../images/nav/nav-4-375.png);
   }
 }

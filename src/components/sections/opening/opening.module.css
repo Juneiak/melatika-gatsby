@@ -1,12 +1,16 @@
 .opening {
-  background-image: url(../../../images/opening/opening.jpg);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
 }
 
 .content {
@@ -29,9 +33,6 @@
 }
 
 @media screen and (max-width: 460px) {
-  .opening {
-    background-image: url(../../../images/opening/opening-375.jpg);
-  }
   .subtitle {
     font-size: var(--font-size-body);
   }

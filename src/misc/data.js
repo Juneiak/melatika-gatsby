@@ -1,13 +1,23 @@
-import articleImage1 from '../images/about/about-1.jpg';
-import articleImage2 from '../images/about/about-2.jpg';
-import articleImage3 from '../images/about/about-3.jpg';
-import articleImage4 from '../images/about/about-4.jpg';
-import articleImage5 from '../images/about/about-5.jpg';
-import articleImage6 from '../images/about/about-6.jpg';
+import articleImage1 from '../images/articles/articles-1.jpg';
+import articleImage2 from '../images/articles/articles-2.jpg';
+import articleImage3 from '../images/articles/articles-3.jpg';
+import articleImage4 from '../images/articles/articles-4.jpg';
+import articleImage5 from '../images/articles/articles-5.jpg';
+import articleImage6 from '../images/articles/articles-6.jpg';
 
 import designerImage1 from '../images/designers/designer-1.jpg';
 import designerImage2 from '../images/designers/designer-2.jpg';
 import designerImage3 from '../images/designers/designer-3.jpg';
+
+import navImage1 from '../images/nav/nav-1.png';
+import navImage2 from '../images/nav/nav-2.png';
+import navImage3 from '../images/nav/nav-3.png';
+import navImage4 from '../images/nav/nav-4.png';
+
+import nav460Image1 from '../images/nav/nav-1-460.png';
+import nav460Image2 from '../images/nav/nav-2-460.png';
+import nav460Image3 from '../images/nav/nav-3-460.png';
+import nav460Image4 from '../images/nav/nav-4-460.png';
 
 
 const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun...'
@@ -77,8 +87,36 @@ const designerCardsData = [
   },
 ]
 
+const navElementsData = [
+  {
+    title: 'Каталог',
+    linkTo: '/catalog',
+    image: navImage1,
+    image460: nav460Image1,
+  },
+  {
+    title: 'Персональные решения',
+    linkTo: '#solution',
+    image: navImage2,
+    image460: nav460Image2,
+  },
+  {
+    title: 'Дизайнерам',
+    linkTo: '#solution',
+    image: navImage3,
+    image460: nav460Image3,
+  },
+  {
+    title: 'Контакты',
+    linkTo: '#contacts',
+    image: navImage4,
+    image460: nav460Image4,
+  },
+]
+
 export {
   articlesData1,
   articlesData2,
   designerCardsData,
+  navElementsData,
 }

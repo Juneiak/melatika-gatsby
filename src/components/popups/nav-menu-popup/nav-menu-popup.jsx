@@ -2,6 +2,8 @@ import React from 'react';
 import * as styles from './nav-menu-popup.module.css';
 import { Link } from 'gatsby';
 import PopupLayout from '../popup-layout/popup-layout';
+import MediaImage from '../../media-image/media-image';
+import { navElementsData } from '../../../misc/data';
 
 const NavMenuPopup = ({ closeNavHandler, isOpen }) => {
   
@@ -9,30 +11,18 @@ const NavMenuPopup = ({ closeNavHandler, isOpen }) => {
     <PopupLayout isNav={true} isOpen={isOpen}>
       <nav className={styles.navMenu}>
         <ul className={styles.list}>
-          <li className={styles.listElement}>
-            <Link onClick={closeNavHandler} to='/catalog' className={styles.navLink}>
-              <div className={`${styles.linkImage} ${styles.linkImage1}`} />
-              <p className={styles.title}>Каталог</p>
-            </Link>
-          </li>
-          <li className={styles.listElement}>
-            <Link onClick={closeNavHandler} to='#solution' className={styles.navLink}>
-              <div className={`${styles.linkImage} ${styles.linkImage2}`} />
-              <p className={styles.title}>Персональные<br />решения</p>
-            </Link>
-          </li>
-          <li className={styles.listElement}>
-            <Link onClick={closeNavHandler} to='#solution' className={styles.navLink}>
-              <div className={`${styles.linkImage} ${styles.linkImage3}`} />
-              <p className={styles.title}>Дизайнерам</p>
-            </Link>
-          </li>
-          <li  className={styles.listElement}>
-            <Link onClick={closeNavHandler} to='#contacts' className={styles.navLink}>
-              <div className={`${styles.linkImage} ${styles.linkImage4}`} />
-              <p className={styles.title}>Контакты</p>
-            </Link>
-          </li>
+          {
+            navElementsData.map((navElement, index) => (
+              <li key={index} className={styles.listElement}>
+                <Link onClick={closeNavHandler} to={navElement.linkTo} className={styles.navLink}>
+                  <div className={styles.linkImage}>
+                    <MediaImage image={navElement.image} image460={navElement.image460} alt={`фон ${navElement.title}`}/>
+                  </div>
+                  <p className={styles.title}>{navElement.title}</p>
+                </Link>
+              </li>
+            ))
+          }
         </ul>
       </nav>
     </PopupLayout>

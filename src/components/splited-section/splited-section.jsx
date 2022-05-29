@@ -1,10 +1,10 @@
 import React from 'react';
 import * as styles from './splited-section.module.css';
 import useWidthMediaMatch from '../hooks/use-width-media-match';
+import MediaImage from '../media-image/media-image';
 
-const SplitedSection = ({ image, image375, children, isReversed=false, is460Cover=false }) => {
+const SplitedSection = ({ image, image460, children, isReversed=false, is460Cover=false }) => {
   const is460 = useWidthMediaMatch('(max-width: 460px)');
-
 
   return (
     <section className={styles.splitedSection}>
@@ -14,7 +14,9 @@ const SplitedSection = ({ image, image375, children, isReversed=false, is460Cove
         ${is460Cover ? styles.is460Cover : ''}
 
       `}>
-        <img src={!is460 ? image : image375} alt="иконка вк" className={styles.image} />
+        <div className={styles.image}>
+          <MediaImage image={image} image460={image460} alt='фоновая картинка'/>
+        </div>
         <div className={styles.aboutContainer}>
           {children}
         </div>

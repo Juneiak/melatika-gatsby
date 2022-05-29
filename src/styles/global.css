@@ -33,18 +33,6 @@ body {
   height: 100%;
 }
 
-body::after {
-  position: absolute; height: 0; width: 0; overflow: hidden; z-index: -1;
-  content: 
-  url(../images/nav/nav-1-375.png)
-  url(../images/nav/nav-2-375.png)
-  url(../images/nav/nav-3-375.png)
-  url(../images/nav/nav-4-375.png)
-  url(../images/nav/nav-1.png)
-  url(../images/nav/nav-2.png)
-  url(../images/nav/nav-3.png)
-  url(../images/nav/nav-4.png);
-}
 
 ul {
   list-style: none;
@@ -64,4 +52,23 @@ h1, h2, h3, h4, h5, p {
 @keyframes closeAniamtion {
   0% {opacity: 1}
   100% {opacity: 0}
+}
+
+body::after {
+  position: absolute; height: 0; width: 0; overflow: hidden; z-index: -1;
+  content: 
+  url(../images/nav/nav-1.png)
+  url(../images/nav/nav-2.png)
+  url(../images/nav/nav-3.png)
+  url(../images/nav/nav-4.png);
+}
+
+@media screen and (max-width: 460px) {
+  body::after {
+    content: 
+    url(../images/nav/nav-1-460.png)
+    url(../images/nav/nav-2-460.png)
+    url(../images/nav/nav-3-460.png)
+    url(../images/nav/nav-4-460.png);
+  }
 }
