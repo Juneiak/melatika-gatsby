@@ -16,7 +16,7 @@ const DesignersList = ({ openFormPopupHandler, selectVideoHandler }) => {
           <WorkWithUs openPopupHanler={openFormPopupHandler} />
         </div>
         <div className={styles.listContainer}>
-          <li className={styles.elementContainer}><WorkWithUs openPopupHanler={openFormPopupHandler} /></li>
+          <div className={styles.elementContainer}><WorkWithUs openPopupHanler={openFormPopupHandler} /></div>
           <div className={styles.listWrapper}>
             <Arrow clickHandler={() => setIsSecondPage(false)} isHide={!isSecondPage}/>
 

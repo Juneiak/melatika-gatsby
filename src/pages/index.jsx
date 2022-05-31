@@ -32,12 +32,12 @@ const IndexPage = () => {
     <IndexLayout>
       <main style={{width: '100%', height: '100%'}}>
         <Opening />
-        <Catalog openFormPopupHandler={() => openFormPopup(true)} />
+        <Catalog openFormPopupHandler={() => openFormPopup('Оставьте заявку и мы рассчитаем цену')} />
         <FirstPartArticles />
-        <WeWillSelect openFormPopupHandler={() => openFormPopup('Получите своего персонального менеджера для комфортной работы')} />
+        <WeWillSelect openFormPopupHandler={() => openFormPopup('Оставьте заявку и мы рассчитаем цену')} />
         <SecondPartArticles />
         <AboutUs />
-        <DesignersList selectVideoHandler={setSelectedDesignerVideo} openFormPopupHandler={() => openFormPopup('Оставьте заявку и мы рассчитаем цену')} />
+        <DesignersList selectVideoHandler={setSelectedDesignerVideo} openFormPopupHandler={() => openFormPopup('Получите своего персонального менеджера для комфортной работы')} />
       </main>
       <Footer />
 

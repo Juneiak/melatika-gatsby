@@ -16,7 +16,7 @@ const WeWillSelect = ({ openFormPopupHandler }) => {
         <div className={styles.content}>
           <div className={styles.titleContent}>
             <h2 className={styles.title}>Полная свобода творчества</h2>
-            <p className={styles.subtitle}>Подберем идеальную мебель в ваш интерьер</p>
+            <p className={styles.subtitle}>Мебель по вашему проекту</p>
           </div>
           <BasicButton
             type={is460 ? 'tertiary' : 'secondary'}

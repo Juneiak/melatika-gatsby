@@ -46,13 +46,13 @@
   justify-content: flex-start;
   font-family: var(--font-basic);
   flex-direction: column;
-  padding: 1.5vw 1.6vw;
+  padding: 1.4vw 1.5vw;
   box-sizing: border-box;
   position: relative;
 }
 
 .isReversed .about {
-  justify-content: flex-end;
+  justify-content: flex-end!important;
 }
 
 .watchVideo {
@@ -69,7 +69,6 @@
 .isReversed .watchVideo {
   bottom: auto;
   top: 0.95vw;
-
 }
 
 .article:hover .watchVideo {
@@ -89,7 +88,7 @@
 }
 
 .text {
-  font-size: 0.96vw;
+  font-size: 0.94vw;
   font-weight: 300;
   line-height: 1.55;
 }

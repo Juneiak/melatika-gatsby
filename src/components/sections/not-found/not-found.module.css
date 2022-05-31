@@ -36,3 +36,9 @@
   margin-bottom: 8vw;
   font-weight: 300;
 }
+
+@media screen and (max-width: 800px) {
+  .notFound {
+    background-size: cover;
+  }
+}
