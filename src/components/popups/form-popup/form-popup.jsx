@@ -10,6 +10,12 @@ const FormPopup = ({ title, closeHandler, isOpen }) => {
 
   const [ isSuccessResponse, setIsSuccessResponse ] = React.useState(false)
 
+  React.useEffect(() => {
+
+    console.log('formpopup')
+  }, [])
+
+  // console.log(isSuccessResponse)
   return (
     <PopupLayout isOpen={isOpen}>
       <section className={styles.formPopup}>

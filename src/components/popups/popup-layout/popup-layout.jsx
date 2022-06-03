@@ -12,6 +12,12 @@ const PopupLayout = ({ children, isNav, isOpen, closeHandler }) => {
     if (evt.target.classList.contains(styles.popupLayout)) closeHandler()
   }
 
+  React.useEffect(() => {
+
+    console.log('popuplayout')
+  }, [])
+
+
   return (
     isShouldVideoPopupMount && 
       <div 

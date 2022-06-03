@@ -180,7 +180,7 @@ export default function BitrixForm({ setIsSuccessResponse }) {
             isValid={buttonStatus}
             handler={handleButtonClick}
             name="send-contact"
-            text='Записаться'
+            text='Оставить заявку'
             type='primary'
             customStyle={is460 ? {fontSize: 'var(--font-size-body'} : {fontSize: 'var(--font-size-body'}}
           />
@@ -189,3 +189,10 @@ export default function BitrixForm({ setIsSuccessResponse }) {
     </div>
   )
 }
+
+// inline/24/k9hje0
+
+// https://cdn-ru.bitrix24.ru/b21322336/crm/form/loader_24.js
+
+// original
+// inline/26/kcp3o8 https://cdn-ru.bitrix24.ru/b18265368/crm/form/loader_26.js

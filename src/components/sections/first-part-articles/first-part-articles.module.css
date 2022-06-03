@@ -119,7 +119,9 @@
   }
   
   .about2 {
-    justify-content: flex-end!important;
+    justify-content: center!important;
+    align-items: flex-end!important;
+    text-align: end!important;
   }
   
   
