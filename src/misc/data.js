@@ -14,29 +14,33 @@ import navImage2 from '../images/nav/nav-2.png';
 import navImage3 from '../images/nav/nav-3.png';
 import navImage4 from '../images/nav/nav-4.png';
 
-import nav460Image1 from '../images/nav/nav-1-460.png';
-import nav460Image2 from '../images/nav/nav-2-460.png';
-import nav460Image3 from '../images/nav/nav-3-460.png';
-import nav460Image4 from '../images/nav/nav-4-460.png';
+import navImage1_480 from '../images/nav/nav-1-480.png';
+import navImage2_480 from '../images/nav/nav-2-480.png';
+import navImage3_480 from '../images/nav/nav-3-480.png';
+import navImage4_480 from '../images/nav/nav-4-480.png';
 
 
-const lorem = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididun...'
+import catalogImage1 from '../images/catalog/catalog-1.jpg'
+import catalogImage2 from '../images/catalog/catalog-2.jpg'
+import catalogImage3 from '../images/catalog/catalog-3.jpg'
+import catalogImage4 from '../images/catalog/catalog-4.jpg'
+
 
 const articlesData1 = [
   {
-    title: 'Актуальность',
-    text: 'Создаем стильную мебель, вдохновляясь лучшими европейскими трендами. Концепция бренда «Melatika» –  это синергия современных идей и передовых технологий в сфере дизайна.',
+    title: 'Кастомизация',
+    text: 'Реализуем уникальные проекты, вдохновлённые Вашей фантазией. С легкостью создадим и привезём мебель Вашей мечты.',
     image: articleImage1,
   },
   {
     title: 'Детали',
-    text: 'Изысканная эстетика в каждом шве и соединении –  один из главных канонов нашего бренда. Мы видим большое в малом, создавая эксклюзивы для вашего интерьера.',
+    text: 'Суть нашего бренда – изысканность швов и подбор материалов. Мы способны увидеть великое в маломи в срок изготовить уникальную и долговечную мебель.',
     image: articleImage2,
 
   },
   {
-    title: 'Забота',
-    text: 'От начала работы над эскизом до распаковки и сборки мебели у вас дома, мы оберегаем наших клиентов на всех этапах.',
+    title: 'Ткани',
+    text: 'Эксклюзивные и популярные, любого цвета и фактуры. Мы сможем найти любую из них, чтобы наша мебель идеально вписалась в интерьер Вашего дома, или квартиры.',
     image: articleImage3,
 
   },
@@ -44,20 +48,20 @@ const articlesData1 = [
 
 const articlesData2 = [
   {
-    title: 'Лояльность',
-    text: 'Готовы работать над любым заказом и выполнить его в срок. Доставим мебель до вашего дома, поднимем, распакуем и соберем. Ваше пожелание –  наше точное исполнение.',
+    title: 'Выгода',
+    text: 'Дизайнер интерьера, сотрудничая с нами, получает весомую выгоду, размер которой зависит от объемов и сложности работ.',
     image: articleImage4,
 
   },
   {
     title: 'Интерес',
-    text: 'Ваш персональный менеджер, понимает тренды, и заинтересован в реализации вашего дизайн-проекта. Он всегда на связи, и готов ответить на любые вопросы.',
+    text: 'Ваш персональный менеджер разбирается в мебельных трендах и заинтересован помочь реализовать Ваш дизайн-проект. Он на связи 24/7 и готов ответить на любые вопросы, по работе.',
     image: articleImage5,
 
   },
   {
-    title: 'Исполнение',
-    text: 'Сделаем мебель в точном соответствии с вашим персональным эскизом. Воплотим любые пожелания клиента в качественном исполнении и учетом всех деталей. Вместе мы создадим интерьер, в котором хочется жить, заниматься творчеством и наслаждаться комфортом.',
+    title: 'Лояльность',
+    text: 'Любим сложные задачи и уважаем сроки. Это значит, мы вовремя доставим, поднимем, распакуем и соберем Ваш заказ, оставив после себя порядок.',
     image: articleImage6,
   },
 ]
@@ -68,14 +72,14 @@ const designerCardsData = [
     subtitle : 'Дизайнер интерьеров',
     text: 'О компании “Мелатика” я узнала через соц. сети, мне понравился обширный выбор тканей, ценовой диапазон, сроки производства и то, как лояльно работают с дизайнерами.',
     image: designerImage1,
-    videoURl: 'https://www.youtube.com/embed/2P_swy-CIqE?autoplay=1&iv_load_policy=3",'
+    videoURl: 'https://www.youtube.com/embed/2P_swy-CIqE?autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&rel=0&showinfo=0&mute=1&autohide=1',
   },
   {
     name: 'Елена Бузина',
     subtitle : 'Дизайнер интерьеров',
     text: 'Мы смогли реализовать дизайн-проект в жизнь в точности, как на картинке. С любыми вопросами всегда помогала служба поддержки. Нас устроило соотношение “цена-качество” именно здесь.',
     image: designerImage2,
-    videoURl: 'https://www.youtube.com/embed/I9JvyEOXUtM?autoplay=1&iv_load_policy=3",'
+    videoURl: 'https://www.youtube.com/embed/I9JvyEOXUtM?autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&rel=0&showinfo=0&mute=1&autohide=1',
 
   },
   {
@@ -92,25 +96,48 @@ const navElementsData = [
     title: 'Каталог',
     linkTo: '/catalog',
     image: navImage1,
-    image460: nav460Image1,
+    image_480: navImage1_480,
   },
   {
     title: 'Персональные решения',
     linkTo: '#solution',
     image: navImage2,
-    image460: nav460Image2,
+    image_480: navImage2_480,
   },
   {
     title: 'Дизайнерам',
     linkTo: '#solution',
     image: navImage3,
-    image460: nav460Image3,
+    image_480: navImage3_480,
   },
   {
     title: 'Контакты',
     linkTo: '#contacts',
     image: navImage4,
-    image460: nav460Image4,
+    image_480: navImage4_480,
+  },
+]
+
+const catalogData = [
+  {
+    title: 'Диваны',
+    linkUrl: '#',
+    image: catalogImage1,
+  },
+  {
+    title: 'Кровати',
+    linkUrl: '#',
+    image: catalogImage2,
+  },
+  {
+    title: 'Детские',
+    linkUrl: '#',
+    image: catalogImage3,
+  },
+  {
+    title: 'Аксессуары',
+    linkUrl: '#',
+    image: catalogImage4,
   },
 ]
 
@@ -119,4 +146,5 @@ export {
   articlesData2,
   designerCardsData,
   navElementsData,
+  catalogData,
 }

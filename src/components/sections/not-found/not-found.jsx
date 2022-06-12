@@ -1,10 +1,10 @@
 import React from 'react';
 import * as styles from './not-found.module.css';
-import Logo from '../../logo/logo';
+import Logo from '../../common/logo/logo';
 import { navigate } from 'gatsby';
-import BasicButton from '../../basic-button/basic-button';
+import {BasicButton} from '../../ui';
 
-const NotFound = () => {
+export default function NotFound() {
 
   return (
     <section className={styles.notFound}>
@@ -18,5 +18,3 @@ const NotFound = () => {
     </section>
   )
 }
-
-export default NotFound;

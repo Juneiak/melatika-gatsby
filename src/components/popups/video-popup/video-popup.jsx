@@ -2,7 +2,7 @@ import React from 'react';
 import * as styles from './video-popup.module.css';
 import PopupLayout from '../popup-layout/popup-layout';
 
-const VideoPopup = ({ videoUrl, isOpen, closeHandler }) => {
+export default function VideoPopup({ videoUrl, isOpen, closeHandler }) {
 
   return (
     <PopupLayout isOpen={isOpen} closeHandler={closeHandler}>
@@ -19,5 +19,3 @@ const VideoPopup = ({ videoUrl, isOpen, closeHandler }) => {
     </PopupLayout>
   )
 }
-
-export default VideoPopup;

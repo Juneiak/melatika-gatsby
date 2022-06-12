@@ -1,9 +1,9 @@
 import React from 'react';
 import * as styles from './second-part-articles.module.css';
-import Article from '../../atricle/atricle';
+import Article from '../../common/atricle/atricle';
 import { articlesData2 } from '../../../misc/data';
 
-const SecondPartArticles = () => {
+export default function SecondPartArticles() {
 
   return (
     <section className={styles.atricles}>
@@ -37,5 +37,3 @@ const SecondPartArticles = () => {
     </section>
   )
 }
-
-export default SecondPartArticles;

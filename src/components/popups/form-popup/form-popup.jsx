@@ -1,21 +1,15 @@
 import React from 'react';
 import * as styles from './form-popup.module.css';
-import CloseButton from '../../close-button/close-button';
-import BitrixForm from '../../bitrix-form/bitrix-form';
-import image from '../../../images/form.jpg';
+import CloseButton from '../../ui/close-button/close-button';
+import BitrixForm from '../../common/bitrix-form/bitrix-form';
+import image from '../../../images/misc/form.jpg';
 import politDoc from '../../../misc/confidential_politic_document.pdf';
 import PopupLayout from '../popup-layout/popup-layout';
 
-const FormPopup = ({ title, closeHandler, isOpen }) => {
+export default function FormPopup({ title, closeHandler, isOpen }) {
 
   const [ isSuccessResponse, setIsSuccessResponse ] = React.useState(false)
 
-  React.useEffect(() => {
-
-    console.log('formpopup')
-  }, [])
-
-  // console.log(isSuccessResponse)
   return (
     <PopupLayout isOpen={isOpen}>
       <section className={styles.formPopup}>
@@ -42,5 +36,3 @@ const FormPopup = ({ title, closeHandler, isOpen }) => {
     </PopupLayout>  
   )
 }
-
-export default FormPopup;

@@ -1,49 +1,17 @@
 import React from 'react';
 import * as styles from './catalog.module.css';
-import image1 from '../../../images/catalog/catalog-1.jpg'
-import image2 from '../../../images/catalog/catalog-2.jpg'
-import image3 from '../../../images/catalog/catalog-3.jpg'
-import image4 from '../../../images/catalog/catalog-4.jpg'
+import {catalogData} from '../../../misc/data';
+import CatalogCard from './catalog-card/catalog-card';
 
-
-const Catalog = ({ openFormPopupHandler }) => {
-
-  const catalogData = [
-    {
-      title: 'Диваны',
-      linkUrl: '#',
-      image: image1,
-    },
-    {
-      title: 'Кровати',
-      linkUrl: '#',
-      image: image2,
-    },
-    {
-      title: 'Детские',
-      linkUrl: '#',
-      image: image3,
-    },
-    {
-      title: 'Аксессуары',
-      linkUrl: '#',
-      image: image4,
-    },
-  ]
+export default function Catalog({ openFormPopupHandler }) {
 
   return (
     <section id='catalog' className={styles.catalog}>
       <ul className={styles.list}>
         {catalogData.map((item, index) => (
-          <li onClick={openFormPopupHandler} key={index} className={styles.listElement}>
-            <img className={styles.elementImage} src={item.image} alt={`иконка ${item.title}`} />
-            <p className={styles.elementTitle}>{item.title}</p>
-          </li>
+          <CatalogCard key={index} clickHandler={openFormPopupHandler} imageSrc={item.image} title={item.title} />
         ))}
-
       </ul>
     </section>
   )
 }
-
-export default Catalog;

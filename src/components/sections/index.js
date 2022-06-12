@@ -6,6 +6,8 @@ import Footer from "./footer/footer";
 import DesignersList from "./designers-list/designers-list";
 import FirstPartArticles from "./first-part-articles/first-part-atricles";
 import SecondPartArticles from "./second-part-articles/second-part-articles";
+import Header from "./header/header";
+import FixedElements from './fixed-elements/fixed-elements'
 
 export {
   Opening,
@@ -16,4 +18,6 @@ export {
   AboutUs,
   Footer,
   DesignersList,
+  Header,
+  FixedElements,
 }

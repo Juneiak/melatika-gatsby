@@ -4,17 +4,19 @@ import {
   Catalog,
   WeWillSelect,
   AboutUs,
-  Footer,
   SecondPartArticles,
   FirstPartArticles,
   DesignersList,
+  FixedElements
 } from '../components/sections/index';
+import { FormPopup, VideoPopup, NavMenuPopup } from "../components/popups"
 import IndexLayout from "../components/index-layout/index-layout";
-import { FormPopup, VideoPopup } from "../components/popups"
 
-const IndexPage = () => {
+
+export default function IndexPage() {
   const [ isFormPopupOpen, setIsFormPopupOpen ] = React.useState(false);
   const [ selectedDesignerVideo, setSelectedDesignerVideo ] = React.useState('');
+  const [ isNavMenuOpened, setIsNavMenuOpened] = React.useState(false);
 
   const [ formTitle, setFormTitle ] = React.useState('');
 
@@ -33,13 +35,14 @@ const IndexPage = () => {
       <main style={{width: '100%', height: '100%'}}>
         <Opening />
         <Catalog openFormPopupHandler={() => openFormPopup('Оставьте заявку и мы рассчитаем цену')} />
-        <FirstPartArticles />
         <WeWillSelect openFormPopupHandler={() => openFormPopup('Оставьте заявку и мы рассчитаем цену')} />
-        <SecondPartArticles />
+        <FirstPartArticles />
         <AboutUs />
         <DesignersList selectVideoHandler={setSelectedDesignerVideo} openFormPopupHandler={() => openFormPopup('Получите своего персонального менеджера для комфортной работы')} />
+        <SecondPartArticles />
       </main>
-      <Footer />
+      <FixedElements isNavOpened={isNavMenuOpened} openNav={setIsNavMenuOpened} />
+
 
       <FormPopup isOpen={isFormPopupOpen} title={formTitle} closeHandler={closeFormPopup} />
       <VideoPopup
@@ -47,9 +50,8 @@ const IndexPage = () => {
         videoUrl={selectedDesignerVideo}
         isOpen={!!selectedDesignerVideo}
       />
+      <NavMenuPopup isOpen={isNavMenuOpened} closeNavHandler={() => setIsNavMenuOpened(false)} />
 
     </IndexLayout>
   )
 }
-
-export default IndexPage;

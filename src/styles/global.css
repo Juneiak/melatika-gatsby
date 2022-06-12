@@ -1,36 +1,49 @@
-@import url(./fonts/fonts.css);
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+html {
+  font-size: calc(1vw / 14.4);
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: calc(1vw / 7.68);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: calc(1vw / 3.75);
+  }
+}
 
 :root {
-  --font-basic: Montserrat, 'Roboto', 'Oxygen', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+  --font-basic: 'Montserrat', sans-serif;
   --color-white: white;
   --color-peach: #D5876F;
   --color-error: #87331a;
   --color-gray: #2A2C2E;
-  --font-size-large: 4.9vw; /* 60px => 70 */
-  --font-size-big: 2.8vw; /* 40px */
-  --font-size-middle: 1.81vw ; /* 26px */
-  --font-size-small: 1.67vw; /* 24px */
-  --font-size-body: 1.12vw; /* 16px */
-  --font-size-body-small: 0.96vw; /* 14px */
-  --font-size-body-extra-small: 0.84vw; /* 12px */
+  --color-black: #000;
 
+  --font-size-large: 70rem;
+  --font-size-big: 40rem;
+  --font-size-middle: 24rem;
+  --font-size-small: 20rem;
+
+  --font-size-caption-big: 18rem;
+  --font-size-caption-middle: 16rem;
+  --font-size-caption-small: 14rem;
+  
+  --font-size-body-big: 12rem;
+  --font-size-body-middle: 10rem;
+  --font-size-body-small: 8rem;
 }
-@media screen and (max-width: 460px) {
-  :root {
-    --font-size-large: 10.7vw; /* 40px */
-    --font-size-big: 6.5vw; /* 24px */
-    --font-size-middle: 4.8vw; /* 18px */
-    --font-size-small: 3.8vw; /* 14px */
-    --font-size-body: 2.7vw; /* 10px */
-    --font-size-body-small: 2.15vw; /* 8px */
-    --font-size-body-extra-small: 2.15vw /* 8px */
-  }
-}
+
 
 body {
   margin: 0;
   width: 100%;
   height: 100%;
+  font-family: 'Roboto', 'Oxygen', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
 }
 
 
@@ -66,9 +79,9 @@ body::after {
 @media screen and (max-width: 460px) {
   body::after {
     content: 
-    url(../images/nav/nav-1-460.png)
-    url(../images/nav/nav-2-460.png)
-    url(../images/nav/nav-3-460.png)
-    url(../images/nav/nav-4-460.png);
+    url(../images/nav/nav-1-480.png)
+    url(../images/nav/nav-2-480.png)
+    url(../images/nav/nav-3-480.png)
+    url(../images/nav/nav-4-480.png);
   }
 }

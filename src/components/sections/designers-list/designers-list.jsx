@@ -1,47 +1,33 @@
 import React, {useState} from 'react';
 import * as styles from './designers-list.module.css';
-import WorkWithUs from '../../work-with-us/work-with-us';
-import DesignerCard from '../../designer-card/designer-card';
+import WorkWithUs from '../../common/work-with-us/work-with-us';
+import DesignerCard from './designer-card/designer-card';
 import { designerCardsData } from '../../../misc/data';
-import Arrow from './arrow/arrow';
-import DoubleElement from './double-element/double-element';
+import { BasicButton } from '../../ui';
 
-const DesignersList = ({ openFormPopupHandler, selectVideoHandler }) => {
-  const [ isSecondPage, setIsSecondPage ] = useState(false);
+export default function DesignersList({ openFormPopupHandler, selectVideoHandler }) {
 
   return (
     <section id='toDesigners' className={styles.designersList}>
       <div className={styles.content}>
-        <div  className={styles.titleConatainer}>
-          <WorkWithUs openPopupHanler={openFormPopupHandler} />
-        </div>
-        <div className={styles.listContainer}>
-          <div className={styles.elementContainer}><WorkWithUs openPopupHanler={openFormPopupHandler} /></div>
-          <div className={styles.listWrapper}>
-            <Arrow clickHandler={() => setIsSecondPage(false)} isHide={!isSecondPage}/>
-
-            <ul className={styles.list}>
-              <DoubleElement isSecondState={isSecondPage}
-                firstCard={<DesignerCard data={designerCardsData[0]} isReversed={true} selectVideoHandler={selectVideoHandler} />}
-                secondCard={<DesignerCard data={designerCardsData[2]} isReversed={false} selectVideoHandler={selectVideoHandler} />}
-              />
-              <DoubleElement isReversed={true} isSecondState={isSecondPage}
-                firstCard={<DesignerCard data={designerCardsData[1]} isReversed={false} selectVideoHandler={selectVideoHandler} />}
-                secondCard={<DesignerCard data={designerCardsData[0]} isReversed={true} selectVideoHandler={selectVideoHandler} />}
-              />
-               <DoubleElement isSecondState={isSecondPage}
-                firstCard={<DesignerCard data={designerCardsData[2]} isReversed={true} selectVideoHandler={selectVideoHandler} />}
-                secondCard={<DesignerCard data={designerCardsData[1]} isReversed={false} selectVideoHandler={selectVideoHandler} />}
-              />
-            </ul>
-
-            <Arrow clickHandler={() => setIsSecondPage(true)} isNextState={true} isHide={isSecondPage}/>
-          </div>
-        </div>
-        
+        <div  className={styles.titleConatainer}><WorkWithUs openPopupHanler={openFormPopupHandler} /></div>
+          <ul className={styles.list}>
+            <li className={styles.elementWithButton}>
+              <div className={styles.buttonContainer}>
+                <p className={styles.text}>Нас выбирают профи</p>
+                <BasicButton
+                  handler={openFormPopupHandler}
+                  type='secondary'
+                  text="Работать с нами"
+                  small={true}
+                />
+              </div>
+             </li>
+            <li className={styles.listElement}><DesignerCard data={designerCardsData[0]} selectVideoHandler={selectVideoHandler} /></li>
+            <li className={styles.listElement}><DesignerCard data={designerCardsData[1]} selectVideoHandler={selectVideoHandler} /></li>
+            <li className={styles.listElement}><DesignerCard data={designerCardsData[2]} selectVideoHandler={selectVideoHandler} /></li>
+          </ul>
       </div>
     </section>
   )
 }
-
-export default DesignersList;

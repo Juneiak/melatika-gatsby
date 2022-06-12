@@ -1,9 +1,15 @@
 .opening {
-  height: 100vh;
+  height: 749rem;
   width: 100%;
   display: flex;
   justify-content: center;
+}
+
+.content {
   position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .image {
@@ -13,23 +19,25 @@
   z-index: -1;
 }
 
-.content {
+.text {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: var(--color-white);
-  font-family: var(--font-basic);
   flex-direction: column;
+  margin-top: 186rem;
 }
 
 .title {
+  color: var(--color-white);
   font-size: var(--font-size-large);
-  font-weight: 500;
+  font-family: var(--font-basic);
+  font-weight: 900;
 }
 
 .subtitle {
+  color: var(--color-white);
   font-size: var(--font-size-middle);
-  font-weight: 300;
+  font-weight: 600;
+  font-family: var(--font-basic);
 }
 
 @media screen and (max-width: 460px) {

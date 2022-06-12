@@ -1,34 +1,27 @@
 import React from 'react';
 import * as styles from './we-will-select.module.css';
-import BasicButton from '../../basic-button/basic-button';
-import SplitedSection from '../../splited-section/splited-section';
 import image from '../../../images/we-will-select/we-will-select.jpg'
-import image460 from '../../../images/we-will-select/we-will-select-460.jpg'
-import useWidthMediaMatch from '../../hooks/use-width-media-match';
+import image_480 from '../../../images/we-will-select/we-will-select-480.jpg'
 
-const WeWillSelect = ({ openFormPopupHandler }) => {
-  const is460 = useWidthMediaMatch('(max-width: 460px)');
+import { Is480Context } from '../../../utils/contexts';
+import {MediaImage, BasicButton} from '../../ui';
+
+export default function WeWillSelect({ openFormPopupHandler }) {
+  const is480 = React.useContext(Is480Context)
 
   return (
-    <SplitedSection is460Cover={true} image460={image460} image={image} isReversed={true}>
-      <div id='solution' className={styles.weWillSelect}>
+    <section className={styles.weWillSelect}>
+      <div className={styles.content}>
 
-        <div className={styles.content}>
-          <div className={styles.titleContent}>
-            <h2 className={styles.title}>Полная свобода творчества</h2>
-            <p className={styles.subtitle}>Мебель по вашему проекту</p>
-          </div>
-          <BasicButton
-            type={is460 ? 'tertiary' : 'secondary'}
-            small={true}
-            text='Заказать'
-            handler={openFormPopupHandler}
-          />
+        <div className={styles.textContainer}>
+          <h2 className={styles.title}>Полная свобода творчества</h2>
+          <p className={styles.subtitle}>Мебель по вашему проекту</p>
+          <BasicButton type={is480 ? 'tertiary' : 'secondary'} small={true} text='Заказать' handler={openFormPopupHandler}/>
         </div>
 
+        <div className={styles.image}><MediaImage image={image} image_480={image_480} alt='фоновая картинка'/></div>
+
       </div>
-    </SplitedSection>
+    </section>
   )
 }
-
-export default WeWillSelect;

@@ -1,16 +1,15 @@
 import React from 'react';
 import '../../styles/global.css'
 import * as styles from './index-layout.module.css';
-import Logo from '../logo/logo';
-import Contacts from '../contacts/contacts';
-import BurgerMenuButton from '../burger-menu-button/burger-menu-button';
-import { NavMenuPopup } from '../popups'
+import { Footer, Header } from '../sections';
 import Helmet from 'react-helmet';
-import favicon from '../../images/favicon.ico';
+import favicon from '../../images/misc/favicon.ico';
+import { Is480Context } from '../../utils/contexts';
+import useIs480 from '../../hooks/use-is-480';
 
-const IndexLayout = ({ children }) => {
-  const [isNavMenuOpen, setIsNavMenuOpen] = React.useState(false);
-
+export default function IndexLayout({ children }) {
+  const is480 = useIs480();
+  
   return (
     <>
       <Helmet htmlAttributes={{lang: 'ru'}}>
@@ -22,24 +21,16 @@ const IndexLayout = ({ children }) => {
         <title>Melatika</title>
       </Helmet>
 
-      <div className={styles.layout}>
+      <Is480Context.Provider value={is480}>
+        <div className={styles.layout}>
 
-        {children}
+          <Header />
+          {children}
+          <Footer />
 
-        <div className={styles.logoContainer}>
-          <a href="#opening" className=""><Logo /></a>
         </div>
-        <div className={styles.contactsContainer}><Contacts whiteColor={true}/></div>
-        <div className={styles.buttonContainer}>
-          <BurgerMenuButton isOpen={isNavMenuOpen} handler={() => setIsNavMenuOpen(!isNavMenuOpen)}/>
-        </div>
-
-        <NavMenuPopup isOpen={isNavMenuOpen} closeNavHandler={() => setIsNavMenuOpen(false)} />
-
-      </div>
+      </Is480Context.Provider>
     </>
 
   )
 }
-
-export default IndexLayout

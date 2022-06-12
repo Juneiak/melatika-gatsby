@@ -1,44 +1,46 @@
 .footer {
   width: 100%;
   display: flex;
-  justify-content: center;
-  padding: 4.85vw 0;
+  align-items: center;
+  background-color: var(--color-gray);
+  padding: 50rem 0;
+
 }
 
 .content {
-  height: 100%;
-  width: 70%;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-
-  font-family: var(--font-basic);
-}
-
-.titleContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   width: 100%;
-  margin-bottom: 3vw;
-  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.title {
-  font-size: var(--font-size-big);
-  font-weight: 300;
-  
+.companyName {
+  width: 142rem;
+  height: 28rem;
+  margin-bottom: 35rem;
+}
+.mail {
+  font-size: var(--font-size-caption-small);
+  font-family: var(--font-basic);
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 17rem;
+  margin-bottom: 40rem;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 30rem;
+
 }
 
-.contacts {
-  font-size: var(--font-size-middle);
-  font-weight: 300;
-  margin-bottom: 6.5vw;
-  line-height: 1.5;
+.contactsContainer {
+  margin-bottom: 30rem;
 }
 
-@media screen and (max-width: 460px) {
-  .contacts {
-    font-size: var(--font-size-small);
-  }
+.year {
+  font-size: var(--font-size-caption-small);
+  font-family: var(--font-basic);
+  color: var(--color-white);
+  font-weight: 500;
+  line-height: 17rem;
 }
