@@ -1,6 +1,6 @@
 .logoContainer {
   position: fixed;
-  top: 14rem;
+  top: 25rem;
   left: 40rem;
   width: 29rem;
   height: 31rem;
@@ -15,12 +15,24 @@
 .burgerButtonContainer {
   display: none;
   position: fixed;
-  top: 3vw;
-  right: 3vw;
+  top: 20rem;
+  right: 24rem;
   z-index: 102;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
+
+  .logoContainer {
+    top: 20rem;
+    left: 24rem;
+    width: 24rem;
+    height: 25rem;
+  }
+
+  .contactsContainer {
+    display: none;
+  }
+
   .burgerButtonContainer {
     display: block;
   }

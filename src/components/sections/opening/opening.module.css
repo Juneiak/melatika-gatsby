@@ -31,6 +31,8 @@
   font-size: var(--font-size-large);
   font-family: var(--font-basic);
   font-weight: 900;
+  line-height: 85rem;
+  margin-bottom: 5rem;
 }
 
 .subtitle {
@@ -38,10 +40,20 @@
   font-size: var(--font-size-middle);
   font-weight: 600;
   font-family: var(--font-basic);
+  line-height: 30rem;
+
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
+  .opening {
+    height: 560rem;
+  }
+
+  .title {
+    font-size: var(--font-size-big);
+  }
+
   .subtitle {
-    font-size: var(--font-size-body);
+    font-size: var(--font-size-caption-small);
   }
 }

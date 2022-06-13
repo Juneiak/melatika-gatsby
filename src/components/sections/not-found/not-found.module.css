@@ -2,10 +2,6 @@
   width: 100%;
   height: 100%;
   position: relative;
-  background-image: url(../../../images/404/404.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  font-family: var(--font-basic);
   color: var(--color-white);
   display: flex;
   justify-content: flex-end;
@@ -16,25 +12,38 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-right: 6vw;
+  margin-right: 160rem;
+  z-index: 2;
+}
+
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .logoContainer {
   position: fixed;
-  top: 3vw;
-  left: 3vw;
+  top: 14rem;
+  left: 40rem;
+  width: 29rem;
+  height: 31rem;
 }
 
 .title {
-  font-size: 23vw;
-  font-weight: 300;
-  line-height: 1;
+  font-family: var(--font-basic);
+  font-size: 300rem;
+  font-weight: 500;
+  line-height: 365rem;
 }
 
 .subtitle {
   font-size: var(--font-size-big);
-  margin-bottom: 8vw;
-  font-weight: 300;
+  margin-bottom: var(--font-size-big);
+  font-weight: 100;
 }
 
 @media screen and (max-width: 800px) {

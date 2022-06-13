@@ -1,9 +1,9 @@
 import React from 'react';
 import * as styles from './about-us.module.css';
-import vkIcon from '../../../images/icons/vk.svg';
 import image from '../../../images/about-us/about-us.jpg';
 import image_480 from '../../../images/about-us/about-us-480.jpg'
 import {MediaImage} from '../../ui';
+import { VkIcon } from '../../common/icons/icons';
 
 export default function AboutUs() {
 
@@ -14,10 +14,11 @@ export default function AboutUs() {
         <div className={styles.imageContainer}><MediaImage image={image} image_480={image_480} alt='Александр Зырянов'/></div>
         
         <div className={styles.textContainer}>
-          <h2 className={styles.name}>Александр Зырянов
-            <a className={styles.vkLink} href="https://vk.com/thugsagainstdrugs" target='_blank'><img src={vkIcon} alt="иконка вк" className={styles.vkIcon}/></a>
-          </h2>
-          <p className={styles.text}>Каждое изделие Melatika мы проектируем с огромным вниманием к деталям, а вдохновение черпаем из эстетики премиальных европейских интерьеров и брендов.</p>
+          <div className={styles.nameContainer}>
+            <h2 className={styles.name}>Александр Зырянов</h2>
+            <a className={styles.vkLink} href="https://vk.com/thugsagainstdrugs" target='_blank'><VkIcon /></a>
+          </div>
+          <p className={styles.text}>Сделаем мебель в точном соответствии с вашим персональным эскизом. Воплотим любые пожелания клиента в качественном исполнении и учетом всех деталей. Вместе мы создадим интерьер, в котором хочется жить, заниматься творчеством и наслаждаться комфортом.</p>
         </div>
 
       </div>

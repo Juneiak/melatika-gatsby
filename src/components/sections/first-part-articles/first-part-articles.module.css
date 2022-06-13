@@ -14,8 +14,8 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-template-rows: 100%;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr;
 }
 
 
@@ -24,14 +24,15 @@
 }
 
 .articleCard1 {
-  grid-template-columns: 50% 50%!important;
+  grid-template-columns: 1fr 1fr!important;
   grid-template-rows: 100%!important;
   grid-template-areas: 
   'image about'!important;
+  background-color: var(--color-gray);
 }
 
 .about1 {
-  justify-content: center!important;
+  color: var(--color-white);
 }
 
 .articleCard1:hover .about1 {
@@ -44,7 +45,7 @@
 }
 
 .articleCard2 {
-  grid-template-rows: 40% 60%!important;
+  grid-template-rows: 1fr 1fr!important;
   grid-template-areas: 
   'about'
   'image'!important;
@@ -56,7 +57,7 @@
 
 
 .about2 {
-  justify-content: center!important;
+
 }
 
 
@@ -73,11 +74,9 @@
 }
 
 .about3 {
-  justify-content: center!important;
-
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
   .atricles {
     height: 687rem;
   }
@@ -93,11 +92,10 @@
   }
   
   .articleCard1 {
-    grid-template-columns: 43% 57%!important;
+    grid-template-columns: 40% 60%!important;
   }
   
   .about1 {
-    justify-content: center!important;
   }
 
   .articleCard1:hover .about1 {
@@ -109,7 +107,7 @@
   }
   
   .articleCard2 {
-    grid-template-columns: 57% 43%!important;
+    grid-template-columns: 60% 40%!important;
     grid-template-rows: 100%!important;
     grid-template-areas: 
     'about image'!important;
@@ -120,9 +118,8 @@
   }
   
   .about2 {
-    justify-content: center!important;
-    align-items: flex-end!important;
-    text-align: end!important;
+    background-color: var(--color-gray);
+    color: var(--color-white);
   }
   
   
@@ -139,8 +136,7 @@
   }
   
   .about3 {
-    align-items: center!important;
-    text-align: center!important;
+
   }
 
 }

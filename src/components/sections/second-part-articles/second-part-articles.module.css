@@ -1,6 +1,6 @@
 .atricles {
   width: 100%;
-  height: 38vw;
+  height: 720rem;
   display: flex;
   justify-content: center;
 }
@@ -14,14 +14,13 @@
   width: 100%;
   height: 100%;
   display: grid;
-  grid-template-columns: repeat(4, 25%);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: 100%;
 }
 
 
 .listElement1 {
   grid-column: 2 span;
-
 }
 
 .articleCard1 {
@@ -33,7 +32,6 @@
 }
 
 .about1 {
-  justify-content: center;
 }
 
 
@@ -42,7 +40,7 @@
 }
 
 .articleCard2 {
-  grid-template-rows: 40% 60%;
+  grid-template-rows: 1fr 1fr;
   grid-template-areas: 
   'about'
   'image' ;
@@ -73,9 +71,9 @@
   transform: translateY(-10%);
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
   .atricles {
-    height: 143vw;
+    height: 688rem;
   }
 
   .list {
@@ -85,14 +83,19 @@
 
 
   .listElement1 {
+    grid-row: 2 span;
+    grid-column: auto;
+
 
   }
   
   .articleCard1 {
-    grid-template-columns: 43% 57% ;
-    grid-template-rows: 100%;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 100%;
+  
     grid-template-areas: 
-    'image about';
+    'about'
+    'image';
   }
 
   .articleCard1:hover {
@@ -100,7 +103,6 @@
   }
   
   .about1 {
-    justify-content: center;
   
   }
   
@@ -109,7 +111,7 @@
   }
   
   .articleCard2 {
-    grid-template-columns: 57% 43%;
+    grid-template-columns: 60% 40%;
     grid-template-rows: 100%;
     grid-template-areas: 
     'about image';
@@ -120,30 +122,24 @@
   }
   
   .about2 {
-    justify-content: center;
-    align-items: flex-end;
-    text-align: end;
+
   }
   
   .listElement3 {
-    grid-column: auto;
-    grid-row: 2 span;
   }
   
   .articleCard3 {
-    grid-template-rows: 50% 50%;
-    grid-template-columns: 100%;
-  
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
     grid-template-areas: 
-    'image'
-    'about';
+    'image about';
   }
   
   .about3 {
-    justify-content: flex-start;
-    align-items: flex-end;
-    text-align: end;
+    background-color: var(--color-gray);
+    color: var(--color-white);
   }
+  
   .articleCard3:hover .about3 {
     transform: none;
   }

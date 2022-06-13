@@ -2,17 +2,20 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .content {
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  position: relative;
+
 }
 
-.image {
+.imageContainer {
+  width: 100%;
   height: 720rem;
-  width: 100%
 }
 
 .textContainer {
@@ -20,6 +23,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  z-index: 2;
 }
 
 .title {
@@ -36,4 +40,44 @@
   font-weight: 500;
   line-height: 23rem;
   margin-bottom: 15rem;
+}
+
+@media screen and (max-width: 480px) {
+  .weWillSelect {
+    width: 100%;
+    height: 525rem;
+  }
+
+  .imageContainer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .textContainer {
+    width: 232rem;
+    text-align: center;
+    color: var(--color-white)
+  }
+  
+  .title {
+    font-size: var(--font-size-middle);
+    line-height: 29rem;
+    margin-bottom: 5rem;
+  }
+  
+  .subtitle {
+    font-size: var(--font-size-body-middle);
+    line-height: 12rem;
+  }
+
 }

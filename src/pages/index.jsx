@@ -7,7 +7,8 @@ import {
   SecondPartArticles,
   FirstPartArticles,
   DesignersList,
-  FixedElements
+  FixedElements,
+  ContactsBar
 } from '../components/sections/index';
 import { FormPopup, VideoPopup, NavMenuPopup } from "../components/popups"
 import IndexLayout from "../components/index-layout/index-layout";
@@ -19,6 +20,7 @@ export default function IndexPage() {
   const [ isNavMenuOpened, setIsNavMenuOpened] = React.useState(false);
 
   const [ formTitle, setFormTitle ] = React.useState('');
+  const topRef = React.useRef()
 
   const openFormPopup = (title) => {
     setIsFormPopupOpen(true);
@@ -30,10 +32,17 @@ export default function IndexPage() {
     setTimeout(() => setFormTitle(''), 500)
   }
 
+  
+
+  const handleScrollToTop = (ref) => {
+    topRef.current.scrollIntoView({behavior: 'smooth'});
+  }
+
   return (
-    <IndexLayout>
+    <IndexLayout headerRef={topRef}>
       <main style={{width: '100%', height: '100%'}}>
         <Opening />
+        <ContactsBar />
         <Catalog openFormPopupHandler={() => openFormPopup('Оставьте заявку и мы рассчитаем цену')} />
         <WeWillSelect openFormPopupHandler={() => openFormPopup('Оставьте заявку и мы рассчитаем цену')} />
         <FirstPartArticles />
@@ -41,7 +50,7 @@ export default function IndexPage() {
         <DesignersList selectVideoHandler={setSelectedDesignerVideo} openFormPopupHandler={() => openFormPopup('Получите своего персонального менеджера для комфортной работы')} />
         <SecondPartArticles />
       </main>
-      <FixedElements isNavOpened={isNavMenuOpened} openNav={setIsNavMenuOpened} />
+      <FixedElements handleScroll={handleScrollToTop} isNavOpened={isNavMenuOpened} openNav={setIsNavMenuOpened} />
 
 
       <FormPopup isOpen={isFormPopupOpen} title={formTitle} closeHandler={closeFormPopup} />

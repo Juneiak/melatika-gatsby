@@ -2,12 +2,12 @@ import React from 'react';
 import * as styles from './header.module.css';
 import HeaderLink from './header-link/header-link';
 
-export default function Header() {
+export default function Header({ headerRef }) {
 
   return (
-    <header className={styles.header}>
-      <div className={styles.content}>
+    <header ref={headerRef} id='header' className={styles.header}>
 
+      <div className={styles.content}>
         <ul className={styles.list}>
           <li className={styles.listElement}>
             <HeaderLink text='Каталог' linkTo='/catalog' />
@@ -22,7 +22,6 @@ export default function Header() {
             <HeaderLink text='Контакты' linkTo='#contacts' />
           </li>
         </ul>
-        
       </div>
     </header>
   )

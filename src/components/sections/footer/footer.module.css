@@ -4,7 +4,7 @@
   align-items: center;
   background-color: var(--color-gray);
   padding: 50rem 0;
-
+  box-sizing: border-box;
 }
 
 .content {
@@ -14,15 +14,16 @@
   flex-direction: column;
 }
 
-.companyName {
+.logoContainer {
   width: 142rem;
   height: 28rem;
   margin-bottom: 35rem;
+  color: var(--color-white);
+
 }
 .mail {
   font-size: var(--font-size-caption-small);
   font-family: var(--font-basic);
-  color: var(--color-white);
   text-decoration: none;
   font-weight: 500;
   line-height: 17rem;
@@ -30,11 +31,11 @@
   display: grid;
   grid-auto-flow: column;
   gap: 30rem;
-
 }
 
-.contactsContainer {
-  margin-bottom: 30rem;
+.mail > a {
+  text-decoration: none;
+  color: var(--color-white);
 }
 
 .year {
@@ -43,4 +44,66 @@
   color: var(--color-white);
   font-weight: 500;
   line-height: 17rem;
+}
+
+
+.contacts {
+  display: grid;
+  align-items: center;
+  gap: 17rem;
+  grid-auto-flow: column;
+  margin-bottom: 30rem;
+}
+
+.link {
+  color: var(--color-white);
+  width: 22rem;
+  height: 22rem;
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    background-color: var(--color-white);
+    padding: 35rem 0;
+  }
+
+  .logoContainer {
+    width: 78rem;
+    height: 15rem;
+    color: var(--color-black);
+    margin-bottom: 35rem;
+  }
+
+  .mail {
+    font-size: var(--font-size-body-middle);
+    color: var(--color-black);
+    font-weight: 500;
+    line-height: 12rem;
+    margin-bottom: 15rem;
+    gap: 20rem;
+  }
+
+  .mail > a {
+    color: var(--color-black);
+  }
+  
+  .year {
+    font-size: var(--font-size-body-small);
+    color: var(--color-black);
+    line-height: 10rem;
+    width: 150rem;
+    text-align: center;
+  }
+  
+  
+  .contacts {
+    margin-bottom: 15rem;
+  }
+  
+  .link {
+    color: var(--color-black);
+    width: 14rem;
+    height: 14rem;
+  }
+  
 }

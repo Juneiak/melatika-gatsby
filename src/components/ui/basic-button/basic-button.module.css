@@ -1,7 +1,7 @@
 .button {
   transition: all linear 0.25s;
-  width: 19.5vw;
-  height: 3.5vw;
+  width: 280rem;
+  height: 50rem;
   border-radius: 35px;
   font-family: var(--font-basic);
   font-weight: 300;
@@ -26,8 +26,8 @@
 }
 
 .small {
-  width: 14vw;
-  height: 2.8vw;
+  width: 200rem;
+  height: 40rem;
 }
 
 .primary {
@@ -52,13 +52,13 @@
 @media screen and (max-width: 460px) {
 
   .button {
-    width: 44vw;
+    width: 32rem;
     height: 8.5vw;
     font-size: var(--font-size-body)
   }
 
   .small {
-    width: 44vw;
+    width: 40;
     height: 8.5vw;
   }
 }

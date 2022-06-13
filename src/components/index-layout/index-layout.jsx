@@ -1,5 +1,7 @@
 import React from 'react';
 import '../../styles/global.css'
+import '@splidejs/react-splide/css/core';
+        
 import * as styles from './index-layout.module.css';
 import { Footer, Header } from '../sections';
 import Helmet from 'react-helmet';
@@ -7,9 +9,9 @@ import favicon from '../../images/misc/favicon.ico';
 import { Is480Context } from '../../utils/contexts';
 import useIs480 from '../../hooks/use-is-480';
 
-export default function IndexLayout({ children }) {
+export default function IndexLayout({ children, headerRef }) {
   const is480 = useIs480();
-  
+
   return (
     <>
       <Helmet htmlAttributes={{lang: 'ru'}}>
@@ -24,7 +26,7 @@ export default function IndexLayout({ children }) {
       <Is480Context.Provider value={is480}>
         <div className={styles.layout}>
 
-          <Header />
+          <Header headerRef={headerRef} />
           {children}
           <Footer />
 

@@ -1,14 +1,15 @@
 import React from 'react';
 import * as styles from './atricle.module.css';
+import { MediaImage } from '../../ui';
 
-export default function Atricle({ articleData: {text, title, image}, articleStyles, aboutStyles}) {
+export default function Atricle({ articleData: {text, title, image, image_480}, articleStyles, aboutStyles}) {
   return (
     <article className={styles.article}>
       <div className={`
         ${styles.content}
         ${articleStyles}
       `}>
-        <img className={styles.image} src={image} alt="фото статьи" />
+        <div className={styles.imageContainer} src={image}><MediaImage image={image} image_480={image_480}/></div>
         <div className={`
           ${styles.about}
           ${aboutStyles}

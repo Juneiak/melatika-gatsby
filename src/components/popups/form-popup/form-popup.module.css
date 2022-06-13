@@ -36,11 +36,11 @@
 
 .formTitle {
   font-family: var(--font-basic);
-  font-size: 2.2vw;
+  font-size: var(--font-size-caption-big);
   font-weight: 300;
-  margin-bottom: 3vw;
+  margin-bottom: 13rem;
   text-align: center;
-  line-height: 0.9;
+  line-height: 21rem
 }
 
 .worning {

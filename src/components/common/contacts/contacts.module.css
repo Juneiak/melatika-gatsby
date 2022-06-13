@@ -1,7 +1,7 @@
 .contacts {
   display: grid;
   flex-direction: column;
-  gap: 1.5vw;
+  gap: 17rem;
   grid-auto-flow: row;
   width: max-content;
 }
@@ -12,9 +12,10 @@
 
 .link {
   transition: 0.2s linear all;
-  width: 2vw;
-  height: 2vw;
+  width: 21rem;
+  height: 21rem;
   background-color: transparent;
+  color: var(--color-peach);
 }
 
 .link:hover {
@@ -25,7 +26,7 @@
 
 @media screen and (max-width: 460px) {
   .link {
-    width: 4vw;
-    height: 4vw;
+    /* width: 4vw;
+    height: 4vw; */
   }
 }

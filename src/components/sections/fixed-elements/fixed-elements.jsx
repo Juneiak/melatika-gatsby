@@ -4,12 +4,11 @@ import Logo from '../../common/logo/logo';
 import BurgerMenuButton from '../../common/burger-menu-button/burger-menu-button';
 import Contacts from '../../common/contacts/contacts';
 
-export default function FixedElements({ isNavOpened, openNav }) {
+export default function FixedElements({ isNavOpened, openNav, handleScroll }) {
+
   return (
     <>
-      <div className={styles.logoContainer}>
-        <a href="#opening" className=""><Logo /></a>
-      </div>
+      <div onClick={handleScroll} className={styles.logoContainer}><Logo /></div>
       <div className={styles.contactsContainer}><Contacts whiteColor={true}/></div>
       <div className={styles.burgerButtonContainer}>
         <BurgerMenuButton isOpen={isNavOpened} handler={() => openNav(!isNavOpened)}/>

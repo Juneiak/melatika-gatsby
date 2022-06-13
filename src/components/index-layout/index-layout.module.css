@@ -6,3 +6,9 @@
   flex-direction: column;
   width: 1440rem;
 }
+
+@media screen and (max-width: 480px) {
+  .layout {
+    width: 375rem;
+  }
+}

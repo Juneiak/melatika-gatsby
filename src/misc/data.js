@@ -4,10 +4,19 @@ import articleImage3 from '../images/articles/articles-3.jpg';
 import articleImage4 from '../images/articles/articles-4.jpg';
 import articleImage5 from '../images/articles/articles-5.jpg';
 import articleImage6 from '../images/articles/articles-6.jpg';
+import articleImage1_480 from '../images/articles/articles-1-480.jpg';
+import articleImage2_480 from '../images/articles/articles-2-480.jpg';
+import articleImage3_480 from '../images/articles/articles-3-480.jpg';
+import articleImage4_480 from '../images/articles/articles-4-480.jpg';
+import articleImage5_480 from '../images/articles/articles-5-480.jpg';
+import articleImage6_480 from '../images/articles/articles-6-480.jpg';
 
 import designerImage1 from '../images/designers/designer-1.jpg';
 import designerImage2 from '../images/designers/designer-2.jpg';
 import designerImage3 from '../images/designers/designer-3.jpg';
+import designerImage1_480 from '../images/designers/designer-1-480.jpg';
+import designerImage2_480 from '../images/designers/designer-2-480.jpg';
+import designerImage3_480 from '../images/designers/designer-3-480.jpg';
 
 import navImage1 from '../images/nav/nav-1.png';
 import navImage2 from '../images/nav/nav-2.png';
@@ -31,18 +40,20 @@ const articlesData1 = [
     title: 'Кастомизация',
     text: 'Реализуем уникальные проекты, вдохновлённые Вашей фантазией. С легкостью создадим и привезём мебель Вашей мечты.',
     image: articleImage1,
+    image_480: articleImage1_480,
+
   },
   {
     title: 'Детали',
     text: 'Суть нашего бренда – изысканность швов и подбор материалов. Мы способны увидеть великое в маломи в срок изготовить уникальную и долговечную мебель.',
     image: articleImage2,
-
+    image_480: articleImage2_480,
   },
   {
     title: 'Ткани',
     text: 'Эксклюзивные и популярные, любого цвета и фактуры. Мы сможем найти любую из них, чтобы наша мебель идеально вписалась в интерьер Вашего дома, или квартиры.',
     image: articleImage3,
-
+    image_480: articleImage3_480,
   },
 ]
 
@@ -51,18 +62,19 @@ const articlesData2 = [
     title: 'Выгода',
     text: 'Дизайнер интерьера, сотрудничая с нами, получает весомую выгоду, размер которой зависит от объемов и сложности работ.',
     image: articleImage4,
-
+    image_480: articleImage4_480,
   },
   {
     title: 'Интерес',
     text: 'Ваш персональный менеджер разбирается в мебельных трендах и заинтересован помочь реализовать Ваш дизайн-проект. Он на связи 24/7 и готов ответить на любые вопросы, по работе.',
     image: articleImage5,
-
+    image_480: articleImage5_480,
   },
   {
     title: 'Лояльность',
     text: 'Любим сложные задачи и уважаем сроки. Это значит, мы вовремя доставим, поднимем, распакуем и соберем Ваш заказ, оставив после себя порядок.',
     image: articleImage6,
+    image_480: articleImage6_480,
   },
 ]
 
@@ -72,6 +84,7 @@ const designerCardsData = [
     subtitle : 'Дизайнер интерьеров',
     text: 'О компании “Мелатика” я узнала через соц. сети, мне понравился обширный выбор тканей, ценовой диапазон, сроки производства и то, как лояльно работают с дизайнерами.',
     image: designerImage1,
+    image_480: designerImage1_480,
     videoURl: 'https://www.youtube.com/embed/2P_swy-CIqE?autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&rel=0&showinfo=0&mute=1&autohide=1',
   },
   {
@@ -79,6 +92,8 @@ const designerCardsData = [
     subtitle : 'Дизайнер интерьеров',
     text: 'Мы смогли реализовать дизайн-проект в жизнь в точности, как на картинке. С любыми вопросами всегда помогала служба поддержки. Нас устроило соотношение “цена-качество” именно здесь.',
     image: designerImage2,
+    image_480: designerImage2_480,
+
     videoURl: 'https://www.youtube.com/embed/I9JvyEOXUtM?autoplay=1&controls=0&disablekb=1&fs=0&loop=1&modestbranding=1&rel=0&showinfo=0&mute=1&autohide=1',
 
   },
@@ -87,6 +102,7 @@ const designerCardsData = [
     subtitle : 'Дизайнер интерьеров',
     text: 'Мне понравилось то, что даже не пришлось приходить в салон. Я посмотрела проекты компании, отправила свой эскиз и мне всё сделали качественно. Получилось даже лучше, чем моя визуализация.',
     image: designerImage3,
+    image_480: designerImage3_480,
     videoURl: false
   },
 ]
@@ -106,7 +122,7 @@ const navElementsData = [
   },
   {
     title: 'Дизайнерам',
-    linkTo: '#solution',
+    linkTo: '#designers',
     image: navImage3,
     image_480: navImage3_480,
   },

@@ -3,11 +3,14 @@ import * as styles from './not-found.module.css';
 import Logo from '../../common/logo/logo';
 import { navigate } from 'gatsby';
 import {BasicButton} from '../../ui';
-
+import {MediaImage} from '../../ui';
+import image from '../../../images/404/image.jpg';
+import image_480 from '../../../images/404/image-480.jpg'
 export default function NotFound() {
 
   return (
     <section className={styles.notFound}>
+      <div className={styles.imageContainer}><MediaImage image={image} image_480={image_480}/></div>
       <div className={styles.logoContainer}><Logo /></div>
       <div className={styles.content}>
         <h1 className={styles.title}>404</h1>
