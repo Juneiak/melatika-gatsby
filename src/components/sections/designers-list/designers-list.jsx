@@ -21,7 +21,7 @@ export default function DesignersList({ openFormPopupHandler, selectVideoHandler
           { is480
             ? <DesignersSliderList />
             : <ul className={styles.list}>
-                <li className={styles.elementWithButton}><ButtonListElement /></li>
+                <li className={styles.elementWithButton}><ButtonListElement openFormPopupHandler={openFormPopupHandler} /></li>
                 <li className={styles.listElement}><DesignerCard data={designerCardsData[0]} selectVideoHandler={selectVideoHandler} /></li>
                 <li className={styles.listElement}><DesignerCard data={designerCardsData[1]} selectVideoHandler={selectVideoHandler} /></li>
                 <li className={styles.listElement}><DesignerCard data={designerCardsData[2]} selectVideoHandler={selectVideoHandler} /></li>

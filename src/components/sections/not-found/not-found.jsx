@@ -1,11 +1,12 @@
 import React from 'react';
 import * as styles from './not-found.module.css';
 import Logo from '../../common/logo/logo';
-import { navigate } from 'gatsby';
 import {BasicButton} from '../../ui';
 import {MediaImage} from '../../ui';
 import image from '../../../images/404/image.jpg';
-import image_480 from '../../../images/404/image-480.jpg'
+import image_480 from '../../../images/404/image-480.jpg';
+import { Link } from 'gatsby';
+
 export default function NotFound() {
 
   return (
@@ -15,7 +16,7 @@ export default function NotFound() {
       <div className={styles.content}>
         <h1 className={styles.title}>404</h1>
         <p className={styles.subtitle}>Такой страницы не существует</p>
-        <BasicButton type='tertiary' text='На главную' handler={() => navigate('/')}/>
+        <Link to='/' className={styles.link}>На главную</Link>
       </div>
       
     </section>

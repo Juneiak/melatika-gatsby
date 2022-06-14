@@ -76,7 +76,7 @@ body::after {
   url(../images/nav/nav-4.png);
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
   body::after {
     content: 
     url(../images/nav/nav-1-480.png)

@@ -5,20 +5,20 @@
 }
 
 .input {
-  width: 100%;
-  height: 5.2vw;
-  border: 0.08em solid black;
+  width: 330rem;
+  height: 60rem;
+  border: 1rem solid var(--color-black);;
   background-color: transparent;
-  border-radius: 35px;
+  border-radius: 35rem;
   padding: 3% 5%;
   outline: none;
   position: relative;
   text-align: center;
   font-family: var(--font-basic);
   font-size: var(--font-size-small);
-  font-weight: 300;
-  color: black;
-  margin-bottom: 1vw;
+  font-weight: 500;
+  color: var(--color-black);
+  margin-bottom: 15rem;
   box-sizing: border-box;
   transition: all 0.1s linear;
 }
@@ -49,10 +49,10 @@
   padding: 2%;
   z-index: 5;
   box-sizing: border-box;
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-caption-small);
   font-family: var(--font-basic);
-  border-radius: 3px;
-  border-radius: 12px;
+  border-radius: 3rem;
+  border-radius: 12rem;
   text-align: center;
 }
 
@@ -63,7 +63,7 @@
   border-right-color: transparent;
   position: absolute;
   top: -35%;
-  left: 51.95%;
+  left: 51.8%;
 }
 
 .errorMessage::after {
@@ -73,12 +73,18 @@
   border-left-color: transparent;
   position: absolute;
   top: -35%;
-  left: 48.15%;
+  left: 48.1%;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
   .input {
-    height: 9vw;
-    margin-bottom: 3vw;
+    height: 37rem;
+    width: 203rem;
+    margin-bottom: 10rem;
+    font-size: var(--font-size-body-middle);
   }
+  .input:focus {
+    font-size: calc(var(--font-size-body-middle) * 0.9);
+  }
+  
 }

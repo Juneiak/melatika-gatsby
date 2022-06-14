@@ -2,33 +2,34 @@ import React from 'react';
 import * as styles from './form-input.module.css';
 
 export default function FormInput({
-  onKeyDownHandler,
-  inputRef,
-  inputType = 'text',
+  onChange,
+  name,
+  type = 'text',
   isRequired = false,
-  inputPlaceholder = '',
+  placeholder = '',
   errorMessage = '',
-  inputMinLength,
-  inputMaxLength,
+  max,
+  min,
+  value,
 }) {
-  const isCorrect = true;
 
   return (
     <label className={styles.label}>
       <input
-        minLength = {inputMinLength}
-        maxLength = {inputMaxLength}
-        ref = {inputRef}
-        type = {inputType}
-        placeholder = {inputPlaceholder}
+        onChange={onChange}
+        name={name}
+        value={value}
+        minLength = {min}
+        maxLength = {max}
+        type = {type}
+        placeholder = {placeholder}
         required = {isRequired}
         className = {`
         ${styles.input}
-        ${isCorrect ? '' : styles.inputError}
+        ${!errorMessage ? '' : styles.inputError}
         `}
-        onKeyDown={onKeyDownHandler}
       />
-      {!isCorrect && <div className={styles.errorMessage}>{errorMessage}</div>}
+      {errorMessage && <div className={styles.errorMessage}>{errorMessage}</div>}
     </label>
     
   )

@@ -24,7 +24,7 @@
   opacity: 0.8;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
   .link {
     /* width: 4vw;
     height: 4vw; */

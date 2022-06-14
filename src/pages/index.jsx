@@ -19,22 +19,20 @@ export default function IndexPage() {
   const [ selectedDesignerVideo, setSelectedDesignerVideo ] = React.useState('');
   const [ isNavMenuOpened, setIsNavMenuOpened] = React.useState(false);
 
-  const [ formTitle, setFormTitle ] = React.useState('');
+  const [ formForWhom, setFormForWhom ] = React.useState('');
   const topRef = React.useRef()
 
-  const openFormPopup = (title) => {
+  const openFormPopup = (forWhom) => {
     setIsFormPopupOpen(true);
-    setFormTitle(title)
+    setFormForWhom(forWhom)
   }
 
   const closeFormPopup = () => {
     setIsFormPopupOpen(false);
-    setTimeout(() => setFormTitle(''), 500)
+    setTimeout(() => setFormForWhom(''), 500)
   }
 
-  
-
-  const handleScrollToTop = (ref) => {
+  const handleScrollToTop = () => {
     topRef.current.scrollIntoView({behavior: 'smooth'});
   }
 
@@ -43,17 +41,17 @@ export default function IndexPage() {
       <main style={{width: '100%', height: '100%'}}>
         <Opening />
         <ContactsBar />
-        <Catalog openFormPopupHandler={() => openFormPopup('Оставьте заявку и мы рассчитаем цену')} />
-        <WeWillSelect openFormPopupHandler={() => openFormPopup('Оставьте заявку и мы рассчитаем цену')} />
+        <Catalog openFormPopupHandler={() => openFormPopup('customer')} />
+        <WeWillSelect openFormPopupHandler={() => openFormPopup('customer')} />
         <FirstPartArticles />
         <AboutUs />
-        <DesignersList selectVideoHandler={setSelectedDesignerVideo} openFormPopupHandler={() => openFormPopup('Получите своего персонального менеджера для комфортной работы')} />
+        <DesignersList selectVideoHandler={setSelectedDesignerVideo} openFormPopupHandler={() => openFormPopup('designer')} />
         <SecondPartArticles />
       </main>
       <FixedElements handleScroll={handleScrollToTop} isNavOpened={isNavMenuOpened} openNav={setIsNavMenuOpened} />
 
 
-      <FormPopup isOpen={isFormPopupOpen} title={formTitle} closeHandler={closeFormPopup} />
+      <FormPopup isOpen={isFormPopupOpen} forDesigners={formForWhom === 'designer'} closeHandler={closeFormPopup} />
       <VideoPopup
         closeHandler={() => setSelectedDesignerVideo('')}
         videoUrl={selectedDesignerVideo}

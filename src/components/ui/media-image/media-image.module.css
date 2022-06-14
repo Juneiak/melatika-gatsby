@@ -2,7 +2,7 @@
   width: 3vw;
   height: 3vw;
 }
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 480px) {
 
   .logo {
     width: 7vw;

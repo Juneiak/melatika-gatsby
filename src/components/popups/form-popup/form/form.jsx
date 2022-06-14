@@ -1,14 +1,29 @@
 import React from 'react';
-import * as styles from './bitrix-form.module.css';
-import BasicButton from '../../ui/basic-button/basic-button';
+import * as styles from './form.module.css';
+import { Loader } from '../../../ui';
 import FormInput from './form-input/form-input';
-import Loader from '../../ui/loader/loader';
-import { Is480Context } from '../../../../utils/contexts';
+import useForm from '../../../../hooks/use-form';
+import NumberFormat from 'react-number-format';
 
-export default function Form({ setIsSuccessResponse }) {
+export default function Form({setStatus}) {
 
   const [isLaoding, setIsLoading] = React.useState(false);
-  const is480 = React.useContext(Is480Context)
+
+  const {values, isValid, errors, handleChange, handleReset} = useForm()
+
+  const handleSendLead = () => {
+    setIsLoading(true);
+    fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=lead_from_melatika&FIELDS[NAME]=${values.name}&FIELDS[LAST_NAME]=- клиент с мелатики&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}`,{
+      method: 'GET'
+    })
+    .then((res) => {
+      if (res.ok) {
+        setIsLoading(false);
+        setStatus(true);
+        handleReset()
+      }
+    })
+  }
 
   return (
     <div className={styles.container}>
@@ -16,47 +31,48 @@ export default function Form({ setIsSuccessResponse }) {
       {isLaoding
       ? <Loader />
       :
-        <form ref={formRef} className={styles.form}>
-          {bitrixResponseIsLoading && <div className={styles.formLoading}><Loader /></div>}
+        <form className={styles.form}>
+          {isLaoding && <div className={styles.formLoading}><Loader /></div>}
 
           <div className={styles.inputsContainer}>
             <FormInput
-              inputTitle = 'Имя'
-              onKeyDownHandler = {() => btxNameInput.focus()}
-              inputRef = {nameRef}
-              inputType = "text"
+              onChange = {handleChange}
+              type = "text"
               isRequired = {true}
-              inputPlaceholder = "Имя"
-              errorMessage = {nameErrorMessage}
+              placeholder = "Имя"
+              name='name'
+              min={1}
+              value={values.name}
+              errorMessage = {errors.name}
             />
-            <FormInput
-              inputTitle = 'Телефон'
-              onKeyDownHandler = {() => btxPhoneInput.focus()}
-              inputRef = {phoneRef}
-              inputType = "tel"
-              isRequired = {true}
-              inputMinLength={5}
-              inputPlaceholder = "Телефон"
-              errorMessage = {phoneErrorMessage}
-            />
-            <FormInput
-              inputTitle = 'Почта'
-              onKeyDownHandler = {() => btxEmailInput.focus()}
-              inputRef = {emailRef}
-              inputType = "email"
+            <NumberFormat
+              customInput={FormInput}x
+              onChange = {handleChange}
+              type = "tel"
+              name='phone'
+              value={values.phone}
               isRequired = {false}
-              inputPlaceholder = "E-mail"
-              errorMessage = {emailErrorMessage}
+              placeholder = "Телефон"
+              errorMessage = {errors.phone}
+
+              format="+1 (###) ###-####"
+              mask="_"
+            />
+            <FormInput
+              onChange = {handleChange}
+              type = "email"
+              name='email'
+              value={values.email}
+              isRequired = {false}
+              placeholder = "E-mail"
+              errorMessage = {errors.email}
             />
           </div>
-          <BasicButton
-            isValid={buttonStatus}
-            handler={() => false}
-            name="send-contact"
-            text='Оставить заявку'
-            type='primary'
-            customStyle={is480 ? {fontSize: 'var(--font-size-body'} : {fontSize: 'var(--font-size-body'}}
-          />
+          <button
+            disabled={!isValid}
+            type='submit' onClick={handleSendLead}
+            className={`${styles.button} ${isValid ? '' : styles.buttonNotValid}`}
+          >Оставить заявку</button>
         </form>
       }
 

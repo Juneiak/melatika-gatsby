@@ -42,12 +42,60 @@
 
 .subtitle {
   font-size: var(--font-size-big);
-  margin-bottom: var(--font-size-big);
+  margin-bottom: 169rem;
   font-weight: 100;
+  line-height: 47rem;
 }
 
-@media screen and (max-width: 800px) {
+.link {
+  width: 200rem;
+  height: 40rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-white);
+  background-color: transparent;
+  border: 1rem var(--color-white) solid;
+  font-size: var(--font-size-caption-middle);
+  font-weight: 500;
+  font-family: var(--font-basic);
+  text-decoration: none;
+  transition: 0.3s all ease-out;
+  border-radius: 32rem;
+}
+
+.link:hover {
+  cursor: pointer;
+  border-color: var(--color-peach);
+  background-color: var(--color-peach);
+}
+
+@media screen and (max-width: 480px) {
   .notFound {
-    background-size: cover;
+    justify-content: center;
+  }
+  
+  .content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-right: 0;
+    z-index: 2;
+  }
+
+  .title {
+    font-size: 98rem;
+    line-height: 120rem;
+  }
+  
+  .subtitle {
+    font-size: var(--font-size-caption-big);
+    margin-bottom: 17rem;
+    font-weight: 100;
+    line-height: 22rem;
+  }
+
+  .link {
+    font-size: var(--font-size-body-middle);
   }
 }

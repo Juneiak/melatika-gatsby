@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `melatika-gatsby`,
@@ -10,5 +14,7 @@ module.exports = {
       "path": "./src/images/"
     },
     __key: "images"
-  }]
+  },
+]
 };
+
