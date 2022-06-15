@@ -18,8 +18,9 @@ export default function DesignersList({ openFormPopupHandler, selectVideoHandler
           <p className={styles.text}>Нас выбирают профи</p>
           <button type='button' className={styles.button} onClick={openFormPopupHandler}>Работать с нами</button>
         </div>
+        <div styles={{width: '375rem'}}>
           { is480
-            ? <DesignersSliderList />
+            ? <DesignersSliderList selectVideoHandler={selectVideoHandler} />
             : <ul className={styles.list}>
                 <li className={styles.elementWithButton}><ButtonListElement openFormPopupHandler={openFormPopupHandler} /></li>
                 <li className={styles.listElement}><DesignerCard data={designerCardsData[0]} selectVideoHandler={selectVideoHandler} /></li>
@@ -27,6 +28,8 @@ export default function DesignersList({ openFormPopupHandler, selectVideoHandler
                 <li className={styles.listElement}><DesignerCard data={designerCardsData[2]} selectVideoHandler={selectVideoHandler} /></li>
               </ul>
           }
+        </div>
+          
       </div>
     </section>
   )

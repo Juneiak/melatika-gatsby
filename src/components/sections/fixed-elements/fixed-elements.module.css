@@ -1,6 +1,6 @@
 .logoContainer {
   position: fixed;
-  top: 25rem;
+  top: 14rem;
   left: 40rem;
   width: 29rem;
   height: 31rem;
@@ -8,8 +8,8 @@
 
 .contactsContainer {
   position: fixed;
-  bottom: 3vw;;
-  left: 3vw;;
+  bottom: 23rem;
+  left: 40rem;
 }
 
 .burgerButtonContainer {

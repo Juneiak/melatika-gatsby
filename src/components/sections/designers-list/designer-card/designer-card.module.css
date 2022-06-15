@@ -1,14 +1,10 @@
 .article {
   width: 100%;
   height: 100%;
-  transition: color 0.6s ease-out, background-color 0.6s ease-out, height 1s linear;
   overflow: hidden;
-  background-color: var(--color-white);
+  background-color: var(--color-black);
 }
-
 .article:hover {
-  background-color: var(--color-gray);
-  color: var(--color-white);
   cursor: pointer;
 }
 
@@ -28,6 +24,33 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: relative;
+}
+
+.imageContainer img {
+  transition: opacity 0.35s ease-out;
+}
+
+.article:hover .imageContainer img {
+  opacity: 0.7;
+}
+
+.play {
+  position: absolute;
+  top: calc(50% - 30rem);
+  left: calc(50% - 30rem);
+  width: 60rem;
+  height: 60rem;
+  background-image: url(../../../../images/misc/triangle.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0;
+  transition: opacity 0.35s ease-out;
+}
+
+.article:hover .play {
+  opacity: 1;
 }
 
 .about {
@@ -44,23 +67,13 @@
   position: relative;
   background-color: var(--color-gray);
   color: var(--color-white);
+  transition: background-color 0.35s ease-out;
 }
 
-
-.watchVideo {
-  font-size: 0.7vw;
-  font-family: var(--font-basic);
-  font-weight: 500;
-  position: absolute;
-  bottom: 0.95vw;
-  left: 1.2vw;
-  transition: color 0.6s ease-out;
-  color: transparent;
+.article:hover .about {
+  background-color: var(--color-peach);
 }
 
-.article:hover .watchVideo {
-  color: var(--color-white);
-}
 
 .title {
   font-size: var(--font-size-middle);
@@ -81,10 +94,13 @@
   line-height: 21rem;
 }
 
+.watchVideo {
+  display: none;
+}
+
 @media screen and (max-width: 480px) {
   .article {
     width: 375rem;
-    height: 100%;
   }
   .content {
     grid-template-columns: 40% 60%;
@@ -118,5 +134,25 @@
   .text {
     font-size: var(--font-size-body-middle);
     line-height: 15rem;
+    margin-bottom: 10rem;
+  }
+
+  .watchVideo {
+    display: inline;
+    line-height: 15rem;
+    color: var(--color-peach);
+    font-size: var(--font-size-body-middle);
+  }
+
+  .article:hover .imageContainer img {
+    opacity: 1;
+  }
+
+  .article:hover .play {
+    opacity: 0;
+  }
+
+  .article:hover .about {
+    background-color: var(--color-gray);
   }
 }
