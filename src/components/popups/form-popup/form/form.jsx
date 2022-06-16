@@ -5,15 +5,29 @@ import FormInput from './form-input/form-input';
 import useForm from '../../../../hooks/use-form';
 import NumberFormat from 'react-number-format';
 
-export default function Form({setStatus}) {
+export default function Form({setStatus, forDesigners}) {
 
   const [isLaoding, setIsLoading] = React.useState(false);
 
   const {values, isValid, errors, handleChange, handleReset} = useForm()
-
-  const handleSendLead = () => {
+  
+  const handleSendLeadDesigner = () => {
     setIsLoading(true);
-    fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=lead_from_melatika&FIELDS[NAME]=${values.name}&FIELDS[LAST_NAME]=- клиент с мелатики&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}`,{
+    fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=testTitle&FIELDS[NAME]=${values.name}&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}&FIELDS[SOURCE_ID]=51`,{
+      method: 'GET'
+    })
+    .then((res) => {
+      if (res.ok) {
+        setIsLoading(false);
+        setStatus(true);
+        handleReset()
+      }
+    })
+  }
+
+  const handleSendLeadCustomer = () => {
+    setIsLoading(true);
+    fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=testTitle&FIELDS[NAME]=${values.name}&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}&FIELDS[SOURCE_ID]=51`,{
       method: 'GET'
     })
     .then((res) => {
@@ -70,7 +84,7 @@ export default function Form({setStatus}) {
           </div>
           <button
             disabled={!isValid}
-            type='submit' onClick={handleSendLead}
+            type='submit' onClick={forDesigners ? handleSendLeadDesigner : handleSendLeadCustomer}
             className={`${styles.button} ${isValid ? '' : styles.buttonNotValid}`}
           >Оставить заявку</button>
         </form>
@@ -79,3 +93,6 @@ export default function Form({setStatus}) {
     </div>
   )
 }
+
+
+//https://krowatson.bitrix24.ru/rest/19416/b236nkjuwhl4irzx/crm.status.list.json

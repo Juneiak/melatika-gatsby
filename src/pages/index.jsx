@@ -8,7 +8,6 @@ import {
   FirstPartArticles,
   DesignersList,
   FixedElements,
-  ContactsBar
 } from '../components/sections/index';
 import { FormPopup, VideoPopup, NavMenuPopup } from "../components/popups"
 import IndexLayout from "../components/index-layout/index-layout";
@@ -40,7 +39,6 @@ export default function IndexPage() {
     <IndexLayout headerRef={topRef}>
       <main style={{width: '100%', height: '100%'}}>
         <Opening />
-        <ContactsBar />
         <Catalog openFormPopupHandler={() => openFormPopup('customer')} />
         <WeWillSelect openFormPopupHandler={() => openFormPopup('customer')} />
         <FirstPartArticles />

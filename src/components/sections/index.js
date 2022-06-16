@@ -8,7 +8,6 @@ import FirstPartArticles from "./first-part-articles/first-part-atricles";
 import SecondPartArticles from "./second-part-articles/second-part-articles";
 import Header from "./header/header";
 import FixedElements from './fixed-elements/fixed-elements'
-import ContactsBar from "./contacts-bar/contacts-bar";
 
 export {
   Opening,
@@ -21,5 +20,4 @@ export {
   DesignersList,
   Header,
   FixedElements,
-  ContactsBar,
 }

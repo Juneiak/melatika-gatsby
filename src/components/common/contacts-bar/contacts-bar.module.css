@@ -3,6 +3,7 @@
   padding: 16rem 0;
   display: none;
   justify-content: center;
+  background-color: var(--color-white);
 }
 
 .list {

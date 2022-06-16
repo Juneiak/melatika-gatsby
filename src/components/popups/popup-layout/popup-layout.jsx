@@ -14,7 +14,7 @@ export default function PopupLayout({ children, isNav, isOpen, closeHandler }) {
 
 
   return (
-    isShouldVideoPopupMount && 
+    isShouldVideoPopupMount &&
       <div 
         style={{...animation, zIndex: [isNav ? 100 : 103]}}
         className={styles.popupLayout}
