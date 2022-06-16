@@ -7,7 +7,7 @@ export default function ButtonListElement({openFormPopupHandler}) {
   return (
     <div className={styles.elementWithButton}>
       <div className={styles.buttonContainer}>
-        <p className={styles.text}>Нас выбирают профи</p>
+        <h2 className={styles.text}>Нас выбирают профи</h2>
         <button type='button' className={styles.button} onClick={openFormPopupHandler}>Работать с нами</button>
       </div>
     </div>

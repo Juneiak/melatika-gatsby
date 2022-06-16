@@ -29,7 +29,7 @@ export default function FormPopup({ forDesigners, closeHandler, isOpen }) {
             :
               <div className={styles.formContent}>
               <h2 className={styles.formTitle}>{forDesigners ? <span>Получите своего<br/>персонального менеджера<br/>для комфортной работы</span> : <span>Оставьте заявку и мы<br/>рассчитаем цену</span>}</h2>
-              <Form setStatus={setIsSuccessResponse}/>
+              <Form setStatus={setIsSuccessResponse} forDesigners={forDesigners}/>
                 <p className={styles.worning}>Нажимая кнопку, вы принимаете<br />
                   <a href={politDoc} className={styles.worningLink} download>условия политики конфиденциальности</a>
                 </p>

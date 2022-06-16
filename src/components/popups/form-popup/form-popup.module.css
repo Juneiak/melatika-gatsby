@@ -103,6 +103,6 @@
 
   .successMessage {
     font-size: var(--font-size-caption-middle);
-    line-height: 20;
+    line-height: 20rem;
   }
 }

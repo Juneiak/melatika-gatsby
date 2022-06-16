@@ -15,7 +15,7 @@ export default function DesignersList({ openFormPopupHandler, selectVideoHandler
     <section id='designers' className={styles.designersList}>
       <div className={styles.content}>
         <div  className={styles.buttonConatainer}>
-          <p className={styles.text}>Нас выбирают профи</p>
+          <h2 className={styles.text}>Нас выбирают профи</h2>
           <button type='button' className={styles.button} onClick={openFormPopupHandler}>Работать с нами</button>
         </div>
         <div styles={{width: '375rem'}}>

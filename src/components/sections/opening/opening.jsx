@@ -14,8 +14,11 @@ export default function Opening() {
           <MediaImage image={image} image_480={image_480} alt='фон главной страницы' />
         </div>
         <div className={styles.text}>
-          <h1 className={styles.title}>Melatika</h1>
-          <p className={styles.subtitle}>Мебель для тех, кто знает цену комфорту</p>
+          <h1 className={styles.title}>
+            Melatika
+            <br />
+            <span className={styles.titleSpan}>Мебель для тех, кто знает цену комфорту</span>
+          </h1>
         </div>
       </div>
 

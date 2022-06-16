@@ -24,6 +24,7 @@
   flex-direction: column;
   justify-content: center;
   z-index: 2;
+  text-align: center;
 }
 
 .title {
@@ -31,15 +32,15 @@
   font-size: var(--font-size-big);
   font-weight: 500;
   line-height: 48rem;
-  margin-bottom: 11rem;
+  margin-bottom: 15rem;
 }
 
-.subtitle {
+.titleSpan {
   font-family: var(--font-basic);
   font-size: var(--font-size-caption-middle);
   font-weight: 500;
+  margin-top: 11rem;
   line-height: 23rem;
-  margin-bottom: 15rem;
 }
 
 @media screen and (max-width: 480px) {
@@ -53,7 +54,6 @@
     top: 0;
     left: 0;
     height: 100%;
-
   }
 
   .content {
@@ -64,18 +64,19 @@
   }
 
   .textContainer {
-    width: 232rem;
+    width: 270rem;
     text-align: center;
     color: var(--color-white)
   }
   
   .title {
     font-size: var(--font-size-middle);
-    line-height: 29rem;
-    margin-bottom: 5rem;
+    line-height: 30rem;
+    margin-bottom: 15rem;
   }
   
-  .subtitle {
+  .titleSpan {
+    margin-top: 7rem;
     font-size: var(--font-size-body-middle);
     line-height: 12rem;
   }

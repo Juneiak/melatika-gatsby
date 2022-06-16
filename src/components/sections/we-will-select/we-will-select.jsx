@@ -14,9 +14,12 @@ export default function WeWillSelect({ openFormPopupHandler }) {
       <div className={styles.content}>
 
         <div className={styles.textContainer}>
-          <h2 className={styles.title}>Полная свобода творчества</h2>
-          <p className={styles.subtitle}>Мебель по вашему проекту</p>
-          <WeWillSelectButton text='Заказать' clickHandler={openFormPopupHandler}/>
+          <h2 className={styles.title}>
+            Полная свобода творчества
+            <br />
+            <p className={styles.titleSpan}>{is480 ? 'Подберем идеальную мебель в ваш интерьер' : 'Мебель по вашему проекту'}</p>
+          </h2>
+          <WeWillSelectButton text={is480 ? 'Подобрать мебель' : 'Заказать'} clickHandler={openFormPopupHandler}/>
         </div>
 
         <div className={styles.imageContainer}><MediaImage image={image} image_480={image_480} alt='фоновая картинка'/></div>

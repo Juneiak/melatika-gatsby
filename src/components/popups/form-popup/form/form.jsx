@@ -13,7 +13,7 @@ export default function Form({setStatus, forDesigners}) {
   
   const handleSendLeadDesigner = () => {
     setIsLoading(true);
-    fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=testTitle&FIELDS[NAME]=${values.name}&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}&FIELDS[SOURCE_ID]=51`,{
+    fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=testTitle&FIELDS[NAME]=${values.name}&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}&FIELDS[SOURCE_ID]=UC_BW7GR2`,{
       method: 'GET'
     })
     .then((res) => {
