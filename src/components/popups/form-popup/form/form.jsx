@@ -69,7 +69,7 @@ export default function Form({setStatus, forDesigners}) {
               placeholder = "Телефон"
               errorMessage = {errors.phone}
 
-              format="+1 (###) ###-####"
+              format="+7 (###) ###-####"
               mask="_"
             />
             <FormInput

@@ -5,14 +5,14 @@
   color: var(--color-white);
   display: flex;
   justify-content: flex-end;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .content {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-right: 160rem;
+  margin: 80rem 134rem 0 0;
   z-index: 2;
 }
 
@@ -37,12 +37,13 @@
   font-family: var(--font-basic);
   font-size: 300rem;
   font-weight: 500;
-  line-height: 365rem;
+  line-height: 1;
+  margin-bottom: 49rem;
 }
 
 .subtitle {
   font-size: var(--font-size-big);
-  margin-bottom: 169rem;
+  margin-bottom: 53rem;
   font-weight: 100;
   line-height: 47rem;
 }
@@ -73,6 +74,7 @@
 @media screen and (max-width: 480px) {
   .notFound {
     justify-content: center;
+    
   }
   
   .content {
@@ -81,11 +83,14 @@
     flex-direction: column;
     margin-right: 0;
     z-index: 2;
+    margin: 170rem 0 0 0;
+
   }
 
   .title {
     font-size: 98rem;
     line-height: 120rem;
+    margin-bottom: 0;
   }
   
   .subtitle {
