@@ -11,7 +11,8 @@ import {
 } from '../components/sections/index';
 import { FormPopup, VideoPopup, NavMenuPopup } from "../components/popups"
 import IndexLayout from "../components/index-layout/index-layout";
-
+import useUrlUpdate from "../hooks/use-url-update";
+import { useLocation } from '@reach/router';
 
 export default function IndexPage() {
   const [ isFormPopupOpen, setIsFormPopupOpen ] = React.useState(false);
@@ -20,20 +21,35 @@ export default function IndexPage() {
 
   const [ formForWhom, setFormForWhom ] = React.useState('');
   const topRef = React.useRef()
+  const changeUrl = useUrlUpdate()
 
   const openFormPopup = (forWhom) => {
     setIsFormPopupOpen(true);
     setFormForWhom(forWhom)
+    changeUrl(forWhom + 's-form')
   }
 
   const closeFormPopup = () => {
     setIsFormPopupOpen(false);
     setTimeout(() => setFormForWhom(''), 500)
+    changeUrl('/')
   }
 
   const handleScrollToTop = () => {
     topRef.current.scrollIntoView({behavior: 'smooth'});
   }
+
+  const location = useLocation()
+  React.useEffect(() => {
+    const checkIsPopUp = () => {
+      const popupState = location?.state?.isPopup
+      
+      if (!popupState) return
+      if (popupState === 'customers-form') openFormPopup('customer')
+      else if (popupState === 'designers-form') openFormPopup('designer')
+    }
+    checkIsPopUp()
+  },[])
 
   return (
     <IndexLayout headerRef={topRef}>

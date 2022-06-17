@@ -17,6 +17,12 @@ export default function FormPopup({ forDesigners, closeHandler, isOpen }) {
     closeHandler()
   }
 
+  React.useEffect(() => {
+    const handleClose = () => closeHandler()
+    window.addEventListener('popstate', handleClose)
+    return () => window.removeEventListener('popstate', handleClose)
+  }, [])
+
   return (
     <PopupLayout isOpen={isOpen}>
       <section className={styles.formPopup}>

@@ -10,7 +10,6 @@ export default function FixedElements({ isNavOpened, openNav, handleScroll }) {
 
   React.useEffect(() => {
     let prevPos = window.pageYOffset
-    console.log(prevPos)
     const handleScroll = () => {
       if (window.pageYOffset > prevPos) {
         setIsContactsBarShown(false);
