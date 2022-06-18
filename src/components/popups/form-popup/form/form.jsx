@@ -4,7 +4,6 @@ import { Loader } from '../../../ui';
 import FormInput from './form-input/form-input';
 import useForm from '../../../../hooks/use-form';
 import NumberFormat from 'react-number-format';
-import ym from 'react-yandex-metrika';
 
 export default function Form({setStatus, forDesigners}) {
 
@@ -22,7 +21,7 @@ export default function Form({setStatus, forDesigners}) {
         setIsLoading(false);
         setStatus(true);
         handleReset()
-        ym('reachGoal','form_client')
+        window.ym(89231470,'reachGoal','form_designer')
       }
     })
   }
@@ -37,7 +36,7 @@ export default function Form({setStatus, forDesigners}) {
         setIsLoading(false);
         setStatus(true);
         handleReset()
-        ym('reachGoal','form_designer')
+        window.ym(89231470,'reachGoal','form_client')
       }
     })
   }
@@ -87,7 +86,8 @@ export default function Form({setStatus, forDesigners}) {
           </div>
           <button
             disabled={!isValid}
-            type='submit' onClick={forDesigners ? handleSendLeadDesigner : handleSendLeadCustomer}
+            type='button' onClick={forDesigners ? handleSendLeadDesigner : handleSendLeadCustomer}
+
             className={`${styles.button} ${isValid ? '' : styles.buttonNotValid}`}
           >Оставить заявку</button>
         </form>

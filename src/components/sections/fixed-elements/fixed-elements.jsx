@@ -5,10 +5,12 @@ import BurgerMenuButton from '../../common/burger-menu-button/burger-menu-button
 import Contacts from '../../common/contacts/contacts';
 import ContactsBar from '../../common/contacts-bar/contacts-bar';
 import { Link } from 'gatsby';
+import { Is480Context } from '../../../utils/contexts';
 
-export default function FixedElements({ isNavOpened, openNav, handleScroll }) {
+export default function FixedElements({ isNavOpened, openNav }) {
   const [ isContactsBarShown, setIsContactsBarShown ] = React.useState(true);
-
+  const is480 = React.useContext(Is480Context);
+  
   React.useEffect(() => {
     let prevPos = window.pageYOffset
     const handleScroll = () => {
@@ -31,9 +33,11 @@ export default function FixedElements({ isNavOpened, openNav, handleScroll }) {
         <BurgerMenuButton isOpen={isNavOpened} handler={() => openNav(!isNavOpened)}/>
       </div>
 
-      <div className={`${styles.contactsBarContainer} ${isContactsBarShown ? styles.isShown : {}}`}>
-        <ContactsBar />
-      </div>
+      {is480 && 
+        <div className={`${styles.contactsBarContainer} ${isContactsBarShown ? styles.isShown : {}}`}>
+          <ContactsBar />
+        </div>
+      }
     </>
   )
 }
