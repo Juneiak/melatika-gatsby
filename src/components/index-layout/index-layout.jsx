@@ -8,6 +8,7 @@ import Helmet from 'react-helmet';
 import favicon from '../../images/misc/favicon.ico';
 import { Is480Context } from '../../utils/contexts';
 import useIs480 from '../../hooks/use-is-480';
+import { YMInitializer } from 'react-yandex-metrika';
 
 export default function IndexLayout({ children }) {
   const is480 = useIs480();
@@ -21,9 +22,9 @@ export default function IndexLayout({ children }) {
         <meta name="author" content="CookDog" />
         <link rel="icon" type="image/x-icon" href={favicon}></link>
         <title>Melatika</title>
-
+        
       </Helmet>
-
+      <YMInitializer accounts={[89237812]}  />
       <Is480Context.Provider value={is480}>
         <div className={styles.layout}>
 
