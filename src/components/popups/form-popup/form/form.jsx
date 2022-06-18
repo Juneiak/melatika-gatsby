@@ -12,34 +12,36 @@ export default function Form({setStatus, forDesigners}) {
   const {values, isValid, errors, handleChange, handleReset} = useForm()
   
   const handleSendLeadDesigner = () => {
-    setIsLoading(true);
-    fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=testTitle&FIELDS[NAME]=${values.name}&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}&FIELDS[SOURCE_ID]=UC_BW7GR2`,{
-      method: 'GET'
-    })
-    .then((res) => {
-      if (res.ok) {
-        setIsLoading(false);
-        setStatus(true);
-        handleReset()
-        window.ym(89231470,'reachGoal','form_designer')
-        console.log(window.ym(89231470,'reachGoal','form_designer'))
-      }
-    })
+    // setIsLoading(true);
+    // fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=testTitle&FIELDS[NAME]=${values.name}&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}&FIELDS[SOURCE_ID]=UC_BW7GR2`,{
+    //   method: 'GET'
+    // })
+    // .then((res) => {
+    //   if (res.ok) {
+    //     setIsLoading(false);
+    //     setStatus(true);
+    //     handleReset()
+    //     window.ym(89231470,'reachGoal','form_designer')
+    //     console.log(window.ym(89231470,'reachGoal','form_designer'))
+    //   }
+    // })
+    window.ym(89231470,'reachGoal','form_designer')
   }
 
   const handleSendLeadCustomer = () => {
-    setIsLoading(true);
-    fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=testTitle&FIELDS[NAME]=${values.name}&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}&FIELDS[SOURCE_ID]=51`,{
-      method: 'GET'
-    })
-    .then((res) => {
-      if (res.ok) {
-        setIsLoading(false);
-        setStatus(true);
-        handleReset()
-        window.ym(89231470,'reachGoal','form_client')
-      }
-    })
+    // setIsLoading(true);
+    // fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=testTitle&FIELDS[NAME]=${values.name}&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}&FIELDS[SOURCE_ID]=51`,{
+    //   method: 'GET'
+    // })
+    // .then((res) => {
+    //   if (res.ok) {
+    //     setIsLoading(false);
+    //     setStatus(true);
+    //     handleReset()
+    //     window.ym(89231470,'reachGoal','form_client')
+    //   }
+    // })
+    window.ym(89231470,'reachGoal','form_client')
   }
 
   return (
@@ -91,6 +93,16 @@ export default function Form({setStatus, forDesigners}) {
 
             className={`${styles.button} ${isValid ? '' : styles.buttonNotValid}`}
           >Оставить заявку</button>
+
+
+
+                    <button
+            disabled={!isValid}
+            type='button' onClick={window.ym(89231470,'reachGoal','form_client')}
+
+            className={`${styles.button} ${isValid ? '' : styles.buttonNotValid}`}
+          >1</button>
+
         </form>
       }
 
