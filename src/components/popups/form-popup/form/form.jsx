@@ -22,6 +22,7 @@ export default function Form({setStatus, forDesigners}) {
         setStatus(true);
         handleReset()
         window.ym(89231470,'reachGoal','form_designer')
+        console.log(window.ym(89231470,'reachGoal','form_designer'))
       }
     })
   }
