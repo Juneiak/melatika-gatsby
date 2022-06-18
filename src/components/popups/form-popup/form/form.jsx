@@ -44,7 +44,7 @@ export default function Form({setStatus, forDesigners}) {
   }
 
   const handleSend = () => {
-    window.ym(89231470,'reachGoal','form_client')
+    window.ym(89237812,'reachGoal','form_client')
     console.log('sended');
   }
 
@@ -109,13 +109,13 @@ export default function Form({setStatus, forDesigners}) {
             type='button' onClick={handleSend}
           >1</button>
           <button
-            type='button' onClick={window.ym(89231470,'reachGoal','form_client', handleClick)}
+            type='button' onClick={window.ym(89237812,'reachGoal','form_client', handleClick)}
           >2</button>
 
           <input
             type='button' onClick={handleSend} />
           <input
-            type='button' onClick={window.ym(89231470,'reachGoal','form_client', handleClick)} />
+            type='button' onClick={window.ym(89237812,'reachGoal','form_client', handleClick)} />
 
         </form>
       }
