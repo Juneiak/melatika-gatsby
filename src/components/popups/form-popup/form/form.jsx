@@ -98,10 +98,17 @@ export default function Form({setStatus, forDesigners}) {
 
                     <button
             disabled={!isValid}
-            type='button' onClick={window.ym(89231470,'reachGoal','form_client')}
+            type='button' onClick={window.ym(244177066,'reachGoal','form_client')}
 
             className={`${styles.button} ${isValid ? '' : styles.buttonNotValid}`}
           >1</button>
+
+<button
+            disabled={!isValid}
+            type='button' onClick={window.ym(244177108,'reachGoal','form_designer')}
+
+            className={`${styles.button} ${isValid ? '' : styles.buttonNotValid}`}
+          >2</button>
 
         </form>
       }
