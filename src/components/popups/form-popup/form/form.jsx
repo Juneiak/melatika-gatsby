@@ -48,11 +48,6 @@ export default function Form({setStatus, forDesigners}) {
     console.log('sended');
   }
 
-  const handleClick = () => {
-    console.log('callback reach');
-    
-  }
-
   return (
     <div className={styles.container}>
 
@@ -108,15 +103,8 @@ export default function Form({setStatus, forDesigners}) {
            <button
             type='button' onClick={handleSend}
           >1</button>
-          <button
-            type='button' onClick={window.ym(89237812,'reachGoal','form_client', handleClick)}
-          >2</button>
-
           <input
             type='button' onClick={handleSend} />
-          <input
-            type='button' onClick={window.ym(89237812,'reachGoal','form_client', handleClick)} />
-
         </form>
       }
 
