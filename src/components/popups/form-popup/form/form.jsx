@@ -9,7 +9,7 @@ import ym from 'react-yandex-metrika';
 export default function Form({setStatus, forDesigners}) {
 
   const [isLaoding, setIsLoading] = React.useState(false);
-
+  const [momentWindow, setMomentWindow] = React.useState({});
   const {values, isValid, errors, handleChange, handleReset} = useForm()
   
   const handleSendLeadDesigner = () => {
@@ -24,8 +24,8 @@ export default function Form({setStatus, forDesigners}) {
     //     handleReset()
     //   }
     // })
-    // window.ym(89237812,'reachGoal','form_client')
-    ym(89231470,'reachGoal','form_client')
+    let v = momentWindow.yaCounter89231470.reachGoal('form_designer');
+    console.log(v);
   }
 
   const handleSendLeadCustomer = () => {
@@ -40,9 +40,13 @@ export default function Form({setStatus, forDesigners}) {
     //     handleReset()
     //   }
     // })
-    ym(89231470,'reachGoal','form_client')
-
+    let v = momentWindow.yaCounter89231470.reachGoal('form_client');
+    console.log(v);
   }
+
+  React.useEffect(() => {
+    setMomentWindow(window)
+  }, [])
 
 
   return (
