@@ -2,10 +2,10 @@ import React from 'react';
 import * as styles from './header.module.css';
 import HeaderLink from './header-link/header-link';
 
-export default function Header({ headerRef }) {
+export default function Header() {
 
   return (
-    <header ref={headerRef} id='header' className={styles.header}>
+    <header id='header' className={styles.header}>
 
       <div className={styles.content}>
         <ul className={styles.list}>

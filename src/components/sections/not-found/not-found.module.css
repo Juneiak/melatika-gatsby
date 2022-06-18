@@ -25,14 +25,6 @@
   z-index: 1;
 }
 
-.logoContainer {
-  position: fixed;
-  top: 14rem;
-  left: 40rem;
-  width: 29rem;
-  height: 31rem;
-}
-
 .title {
   font-family: var(--font-basic);
   font-size: 300rem;
@@ -71,10 +63,18 @@
   background-color: var(--color-peach);
 }
 
+.logoContainer {
+  position: fixed;
+  top: 14rem;
+  left: 40rem;
+  width: 29rem;
+  height: 31rem;
+  z-index: 10;
+}
+
 @media screen and (max-width: 480px) {
   .notFound {
-    justify-content: center;
-    
+    justify-content: center; 
   }
   
   .content {
@@ -103,4 +103,12 @@
   .link {
     font-size: var(--font-size-body-middle);
   }
+
+  .logoContainer {
+    top: 20rem;
+    left: 24rem;
+    width: 24rem;
+    height: 25rem;
+  }
+
 }

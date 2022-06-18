@@ -4,6 +4,7 @@ import Logo from '../../common/logo/logo';
 import BurgerMenuButton from '../../common/burger-menu-button/burger-menu-button';
 import Contacts from '../../common/contacts/contacts';
 import ContactsBar from '../../common/contacts-bar/contacts-bar';
+import { Link } from 'gatsby';
 
 export default function FixedElements({ isNavOpened, openNav, handleScroll }) {
   const [ isContactsBarShown, setIsContactsBarShown ] = React.useState(true);
@@ -24,7 +25,7 @@ export default function FixedElements({ isNavOpened, openNav, handleScroll }) {
   }, [])
   return (
     <>
-      <div onClick={handleScroll} className={styles.logoContainer}><Logo /></div>
+      <Link to='#header' className={styles.logoContainer}><Logo /></Link>
       <div className={styles.contactsContainer}><Contacts whiteColor={true}/></div>
       <div className={styles.burgerButtonContainer}>
         <BurgerMenuButton isOpen={isNavOpened} handler={() => openNav(!isNavOpened)}/>

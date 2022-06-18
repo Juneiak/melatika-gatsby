@@ -20,7 +20,6 @@ export default function IndexPage() {
   const [ isNavMenuOpened, setIsNavMenuOpened] = React.useState(false);
 
   const [ formForWhom, setFormForWhom ] = React.useState('');
-  const topRef = React.useRef()
   const changeUrl = useUrlUpdate()
 
   const openFormPopup = (forWhom) => {
@@ -33,10 +32,6 @@ export default function IndexPage() {
     setIsFormPopupOpen(false);
     setTimeout(() => setFormForWhom(''), 500)
     changeUrl('/')
-  }
-
-  const handleScrollToTop = () => {
-    topRef.current.scrollIntoView({behavior: 'smooth'});
   }
 
   const location = useLocation()
@@ -52,7 +47,7 @@ export default function IndexPage() {
   },[])
 
   return (
-    <IndexLayout headerRef={topRef}>
+    <IndexLayout>
       <main style={{width: '100%', height: '100%'}}>
         <Opening />
         <Catalog openFormPopupHandler={() => openFormPopup('customer')} />
@@ -62,7 +57,7 @@ export default function IndexPage() {
         <DesignersList selectVideoHandler={setSelectedDesignerVideo} openFormPopupHandler={() => openFormPopup('designer')} />
         <SecondPartArticles />
       </main>
-      <FixedElements handleScroll={handleScrollToTop} isNavOpened={isNavMenuOpened} openNav={setIsNavMenuOpened} />
+      <FixedElements isNavOpened={isNavMenuOpened} openNav={setIsNavMenuOpened} />
 
 
       <FormPopup isOpen={isFormPopupOpen} forDesigners={formForWhom === 'designer'} closeHandler={closeFormPopup} />
