@@ -22,7 +22,7 @@ export default function Form({setStatus, forDesigners}) {
         setIsLoading(false);
         setStatus(true);
         handleReset()
-        ym(89231470,'reachGoal','form_client')
+        ym('reachGoal','form_client')
       }
     })
   }
@@ -37,7 +37,7 @@ export default function Form({setStatus, forDesigners}) {
         setIsLoading(false);
         setStatus(true);
         handleReset()
-        ym(89231470,'reachGoal','form_designer')
+        ym('reachGoal','form_designer')
       }
     })
   }
