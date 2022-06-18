@@ -25,7 +25,6 @@ export default function Form({setStatus, forDesigners}) {
     //     console.log(window.ym(89231470,'reachGoal','form_designer'))
     //   }
     // })
-    window.ym(89231470,'reachGoal','form_designer')
   }
 
   const handleSendLeadCustomer = () => {
@@ -41,7 +40,17 @@ export default function Form({setStatus, forDesigners}) {
     //     window.ym(89231470,'reachGoal','form_client')
     //   }
     // })
+
+  }
+
+  const handleSend = () => {
     window.ym(89231470,'reachGoal','form_client')
+    console.log('sended');
+  }
+
+  const handleClick = () => {
+    console.log('callback reach');
+    
   }
 
   return (
@@ -87,28 +96,26 @@ export default function Form({setStatus, forDesigners}) {
               errorMessage = {errors.email}
             />
           </div>
-          <button
+          {/* <button
             disabled={!isValid}
             type='button' onClick={forDesigners ? handleSendLeadDesigner : handleSendLeadCustomer}
 
             className={`${styles.button} ${isValid ? '' : styles.buttonNotValid}`}
-          >Оставить заявку</button>
+          >Оставить заявку</button> */}
 
 
 
-                    <button
-            disabled={!isValid}
-            type='button' onClick={window.ym(244177066,'reachGoal','form_client')}
-
-            className={`${styles.button} ${isValid ? '' : styles.buttonNotValid}`}
+           <button
+            type='button' onClick={handleSend}
           >1</button>
-
-<button
-            disabled={!isValid}
-            type='button' onClick={window.ym(244177108,'reachGoal','form_designer')}
-
-            className={`${styles.button} ${isValid ? '' : styles.buttonNotValid}`}
+          <button
+            type='button' onClick={window.ym(89231470,'reachGoal','form_client', handleClick)}
           >2</button>
+
+          <input
+            type='button' onClick={handleSend} />
+          <input
+            type='button' onClick={window.ym(89231470,'reachGoal','form_client', handleClick)} />
 
         </form>
       }
