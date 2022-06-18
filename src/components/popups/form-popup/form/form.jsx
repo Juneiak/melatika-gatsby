@@ -4,6 +4,7 @@ import { Loader } from '../../../ui';
 import FormInput from './form-input/form-input';
 import useForm from '../../../../hooks/use-form';
 import NumberFormat from 'react-number-format';
+import ym from 'react-yandex-metrika';
 
 export default function Form({setStatus, forDesigners}) {
 
@@ -21,12 +22,10 @@ export default function Form({setStatus, forDesigners}) {
     //     setIsLoading(false);
     //     setStatus(true);
     //     handleReset()
-    //     window.ym(89231470,'reachGoal','form_designer')
-    //     console.log(window.ym(89231470,'reachGoal','form_designer'))
     //   }
     // })
     // window.ym(89237812,'reachGoal','form_client')
-    
+    ym(89231470,'reachGoal','form_client')
   }
 
   const handleSendLeadCustomer = () => {
@@ -39,10 +38,9 @@ export default function Form({setStatus, forDesigners}) {
     //     setIsLoading(false);
     //     setStatus(true);
     //     handleReset()
-    //     window.ym(89231470,'reachGoal','form_client')
     //   }
     // })
-    // window.ym(89237812,'reachGoal','form_client')
+    ym(89231470,'reachGoal','form_client')
 
   }
 

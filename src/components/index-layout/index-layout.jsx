@@ -22,7 +22,6 @@ export default function IndexLayout({ children }) {
         <meta name="author" content="CookDog" />
         <link rel="icon" type="image/x-icon" href={favicon}></link>
         <title>Melatika</title>
-        <YMInitializer accounts={[89231470]}  />
         
       </Helmet>
       <Is480Context.Provider value={is480}>
@@ -33,6 +32,7 @@ export default function IndexLayout({ children }) {
           <Footer />
 
         </div>
+        <YMInitializer accounts={[89231470]} />
 
       </Is480Context.Provider>
     </>
