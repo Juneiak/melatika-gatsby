@@ -21,6 +21,8 @@ export default function IndexLayout({ children }) {
         <meta name="keywords" content="Диваны, кровати, качественный, специально для вас, уфа, быстро" />
         <meta name="author" content="CookDog" />
         <link rel="icon" type="image/x-icon" href={favicon}></link>
+        <meta name="yandex-verification" content="dc860157a834aac9" />
+        <meta name="google-site-verification" content="RXEPdeCPeDE_pKM-kAVs0WD6KofLsx1GjtCfTQ39Wto" />
         <title>Melatika</title>
         
       </Helmet>
@@ -32,7 +34,7 @@ export default function IndexLayout({ children }) {
           <Footer />
 
         </div>
-        <YMInitializer accounts={[89231470]} />
+        <YMInitializer accounts={[89136753]} />
 
       </Is480Context.Provider>
     </>

@@ -21,7 +21,7 @@ export default function Form({setStatus, forDesigners}) {
         setIsLoading(false);
         setStatus(true);
         handleReset()
-        momentWindow.yaCounter89231470.reachGoal('form_designer');
+        momentWindow.yaCounter89136753.reachGoal('form_designer');
       }
     })
   }
@@ -36,7 +36,7 @@ export default function Form({setStatus, forDesigners}) {
         setIsLoading(false);
         setStatus(true);
         handleReset()
-        momentWindow.yaCounter89231470.reachGoal('form_client');
+        momentWindow.yaCounter89136753.reachGoal('form_client');
       }
     })
   }
@@ -71,11 +71,11 @@ export default function Form({setStatus, forDesigners}) {
               type = "tel"
               name='phone'
               value={values.phone}
-              isRequired = {false}
+              isRequired = {true}
               placeholder = "Телефон"
               errorMessage = {errors.phone}
-
-              format="+7 (###) ###-####"
+              // pattern={/^[0-9\+]{1,}[0-9\-]{3,15}$/}
+              format="+7 ### ###-####"
               mask="_"
             />
             <FormInput
