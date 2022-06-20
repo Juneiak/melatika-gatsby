@@ -75,7 +75,7 @@ export default function Form({setStatus, forDesigners}) {
               placeholder = "Телефон"
               errorMessage = {errors.phone}
               // pattern={/^[0-9\+]{1,}[0-9\-]{3,15}$/}
-              format="+7 ### ###-####"
+              format="+7 (###) ###-####"
               mask="_"
             />
             <FormInput

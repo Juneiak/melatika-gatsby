@@ -21,8 +21,10 @@ export default function IndexLayout({ children }) {
         <meta name="keywords" content="Диваны, кровати, качественный, специально для вас, уфа, быстро" />
         <meta name="author" content="CookDog" />
         <link rel="icon" type="image/x-icon" href={favicon}></link>
-        <meta name="yandex-verification" content="dc860157a834aac9" />
-        <meta name="google-site-verification" content="RXEPdeCPeDE_pKM-kAVs0WD6KofLsx1GjtCfTQ39Wto" />
+        {/* <meta name="yandex-verification" content="dc860157a834aac9" /> */}
+        <meta name="yandex-verification" content="8c722c33efed3b21" />
+        {/* <meta name="google-site-verification" content="RXEPdeCPeDE_pKM-kAVs0WD6KofLsx1GjtCfTQ39Wto" /> */}
+        <meta name="google-site-verification" content="YvBXpWF1wIA4ZUNUwR3XJifgkONwDIehDm6sXgwrIOw" />
         <title>Melatika</title>
         
       </Helmet>
