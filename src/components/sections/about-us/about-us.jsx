@@ -2,6 +2,9 @@ import React from 'react';
 import * as styles from './about-us.module.css';
 import image from '../../../images/about-us/about-us.jpg';
 import image_480 from '../../../images/about-us/about-us-480.jpg'
+import imageWebp from '../../../images/about-us/about-us.webp';
+import imageWebp_480 from '../../../images/about-us/about-us-480.webp'
+
 import {MediaImage} from '../../ui';
 import { VkIcon } from '../../common/icons/icons';
 
@@ -11,7 +14,7 @@ export default function AboutUs() {
     <section id='aboutUs'  className={styles.aboutUs}>
       <div className={styles.content}>
 
-        <div className={styles.imageContainer}><MediaImage image={image} image_480={image_480} alt='Александр Зырянов'/></div>
+        <div className={styles.imageContainer}><MediaImage imageWebp={imageWebp} imageWebp_480={imageWebp_480} image={image} image_480={image_480} alt='Александр Зырянов'/></div>
         
         <div className={styles.textContainer}>
           <div className={styles.nameContainer}>

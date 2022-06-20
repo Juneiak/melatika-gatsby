@@ -9,7 +9,13 @@ export default function Catalog({ openFormPopupHandler }) {
     <section id='catalog' className={styles.catalog}>
       <ul className={styles.list}>
         {catalogData.map((item, index) => (
-          <CatalogCard key={index} clickHandler={openFormPopupHandler} imageSrc={item.image} title={item.title} />
+          <CatalogCard
+            key={index}
+            clickHandler={openFormPopupHandler}
+            imageSrc={item.image}
+            imageWebpSrc={item.imageWebp}
+            title={item.title}
+          />
         ))}
       </ul>
     </section>

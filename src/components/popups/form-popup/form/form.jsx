@@ -4,7 +4,6 @@ import { Loader } from '../../../ui';
 import FormInput from './form-input/form-input';
 import useForm from '../../../../hooks/use-form';
 import NumberFormat from 'react-number-format';
-import ym from 'react-yandex-metrika';
 
 export default function Form({setStatus, forDesigners}) {
 
@@ -13,41 +12,38 @@ export default function Form({setStatus, forDesigners}) {
   const {values, isValid, errors, handleChange, handleReset} = useForm()
   
   const handleSendLeadDesigner = () => {
-    // setIsLoading(true);
-    // fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=testTitle&FIELDS[NAME]=${values.name}&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}&FIELDS[SOURCE_ID]=UC_BW7GR2`,{
-    //   method: 'GET'
-    // })
-    // .then((res) => {
-    //   if (res.ok) {
-    //     setIsLoading(false);
-    //     setStatus(true);
-    //     handleReset()
-    //   }
-    // })
-    let v = momentWindow.yaCounter89231470.reachGoal('form_designer');
-    console.log(v);
+    setIsLoading(true);
+    fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=testTitle&FIELDS[NAME]=${values.name}&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}&FIELDS[SOURCE_ID]=UC_BW7GR2`,{
+      method: 'GET'
+    })
+    .then((res) => {
+      if (res.ok) {
+        setIsLoading(false);
+        setStatus(true);
+        handleReset()
+        momentWindow.yaCounter89231470.reachGoal('form_designer');
+      }
+    })
   }
 
   const handleSendLeadCustomer = () => {
-    // setIsLoading(true);
-    // fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=testTitle&FIELDS[NAME]=${values.name}&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}&FIELDS[SOURCE_ID]=51`,{
-    //   method: 'GET'
-    // })
-    // .then((res) => {
-    //   if (res.ok) {
-    //     setIsLoading(false);
-    //     setStatus(true);
-    //     handleReset()
-    //   }
-    // })
-    let v = momentWindow.yaCounter89231470.reachGoal('form_client');
-    console.log(v);
+    setIsLoading(true);
+    fetch(`https://krowatson.bitrix24.ru/rest/${process.env.GATSBY_API}/crm.lead.add.json?FIELDS[TITLE]=testTitle&FIELDS[NAME]=${values.name}&FIELDS[EMAIL][0][VALUE]=${values.email ? values.email : 'test@mail.ru'}&FIELDS[PHONE][0][VALUE]=${values.phone}&FIELDS[SOURCE_ID]=51`,{
+      method: 'GET'
+    })
+    .then((res) => {
+      if (res.ok) {
+        setIsLoading(false);
+        setStatus(true);
+        handleReset()
+        momentWindow.yaCounter89231470.reachGoal('form_client');
+      }
+    })
   }
 
   React.useEffect(() => {
     setMomentWindow(window)
   }, [])
-
 
   return (
     <div className={styles.container}>

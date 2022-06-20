@@ -69,19 +69,10 @@ h1, h2, h3, h4, h5, p {
 
 body::after {
   position: absolute; height: 0; width: 0; overflow: hidden; z-index: -1;
-  content: 
-  url(../images/nav/nav-1.png)
-  url(../images/nav/nav-2.png)
-  url(../images/nav/nav-3.png)
-  url(../images/nav/nav-4.png);
 }
 
 @media screen and (max-width: 480px) {
   body::after {
-    content: 
-    url(../images/nav/nav-1-480.png)
-    url(../images/nav/nav-2-480.png)
-    url(../images/nav/nav-3-480.png)
-    url(../images/nav/nav-4-480.png);
+
   }
 }

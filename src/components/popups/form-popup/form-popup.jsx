@@ -5,6 +5,9 @@ import CloseButton from '../../ui/close-button/close-button';
 import Form from './form/form';
 import image1 from '../../../images/form-popup/form-popup-1.png';
 import image2 from '../../../images/form-popup/form-popup-2.jpg';
+import image1Webp from '../../../images/form-popup/form-popup-1.webp';
+import image2Webp from '../../../images/form-popup/form-popup-2.webp';
+import { MediaImage } from '../../ui';
 
 import politDoc from '../../../misc/confidential_politic_document.pdf';
 import PopupLayout from '../popup-layout/popup-layout';
@@ -43,7 +46,14 @@ export default function FormPopup({ forDesigners, closeHandler, isOpen }) {
           }
         </div>
         
-        <img src={forDesigners ? image2 : image1} alt="фон формы" className={styles.image} />
+        <div className={styles.imageContainer}>
+          {
+          forDesigners
+            ? <MediaImage image={image2} imageWebp={image2Webp} />
+            : <MediaImage image={image1} imageWebp={image1Webp} />
+          }
+          <MediaImage />
+        </div>
       </section>
     </PopupLayout>  
   )

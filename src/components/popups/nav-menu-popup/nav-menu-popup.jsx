@@ -16,7 +16,13 @@ export default function NavMenuPopup({ closeNavHandler, isOpen }) {
               <li key={index} className={styles.listElement}>
                 <Link onClick={closeNavHandler} to={navElement.linkTo} className={styles.navLink}>
                   <div className={styles.linkImage}>
-                    <MediaImage image={navElement.image} image_480={navElement.image_480} alt={`фон ${navElement.title}`}/>
+                    <MediaImage
+                      image={navElement.image}
+                      image_480={navElement.image_480}
+                      imageWebp={navElement.imageWebp}
+                      imageWebp_480={navElement.imageWebp_480}
+                      alt={`фон ${navElement.title}`}
+                    />
                   </div>
                   <p className={styles.title}>{navElement.title}</p>
                 </Link>
