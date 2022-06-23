@@ -27,7 +27,7 @@
 
 }
 
-.articleCard1:hover {
+.anim1:hover > div {
   transform: translateY(-10%);
 }
 
@@ -46,7 +46,7 @@
   'image' ;
 }
 
-.articleCard2:hover {
+.anim2:hover > div {
   transform: translateY(10%);
 }
 
@@ -67,7 +67,7 @@
   justify-content: center;
 }
 
-.articleCard3:hover {
+.anim3:hover > div {
   transform: translateY(-10%);
 }
 
@@ -98,7 +98,7 @@
     'image';
   }
 
-  .articleCard1:hover {
+  .anim1:hover > div {
     transform: none;
   }
   
@@ -117,7 +117,7 @@
     'about image';
   }
 
-  .articleCard2:hover {
+  .anim2:hover > div {
     transform: none;
   }
   
@@ -140,7 +140,7 @@
     color: var(--color-white);
   }
   
-  .articleCard3:hover .about3 {
+  .anim3:hover > div {
     transform: none;
   }
 }

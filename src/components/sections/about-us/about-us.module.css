@@ -28,11 +28,12 @@
   color: var(--color-white)
 }
 
-.vkLink {
-  color: var(--color-white);
+.vkLink img {
   width: 22rem;
   height: 22rem;
 }
+
+
 .nameContainer {
   display: grid;
   grid-auto-flow: column;
@@ -47,8 +48,6 @@
   line-height: 27rem;
   color: var(--color-white)
 }
-
-
 
 .imageContainer {
   height: 100%;
@@ -69,9 +68,12 @@
     background-color: var(--color-white);
   }
 
-  .vkLink {
-    color: var(--color-black);
+  .vkLink img {
+    width: 20rem;
+    height: 20rem;
+    margin-bottom: 5rem;
   }
+  
 
   .name {
     margin-bottom: 10rem;

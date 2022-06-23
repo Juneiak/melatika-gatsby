@@ -15,6 +15,7 @@ export default function FirstPartArticles() {
                 articleData={articlesData1[0]}
                 articleStyles={styles.articleCard1}
                 aboutStyles={styles.about1}
+                animStyles={styles.anim1}
               />
           </li>
           <li className={styles.listElement2}>
@@ -23,6 +24,8 @@ export default function FirstPartArticles() {
                 articleStyles={styles.articleCard2}
                 aboutStyles={styles.about2}
                 isAnimateUp={true}
+                animStyles={styles.anim2}
+
               />
           </li>
           <li className={styles.listElement3}>
@@ -30,6 +33,8 @@ export default function FirstPartArticles() {
                 articleData={articlesData1[2]}
                 articleStyles={styles.articleCard3}
                 aboutStyles={styles.about3}
+                animStyles={styles.anim3}
+
               />
           </li>
 

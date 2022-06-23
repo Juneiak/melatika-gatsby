@@ -18,6 +18,11 @@
   color: var(--color-peach);
 }
 
+.link img {
+  width: 21rem;
+  height: 21rem;
+}
+
 .link:hover {
   cursor: pointer;
   transform: scale(1.1);

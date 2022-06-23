@@ -27,7 +27,7 @@ export default function FixedElements({ isNavOpened, openNav }) {
   }, [])
   return (
     <>
-      <Link to='#header' className={styles.logoContainer}><Logo /></Link>
+      <Link to='/' className={styles.logoContainer}><Logo /></Link>
       <div className={styles.contactsContainer}><Contacts whiteColor={true}/></div>
       <div className={styles.burgerButtonContainer}>
         <BurgerMenuButton isOpen={isNavOpened} handler={() => openNav(!isNavOpened)}/>

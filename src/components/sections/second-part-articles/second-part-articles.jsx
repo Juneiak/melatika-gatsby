@@ -15,6 +15,7 @@ export default function SecondPartArticles() {
                 articleData={articlesData2[0]}
                 articleStyles={styles.articleCard1}
                 aboutStyles={styles.about1}
+                animStyles={styles.anim1}
               />
           </li>
           <li className={styles.listElement2}>
@@ -22,6 +23,7 @@ export default function SecondPartArticles() {
                 articleData={articlesData2[1]}
                 articleStyles={styles.articleCard2}
                 aboutStyles={styles.about2}
+                animStyles={styles.anim2}
               />
           </li>
           <li className={styles.listElement3}>
@@ -29,6 +31,7 @@ export default function SecondPartArticles() {
                 articleData={articlesData2[2]}
                 articleStyles={styles.articleCard3}
                 aboutStyles={styles.about3}
+                animStyles={styles.anim3}
               />
           </li>
 
