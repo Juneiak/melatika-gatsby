@@ -43,6 +43,7 @@ export default function Form({setStatus, forDesigners}) {
 
   React.useEffect(() => {
     setMomentWindow(window)
+    values.phone = ''
   }, [])
 
   return (
@@ -72,7 +73,7 @@ export default function Form({setStatus, forDesigners}) {
               name='phone'
               value={values.phone}
               isRequired = {true}
-              placeholder = "Телефон"
+              placeholder = "+7 (___) ___-____"
               errorMessage = {errors.phone}
               // pattern={/^[0-9\+]{1,}[0-9\-]{3,15}$/}
               format="+7 (###) ###-####"

@@ -58,22 +58,14 @@
 
 .errorMessage::before {
   content: '';
-  border: 0.5em var(--color-error) solid;
-  border-top-color: transparent;
-  border-right-color: transparent;
+  width: 20rem;
+  height: 20rem;
+  display: block;
   position: absolute;
-  top: -35%;
-  left: 51.8%;
-}
-
-.errorMessage::after {
-  content: '';
-  border: 0.5em var(--color-error) solid;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  position: absolute;
-  top: -35%;
-  left: 48.1%;
+  top: -10rem;
+  right: calc(50% - 10rem);
+  background-color: var(--color-error);
+  transform: rotate(45deg);
 }
 
 @media screen and (max-width: 480px) {
