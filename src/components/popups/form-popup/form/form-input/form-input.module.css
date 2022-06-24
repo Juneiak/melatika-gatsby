@@ -78,5 +78,21 @@
   .input:focus {
     font-size: calc(var(--font-size-body-middle) * 0.9);
   }
+
+  .errorMessage {
+    top: 95%;
+    width: 90%;
+    padding: 2%;
+    font-size: var(--font-size-body-middle);
+  }
+
+  .errorMessage::before {
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    top: -5rem;
+    right: calc(50% - 5rem);
+  }
+  
   
 }
