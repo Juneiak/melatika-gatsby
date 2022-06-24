@@ -2,6 +2,7 @@ import React from 'react';
 import * as styles from './contacts.module.css';
 import vkIcon from '../../../images/icons/vk-2-peach.svg';
 import wuIcon from '../../../images/icons/wu-peach.svg';
+import tgIcon from '../../../images/icons/tg-2-peach.svg';
 
 export default function Contacts() {
 
@@ -12,6 +13,9 @@ export default function Contacts() {
       </a>
       <a target='_blank' className={styles.link} href="https://vk.com/melatika">
         <img src={vkIcon} />
+      </a>
+      <a target='_blank' className={styles.link} href='http://t.me/melatikabot'>
+        <img src={tgIcon} />
       </a>
     </div>
   )
