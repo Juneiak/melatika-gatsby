@@ -7,7 +7,8 @@ module.exports = {
     title: `melatika-gatsby`,
     siteUrl: `https://www.yourdomain.tld`
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sharp", "gatsby-transformer-sharp", {
+  plugins: ["gatsby-plugin-image", "gatsby-plugin-react-helmet", "gatsby-plugin-sharp", "gatsby-transformer-sharp",
+  {
     resolve: 'gatsby-source-filesystem',
     options: {
       "name": "images",
@@ -23,6 +24,16 @@ module.exports = {
       anonymize: false,
       respectDNT: true,
 
+    },
+  },
+  {
+    resolve: `gatsby-source-wordpress`,
+    options: {
+      /*
+       * The full URL of the WordPress site's GraphQL API.
+       * Example : 'https://www.example-site.com/graphql'
+       */
+      url: `http://wp.melatika.ru/graphql`,
     },
   },
 ]
