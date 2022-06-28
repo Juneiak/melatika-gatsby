@@ -5,24 +5,8 @@ import image from '../../../images/opening/opening.jpg';
 import image_480 from '../../../images/opening/opening-480.jpg';
 import imageWebp from '../../../images/opening/opening.webp';
 import imageWebp_480 from '../../../images/opening/opening-480.webp';
-import { useStaticQuery, graphql } from 'gatsby'
 
-export default function Opening() {
-  const data = useStaticQuery(graphql`
-    query {
-      allWpPost {
-        nodes {
-          id
-          title
-          excerpt
-          slug
-          date(formatString: "MMMM DD, YYYY")
-        }
-      }
-    }
-  `)
-
-  console.log(data.allWpPost.nodes[0].title);
+export default function Opening({title}) {
 
   return (
     <section id='opening' className={styles.opening}>
@@ -36,7 +20,7 @@ export default function Opening() {
             Melatika
             <br />
             {/* <span className={styles.titleSpan}>Мебель для тех, кто знает цену комфорту</span> */}
-            <span className={styles.titleSpan}>{data.allWpPost.nodes[0].title}</span>
+            <span className={styles.titleSpan}>{title}</span>
 
           </h1>
         </div>

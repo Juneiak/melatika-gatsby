@@ -13,8 +13,9 @@ import { FormPopup, VideoPopup, NavMenuPopup } from "../components/popups"
 import IndexLayout from "../components/index-layout/index-layout";
 import useUrlUpdate from "../hooks/use-url-update";
 import { useLocation } from '@reach/router';
+import { graphql } from "gatsby"
 
-export default function IndexPage() {
+export default function IndexPage({ data }) {
   const [ isFormPopupOpen, setIsFormPopupOpen ] = React.useState(false);
   const [ selectedDesignerVideo, setSelectedDesignerVideo ] = React.useState('');
   const [ isNavMenuOpened, setIsNavMenuOpened] = React.useState(false);
@@ -46,10 +47,12 @@ export default function IndexPage() {
     checkIsPopUp()
   },[])
 
+  console.log(data.allWpPost.nodes[0].title);
+
   return (
     <IndexLayout>
       <main style={{width: '100%', height: '100%'}}>
-        <Opening />
+        <Opening title={data.allWpPost.nodes[0].title} />
         <Catalog openFormPopupHandler={() => openFormPopup('customer')} />
         <WeWillSelect openFormPopupHandler={() => openFormPopup('customer')} />
         <FirstPartArticles />
@@ -71,3 +74,17 @@ export default function IndexPage() {
     </IndexLayout>
   )
 }
+
+export const pageQuery = graphql`
+query {
+  allWpPost {
+    nodes {
+      id
+      title
+      excerpt
+      slug
+      date(formatString: "MMMM DD, YYYY")
+    }
+  }
+}
+`
